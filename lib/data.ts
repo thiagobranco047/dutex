@@ -25,7 +25,10 @@ export interface ApplicationItem {
   id: string;
   badge: string;
   title: string;
+  subtitle: string;
   description: string;
+  steps: string[];
+  result: string;
   image: string;
 }
 
@@ -59,7 +62,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "10+", label: "anos de atuação" },
+  { value: "12+", label: "anos de atuação" },
   { value: "1500+", label: "aplicações técnicas" },
   { value: "10/10", label: "satisfação dos clientes" },
   { value: "100%", label: "de confiabilidade operacional" },
@@ -115,66 +118,50 @@ export const differentials: DifferentialItem[] = [
 export const applications: ApplicationItem[] = [
   {
     id: "01",
-    badge: "Destaque",
-    title: "Porto de SFS",
+    badge: "Siderurgia",
+    title: "Líder do setor siderúrgico",
+    subtitle: "Cantoneira plástica co-extrusada",
     description:
-      "Proteções aplicadas em bobinas para redução de avarias durante manuseio e transporte.",
+      "Um grande player da siderurgia nacional procurou a Dutex buscando solução de proteção para materiais metálicos. Trouxe uma referência e perguntou se seria possível desenvolver algo semelhante.",
+    steps: [
+      "Análise técnica do produto de referência",
+      "Desenvolvimento de ferramentas de extrusão",
+      "Adaptação do processo de co-extrusão com TNT",
+    ],
+    result:
+      "O resultado foi a cantoneira plástica co-extrusada com TNT hoje utilizada nas operações de vários clientes. Esse projeto abriu caminho para toda a linha de produtos logísticos da Dutex.",
     image: "/images/applications-placeholder.jpg",
   },
   {
     id: "02",
-    badge: "Siderurgia",
-    title: "Usina Siderúrgica",
+    badge: "Indústria",
+    title: "Grande player industrial",
+    subtitle: "Verticalização de produto importado",
     description:
-      "Soluções metálicas de proteção lateral para bobinas de aço laminado a quente.",
+      "Uma indústria utilizava um componente importado da Coreia. Trouxe uma amostra e perguntou se seria possível fabricar o produto no Brasil.",
+    steps: [
+      "Engenharia reversa do produto importado",
+      "Desenvolvimento de ferramentas de produção próprias",
+      "Industrialização e produção nacional do componente",
+    ],
+    result:
+      "A Dutex verticalizou a produção nacional desse componente, eliminando a dependência de importação e reduzindo custos e prazo de entrega.",
     image: "/images/applications-placeholder.jpg",
   },
   {
     id: "03",
-    badge: "Alumínio",
-    title: "Indústria de Alumínio",
+    badge: "Energia renovável",
+    title: "Setor de energia solar",
+    subtitle: "Perfil especial em PP para energia solar",
     description:
-      "Berços e calços técnicos para transporte seguro de bobinas de alumínio.",
-    image: "/images/applications-placeholder.jpg",
-  },
-  {
-    id: "04",
-    badge: "Papel e Celulose",
-    title: "Fábrica de Celulose",
-    description:
-      "Proteções plásticas para rolos de papel em armazenamento vertical e horizontal.",
-    image: "/images/applications-placeholder.jpg",
-  },
-  {
-    id: "05",
-    badge: "Logística",
-    title: "Centro de Distribuição",
-    description:
-      "Divisórias e calços para otimização de espaço em contêineres e carretas.",
-    image: "/images/applications-placeholder.jpg",
-  },
-  {
-    id: "06",
-    badge: "Naval",
-    title: "Terminal Portuário",
-    description:
-      "Soluções anticorrosão para proteção de cargas em ambiente marítimo.",
-    image: "/images/applications-placeholder.jpg",
-  },
-  {
-    id: "07",
-    badge: "Automotivo",
-    title: "Montadora Automotiva",
-    description:
-      "Racks e berços sob medida para transporte de peças estampadas e conjuntos soldados.",
-    image: "/images/applications-placeholder.jpg",
-  },
-  {
-    id: "08",
-    badge: "Energia",
-    title: "Parque Eólico",
-    description:
-      "Estruturas de proteção para transporte de componentes de grande porte.",
+      "Uma empresa do setor de energia solar apresentou um perfil encontrado na Europa para sinalização e proteção de cabos em usinas solares. Perguntou se a Dutex conseguia desenvolver no Brasil.",
+    steps: [
+      "Desenvolvimento da engenharia e desenho técnico",
+      "Ferramentas de extrusão desenvolvidas internamente",
+      "Produção industrial do componente",
+    ],
+    result:
+      "O produto passou a ser utilizado em projetos de geração de energia solar no Brasil.",
     image: "/images/applications-placeholder.jpg",
   },
 ];

@@ -1,9 +1,7 @@
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
-import Card from "@/components/ui/Card";
-import IconCircle from "@/components/ui/IconCircle";
 import { differentials } from "@/lib/data";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CircleCheckBig } from "lucide-react";
 
 export default function WhyDutex() {
   return (
@@ -36,19 +34,21 @@ export default function WhyDutex() {
               terceiros. Soluções customizadas para cada cliente e tipo de carga.
             </p>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-10">
               {differentials.map((item) => (
-                <Card key={item.title} className="p-5">
-                  <IconCircle icon={item.icon} className="mb-3" />
-                  <h3 className="text-sm font-bold text-gray-900">
+                <div key={item.title}>
+                  <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-green-accent/10">
+                    <CircleCheckBig size={22} className="text-green-accent" strokeWidth={1.8} />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-900">
                     {item.title}
                   </h3>
                   {item.subtitle && (
-                    <p className="mt-0.5 text-xs text-gray-text">
+                    <p className="mt-1 text-sm leading-relaxed text-gray-text">
                       {item.subtitle}
                     </p>
                   )}
-                </Card>
+                </div>
               ))}
             </div>
           </div>
