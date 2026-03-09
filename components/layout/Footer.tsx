@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { footerLinkGroups } from "@/lib/data";
@@ -61,7 +62,7 @@ export default function Footer() {
       <Container>
         <div className="grid gap-12 py-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4 space-y-5">
-            <a href="/" className="inline-block">
+            <Link href="/" className="inline-block">
               <Image
                 src="/images/logo-dutex-branco.webp"
                 alt="Dutex"
@@ -69,7 +70,7 @@ export default function Footer() {
                 height={96}
                 className="h-20 w-auto"
               />
-            </a>
+            </Link>
             <p className="text-sm leading-relaxed text-white/60 max-w-sm">
               Soluções industriais em aço e plásticos de engenharia para
               transformação de materiais, proteção de cargas e eficiência

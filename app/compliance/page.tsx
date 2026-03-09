@@ -13,7 +13,6 @@ import {
   Phone,
   Mail,
   LayoutGrid,
-  ArrowRight,
   ShieldCheck,
 } from "lucide-react";
 

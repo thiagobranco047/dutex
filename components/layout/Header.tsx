@@ -2,20 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import { navLinks } from "@/lib/data";
 import Container from "@/components/ui/Container";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -30,7 +24,7 @@ export default function Header() {
     >
       <Container>
         <div className="flex h-32 items-center justify-between lg:h-36">
-          <a href="/" className="shrink-0">
+          <Link href="/" className="shrink-0">
             <Image
               src="/images/logo-dutex-branco.webp"
               alt="Dutex"
@@ -39,7 +33,7 @@ export default function Header() {
               className="h-20 w-auto"
               priority
             />
-          </a>
+          </Link>
 
           {/* Nav — center */}
           <nav className="hidden xl:flex items-center gap-0.5">
@@ -56,12 +50,12 @@ export default function Header() {
 
           {/* CTA + hamburger */}
           <div className="flex items-center gap-3">
-            <a
+            <Link
               href="/#contato"
               className="hidden lg:inline-flex items-center justify-center rounded-lg border border-white/25 px-5 py-2.5 text-[13px] font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Vamos conversar!
-            </a>
+            </Link>
 
             <button
               onClick={() => setMobileOpen(true)}
