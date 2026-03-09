@@ -22,16 +22,28 @@ export default function IntroStats() {
             críticos.
           </p>
 
-          <a
-            href="#diferenciais"
-            className="inline-flex items-center gap-2 shrink-0 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-gray-400 hover:text-gray-900 transition-colors group whitespace-nowrap"
-          >
-            Conheça nossa empresa
-            <ArrowRight
-              size={16}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </a>
+          <div className="flex flex-col gap-3 shrink-0 sm:flex-row lg:flex-col">
+            <a
+              href="/sobre"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-gray-400 hover:text-gray-900 transition-colors group whitespace-nowrap"
+            >
+              Conheça nossa empresa
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </a>
+            <a
+              href="/compliance"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-gray-400 hover:text-gray-900 transition-colors group whitespace-nowrap"
+            >
+              Compliance
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-y-10 lg:grid-cols-4 lg:mt-20">

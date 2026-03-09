@@ -51,14 +51,14 @@ export interface FooterLinkGroup {
 }
 
 export const navLinks: NavLink[] = [
-  { label: "Início", href: "#home" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Soluções", href: "#solucoes" },
-  { label: "Por que Dutex?", href: "#diferenciais" },
-  { label: "Aplicações", href: "#aplicacoes" },
-  { label: "Processo", href: "#processo" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#home" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Soluções", href: "/#solucoes" },
+  { label: "Por que Dutex?", href: "/#diferenciais" },
+  { label: "Aplicações", href: "/#aplicacoes" },
+  { label: "Processo", href: "/#processo" },
+  { label: "Depoimentos", href: "/#depoimentos" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export const stats: StatItem[] = [
@@ -215,11 +215,11 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Empresa",
     links: [
-      { label: "Início", href: "#home" },
-      { label: "Sobre", href: "#sobre" },
-      { label: "Soluções", href: "#solucoes" },
-      { label: "Aplicações", href: "#aplicacoes" },
-      { label: "Contato", href: "#contato" },
+      { label: "Início", href: "/#home" },
+      { label: "Sobre", href: "/#sobre" },
+      { label: "Soluções", href: "/#solucoes" },
+      { label: "Aplicações", href: "/#aplicacoes" },
+      { label: "Contato", href: "/#contato" },
     ],
   },
   {
@@ -232,7 +232,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Fale com a Dutex",
     links: [
-      { label: "Fale com um especialista", href: "#contato" },
+      { label: "Fale com um especialista", href: "/#contato" },
       { label: "Canal de Compliance", href: "mailto:compliance@dutex.com.br" },
       { label: "LGPD / Privacidade", href: "mailto:privacidade@dutex.com.br" },
     ],

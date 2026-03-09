@@ -61,7 +61,7 @@ export default function Footer() {
       <Container>
         <div className="grid gap-12 py-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4 space-y-5">
-            <a href="#home" className="inline-block">
+            <a href="/" className="inline-block">
               <Image
                 src="/images/logo-dutex-branco.webp"
                 alt="Dutex"

@@ -9,6 +9,7 @@ import RealApplications from "@/components/sections/RealApplications";
 import Process from "@/components/sections/Process";
 import Testimonials from "@/components/sections/Testimonials";
 import FinalCta from "@/components/sections/FinalCta";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

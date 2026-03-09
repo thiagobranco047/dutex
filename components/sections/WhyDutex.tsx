@@ -16,7 +16,7 @@ export default function WhyDutex() {
               Por que a Dutex?
             </h2>
             <a
-              href="#aplicacoes"
+              href="/sobre"
               className="mt-6 inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors group"
             >
               Conheça nossa empresa

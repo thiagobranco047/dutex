@@ -53,7 +53,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <Button
             variant="outline"
             size="md"
-            href="#contato"
+            href="/#contato"
             className="w-full justify-center"
           >
             Vamos conversar!

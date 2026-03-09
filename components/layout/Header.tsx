@@ -30,7 +30,7 @@ export default function Header() {
     >
       <Container>
         <div className="flex h-32 items-center justify-between lg:h-36">
-          <a href="#home" className="shrink-0">
+          <a href="/" className="shrink-0">
             <Image
               src="/images/logo-dutex-branco.webp"
               alt="Dutex"
@@ -57,7 +57,7 @@ export default function Header() {
           {/* CTA + hamburger */}
           <div className="flex items-center gap-3">
             <a
-              href="#contato"
+              href="/#contato"
               className="hidden lg:inline-flex items-center justify-center rounded-lg border border-white/25 px-5 py-2.5 text-[13px] font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Vamos conversar!
