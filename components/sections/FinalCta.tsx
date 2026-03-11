@@ -135,6 +135,20 @@ export default function FinalCta() {
           </div>
         </Container>
       </div>
+
+      {/* Google Maps */}
+      <div className="w-full h-[400px] lg:h-[480px] relative">
+        <iframe
+          src="https://maps.google.com/maps?q=Dutex+Industrial,+Rua+Ladislau+Ostrowski+1502,+Garuva,+SC,+Brazil&t=m&z=15&output=embed&iwloc=B"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Localização Dutex Industrial"
+        />
+      </div>
     </section>
   );
 }
