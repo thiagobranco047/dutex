@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { solutions } from "@/lib/data";
@@ -25,7 +26,15 @@ export default function Solutions() {
                 {solution.description}
               </p>
 
-              <div className="mt-6 aspect-[4/3] w-full rounded-2xl bg-gray-200" />
+              <div className="mt-6 relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-200">
+                <Image
+                  src={solution.image}
+                  alt={solution.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
             </div>
           ))}
         </div>

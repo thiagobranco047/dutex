@@ -17,6 +17,8 @@ export default function WhyDutex() {
             </h2>
             <a
               href="/sobre"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-primary hover:text-primary transition-colors group"
             >
               Conheça nossa empresa

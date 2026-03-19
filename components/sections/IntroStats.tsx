@@ -25,6 +25,8 @@ export default function IntroStats() {
           <div className="flex flex-col gap-3 shrink-0 sm:flex-row lg:flex-col">
             <a
               href="/sobre"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-gray-400 hover:text-gray-900 transition-colors group whitespace-nowrap"
             >
               Conheça nossa empresa
@@ -35,6 +37,8 @@ export default function IntroStats() {
             </a>
             <a
               href="/compliance"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-gray-border px-5 py-2.5 text-sm font-semibold text-gray-700 hover:border-gray-400 hover:text-gray-900 transition-colors group whitespace-nowrap"
             >
               Compliance

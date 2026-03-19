@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { applications } from "@/lib/data";
@@ -21,13 +22,15 @@ export default function RealApplications() {
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Image placeholder */}
+          {/* Case image */}
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-sm font-medium text-white/20">
-                {active.subtitle}
-              </span>
-            </div>
+            <Image
+              src={active.image}
+              alt={active.subtitle}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
           {/* Case details */}

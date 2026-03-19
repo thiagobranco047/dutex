@@ -57,7 +57,7 @@ export const navLinks: NavLink[] = [
   { label: "Por que Dutex?", href: "/#diferenciais" },
   { label: "Aplicações", href: "/#aplicacoes" },
   { label: "Processo", href: "/#processo" },
-  { label: "Depoimentos", href: "/#depoimentos" },
+  // { label: "Depoimentos", href: "/#depoimentos" },
   { label: "Contato", href: "/#contato" },
 ];
 
@@ -74,21 +74,21 @@ export const solutions: SolutionCard[] = [
     title: "Transformação de Aço",
     description:
       "Aço transformado com precisão industrial — bobinas, chapas sob medida, slitter e blanks em ZC, FF e FQ com espessuras até 40mm. Matéria-prima pronta para sua produção.",
-    image: "/images/solution-metalica.jpg",
+    image: "/images/transformacao-de-aco.webp",
   },
   {
     number: "02",
     title: "Plásticos de Engenharia",
     description:
       "Componentes industriais em PP virgem ou reciclado por injeção (240 a 650ton) e extrusão. Cantoneiras, separadores e protetores com alta absorção de impacto.",
-    image: "/images/solution-plastica.jpg",
+    image: "/images/plasticos-de-engenharia.webp",
   },
   {
     number: "03",
     title: "Proteção e Logística",
     description:
       "Berços para bobinas de 3 a 20 toneladas, luvas, colarinhos, protetores emborrachados e colmeias. Proteção da linha de produção até o destino final.",
-    image: "/images/solution-sobmedida.jpg",
+    image: "/images/protecao-e-logistica.webp",
   },
 ];
 
@@ -130,7 +130,7 @@ export const applications: ApplicationItem[] = [
     ],
     result:
       "O resultado foi a cantoneira plástica co-extrusada com TNT hoje utilizada nas operações de vários clientes. Esse projeto abriu caminho para toda a linha de produtos logísticos da Dutex.",
-    image: "/images/applications-placeholder.jpg",
+    image: "/images/siderurgia.webp",
   },
   {
     id: "02",
@@ -146,7 +146,7 @@ export const applications: ApplicationItem[] = [
     ],
     result:
       "A Dutex verticalizou a produção nacional desse componente, eliminando a dependência de importação e reduzindo custos e prazo de entrega.",
-    image: "/images/applications-placeholder.jpg",
+    image: "/images/industria.webp",
   },
   {
     id: "03",
@@ -162,7 +162,7 @@ export const applications: ApplicationItem[] = [
     ],
     result:
       "O produto passou a ser utilizado em projetos de geração de energia solar no Brasil.",
-    image: "/images/applications-placeholder.jpg",
+    image: "/images/energia-renovavel.webp",
   },
 ];
 
@@ -247,7 +247,7 @@ export const contactInfo = {
   channels: [
     {
       label: "Compliance",
-      value: "compliance@dutex.com.br | +55 47 9168-9143",
+      value: "compliance@dutex.com.br | +55 47 99168-9143",
     },
     { label: "Canal de Denúncias", value: "denuncia@dutex.com.br" },
     { label: "LGPD/Privacidade", value: "privacidade@dutex.com.br" },

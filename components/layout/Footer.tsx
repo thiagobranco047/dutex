@@ -7,15 +7,36 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { footerLinkGroups } from "@/lib/data";
 
+type NewsletterStatus = "idle" | "sending" | "success" | "error";
+
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [status, setStatus] = useState<NewsletterStatus>("idle");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    if (email && email.includes("@")) {
-      setSubscribed(true);
-      setEmail("");
+    if (!email || !email.includes("@")) return;
+    setStatus("sending");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "",
+          subject: "Nova inscrição newsletter — Site Dutex",
+          email,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
     }
   }
 
@@ -35,23 +56,34 @@ export default function Footer() {
               </p>
             </div>
 
-            {subscribed ? (
+            {status === "success" ? (
               <p className="text-sm text-green-accent font-medium">
                 Inscrição realizada com sucesso!
               </p>
             ) : (
-              <form onSubmit={handleSubmit} className="flex gap-3 w-full max-w-md">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full max-w-md sm:flex-row sm:gap-3">
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="Seu melhor e-mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
                 />
-                <Button variant="primary" size="md" type="submit">
-                  Inscrever-se
+                <Button
+                  variant="primary"
+                  size="md"
+                  type="submit"
+                  disabled={status === "sending"}
+                >
+                  {status === "sending" ? "Enviando..." : "Inscrever-se"}
                 </Button>
+                {status === "error" && (
+                  <p className="text-xs text-red-400 sm:absolute sm:-bottom-5">
+                    Erro ao inscrever. Tente novamente.
+                  </p>
+                )}
               </form>
             )}
           </div>

@@ -1,5 +1,6 @@
 {
-  "/compliance/page": "app/compliance/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/compliance/page": "app/compliance/page.js",
   "/sobre/page": "app/sobre/page.js"
 }

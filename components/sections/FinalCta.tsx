@@ -7,12 +7,29 @@ import { Input, Textarea } from "@/components/ui/Input";
 import { contactInfo } from "@/lib/data";
 import { Mail, Phone, MapPin } from "lucide-react";
 
-export default function FinalCta() {
-  const [submitted, setSubmitted] = useState(false);
+type FormStatus = "idle" | "sending" | "success" | "error";
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+export default function FinalCta() {
+  const [status, setStatus] = useState<FormStatus>("idle");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("sending");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "");
+    formData.append("subject", "Novo contato — Site Dutex");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      setStatus(data.success ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -51,7 +68,7 @@ export default function FinalCta() {
                 em até 24 horas úteis.
               </p>
 
-              {submitted ? (
+              {status === "success" ? (
                 <div className="mt-8 rounded-2xl border border-green-accent/30 bg-green-accent/5 p-8 text-center">
                   <div className="text-2xl mb-3">✓</div>
                   <h4 className="text-lg font-bold text-gray-900">
@@ -63,20 +80,24 @@ export default function FinalCta() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+                  <input type="checkbox" name="botcheck" className="hidden" />
                   <Input
                     id="name"
+                    name="name"
                     label="Nome"
                     placeholder="Seu nome completo"
                     required
                   />
                   <Input
                     id="company"
+                    name="company"
                     label="Empresa"
                     placeholder="Nome da sua empresa"
                     required
                   />
                   <Input
-                    id="contact"
+                    id="email"
+                    name="email"
                     label="Contato"
                     type="email"
                     placeholder="E-mail ou telefone"
@@ -84,12 +105,24 @@ export default function FinalCta() {
                   />
                   <Textarea
                     id="challenge"
+                    name="message"
                     label="Desafio"
                     placeholder="Descreva brevemente seu desafio ou necessidade operacional..."
                     required
                   />
-                  <Button variant="primary" size="lg" type="submit" className="w-full sm:w-auto">
-                    Enviar mensagem
+                  {status === "error" && (
+                    <p className="text-sm text-red-500">
+                      Erro ao enviar. Tente novamente ou entre em contato por e-mail.
+                    </p>
+                  )}
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    type="submit"
+                    className="w-full sm:w-auto"
+                    disabled={status === "sending"}
+                  >
+                    {status === "sending" ? "Enviando..." : "Enviar mensagem"}
                   </Button>
                 </form>
               )}

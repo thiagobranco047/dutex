@@ -23,7 +23,7 @@ export default function Home() {
         <WhyDutex />
         <RealApplications />
         <Process />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FinalCta />
       </main>
       <Footer />
