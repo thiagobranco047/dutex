@@ -16,7 +16,7 @@ export default function RealApplications() {
       <Container>
         <SectionHeading
           badgeText="Engenharia aplicada"
-          title={<>Quando o mercado não tem<br />a solução, a Dutex desenvolve</>}
+          title={<>Quando o mercado não tem<br />a solução, a Dutex desenvolve.</>}
           subtitle="Diversas soluções da Dutex nasceram a partir de necessidades específicas de clientes industriais. A empresa analisa o problema, desenvolve a engenharia, projeta as ferramentas e fabrica internamente."
           dark
         />

@@ -64,8 +64,8 @@ export const navLinks: NavLink[] = [
 export const stats: StatItem[] = [
   { value: "12+", label: "anos de atuação" },
   { value: "1500+", label: "aplicações técnicas" },
-  { value: "10/10", label: "satisfação dos clientes" },
-  { value: "100%", label: "de confiabilidade operacional" },
+  { value: "47+", label: "indústrias atendidas na cadeia siderúrgica" },
+  { value: "ZERO", label: "avarias reportadas em 2024" },
 ];
 
 export const solutions: SolutionCard[] = [
