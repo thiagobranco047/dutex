@@ -247,7 +247,7 @@ export const contactInfo = {
   channels: [
     {
       label: "Compliance",
-      value: "compliance@dutex.com.br | +55 47 99168-9143",
+      value: "compliance@dutex.ind.br | +55 47 99168-9143",
     },
     { label: "Canal de Denúncias", value: "denuncia@dutex.ind.br" },
     { label: "LGPD/Privacidade", value: "privacidade@dutex.ind.br" },
