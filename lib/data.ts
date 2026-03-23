@@ -251,6 +251,6 @@ export const contactInfo = {
     },
     { label: "Canal de Denúncias", value: "denuncia@dutex.ind.br" },
     { label: "LGPD/Privacidade", value: "privacidade@dutex.ind.br" },
-    { label: "Trabalhe Conosco", value: "Envie seu currículo" },
+    { label: "Trabalhe Conosco", value: "rh@dutex.ind.br" },
   ],
 };
