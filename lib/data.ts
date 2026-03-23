@@ -233,24 +233,24 @@ export const footerLinkGroups: FooterLinkGroup[] = [
     title: "Fale com a Dutex",
     links: [
       { label: "Fale com um especialista", href: "/#contato" },
-      { label: "Canal de Compliance", href: "mailto:compliance@dutex.com.br" },
-      { label: "LGPD / Privacidade", href: "mailto:privacidade@dutex.com.br" },
+      { label: "Canal de Compliance", href: "mailto:compliance@dutex.ind.br" },
+      { label: "LGPD / Privacidade", href: "mailto:privacidade@dutex.ind.br" },
     ],
   },
 ];
 
 export const contactInfo = {
   email: "comercial@dutex.ind.br",
-  phone: "(47) 3439-1111",
-  whatsapp: "99121-4911",
+  phone: "(47) 3439-4911",
+  whatsapp: "(47) 99121-4911",
   address: "Garuva – SC",
   channels: [
     {
       label: "Compliance",
       value: "compliance@dutex.com.br | +55 47 99168-9143",
     },
-    { label: "Canal de Denúncias", value: "denuncia@dutex.com.br" },
-    { label: "LGPD/Privacidade", value: "privacidade@dutex.com.br" },
+    { label: "Canal de Denúncias", value: "denuncia@dutex.ind.br" },
+    { label: "LGPD/Privacidade", value: "privacidade@dutex.ind.br" },
     { label: "Trabalhe Conosco", value: "Envie seu currículo" },
   ],
 };
