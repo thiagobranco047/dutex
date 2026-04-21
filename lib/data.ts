@@ -225,8 +225,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Siga-nos",
     links: [
-      { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "YouTube", href: "https://youtube.com" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/94835401" },
+      { label: "Instagram", href: "https://www.instagram.com/dutex_industrial" },
+      { label: "Facebook", href: "https://www.facebook.com/DutexIndustrial" },
+      { label: "Todas as redes sociais", href: "https://linktr.ee/dutex_industrial" },
     ],
   },
   {
