@@ -116,16 +116,25 @@ export default function Footer() {
                 <div key={group.title}>
                   <h3 className="text-sm font-semibold mb-4">{group.title}</h3>
                   <ul className="space-y-2.5">
-                    {group.links.map((link) => (
-                      <li key={link.label}>
-                        <a
-                          href={link.href}
-                          className="text-sm text-white/55 hover:text-white transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      </li>
-                    ))}
+                    {group.links.map((link) => {
+                      const isExternal = /^https?:\/\//i.test(link.href);
+                      return (
+                        <li key={link.label}>
+                          <a
+                            href={link.href}
+                            className="text-sm text-white/55 hover:text-white transition-colors"
+                            {...(isExternal
+                              ? {
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                }
+                              : {})}
+                          >
+                            {link.label}
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               ))}
