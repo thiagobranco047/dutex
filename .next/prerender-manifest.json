@@ -26,6 +26,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/sobre": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sobre",
+      "dataRoute": "/sobre.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -73,37 +97,13 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/sobre": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/sobre",
-      "dataRoute": "/sobre.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "a0f92478f099e0f580f0154519cc91ba",
-    "previewModeSigningKey": "42368898905d4af4e5802a5d5701c6d6cb18b31fc84ac24ae675c50a9fc831b9",
-    "previewModeEncryptionKey": "ad30111f819114f02012a52532ec393718a27c87019c8b601ea7ecd29f6e24e5"
+    "previewModeId": "068d43e1f46fb681852bcafcae0dd48b",
+    "previewModeSigningKey": "395c13005743bb3986c45cdc41fe6c15d76aa014b9ec6c3eb154510b25900923",
+    "previewModeEncryptionKey": "0a9591d8b93cd4ddd159ed67a196881f5d31ffe3122e0f585a689d8a8c521b9f"
   }
 }
