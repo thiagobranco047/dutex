@@ -1,0 +1,170 @@
+{
+  "hero": {
+    "badge": "Dutex Industrial",
+    "titleLine1": "Solutions Powering",
+    "titleLine2": "Industry",
+    "subtitle": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency — from the production line to the final destination."
+  },
+  "about": {
+    "badge": "About Dutex",
+    "introBefore": "Dutex integrates",
+    "introHighlight": "steel processing, engineering plastics and protection systems",
+    "introAfter": "to optimize industrial operations with coils, sheets and critical materials."
+  },
+  "stats": {
+    "items": [
+      { "value": "12+", "label": "Years of experience" },
+      { "value": "1.500+", "label": "Technical applications" },
+      { "value": "47+", "label": "Industries served (steel chain)" },
+      { "value": "ZERO", "label": "Damage reported in 2024" }
+    ]
+  },
+  "solutions": {
+    "badge": "Our Solutions",
+    "title": "Industrial solutions for processing and protection",
+    "subtitle": "Dutex operates at both ends of the operation. It delivers processed material ready for production. And protects the load from the point of origin to the production line.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Steel Processing",
+        "description": "Steel processed with industrial precision — coils, custom sheets, slitter and blanks in ZC, FF and FQ with thicknesses up to 40mm. Raw material ready for your production."
+      },
+      {
+        "number": "02",
+        "title": "Engineering Plastics",
+        "description": "Industrial components in virgin or recycled PP by injection (240 to 650 ton) and extrusion. Corner protectors, separators and protectors with high impact absorption."
+      },
+      {
+        "number": "03",
+        "title": "Protection and Logistics",
+        "description": "Cradles for coils from 3 to 20 tons, sleeves, collars, elastomeric protectors and honeycomb protectors. Protection from the production line to the final destination."
+      }
+    ]
+  },
+  "whyDutex": {
+    "badge": "Differentiators",
+    "title": "Why Dutex?",
+    "intro": "Dutex manufactures internally with a complete structure — full control over quality, lead time and customization, without relying on third parties. Customized solutions for each client and load type.",
+    "items": [
+      {
+        "title": "Engineering applied to operations",
+        "subtitle": "Not an off-the-shelf product. Each solution is designed for the client's reality."
+      },
+      {
+        "title": "Integrated steel + plastic production",
+        "subtitle": "Complete vertical integration: materials, engineering, operations and logistics in a single company."
+      },
+      {
+        "title": "Traceability and control",
+        "subtitle": "Dimensional control in every batch with ISO 9001:2015 certification."
+      },
+      {
+        "title": "100% in-house manufacturing",
+        "subtitle": "Plastic injection, PP extrusion and metal fabrication — without relying on third parties."
+      }
+    ]
+  },
+  "applications": {
+    "badge": "Applied Engineering",
+    "titleLine1": "When the market doesn't have",
+    "titleLine2": "the solution, Dutex develops it.",
+    "subtitle": "Many Dutex solutions were born from specific needs of industrial clients. The company analyzes the problem, develops the engineering, designs the tools and manufactures internally.",
+    "items": [
+      {
+        "id": "01",
+        "badge": "Steel industry",
+        "title": "Leader in the steel sector",
+        "subtitle": "Co-extruded Plastic Corner Protector",
+        "description": "A major player in the national steel industry approached Dutex seeking a protection solution for metallic materials. They brought a reference and asked if it would be possible to develop something similar.",
+        "steps": [
+          "Reverse engineering analysis of the reference product",
+          "Development of specialized extrusion tools",
+          "Adaptation of the co-extrusion process with non-woven fabric (TNT)"
+        ],
+        "result": "The result was the co-extruded plastic corner protector with non-woven fabric, now used in the operations of various clients. This project paved the way for Dutex's entire line of logistics products."
+      },
+      {
+        "id": "02",
+        "badge": "Industry",
+        "title": "Major industrial player",
+        "subtitle": "Vertical integration of imported product",
+        "description": "An industry used a component imported from Korea. They brought a sample and asked if it would be possible to manufacture the product in Brazil.",
+        "steps": [
+          "Reverse engineering of the imported product",
+          "Development of proprietary production tools",
+          "Industrialization and domestic production of the component"
+        ],
+        "result": "Dutex vertically integrated domestic production of this component, eliminating import dependency and reducing costs and delivery time."
+      },
+      {
+        "id": "03",
+        "badge": "Renewable energy",
+        "title": "Solar energy sector",
+        "subtitle": "Special PP profile for solar energy",
+        "description": "A company in the solar energy sector presented a profile found in Europe for signaling and cable protection in solar plants. They asked if Dutex could develop it in Brazil.",
+        "steps": [
+          "Engineering and technical drawing development",
+          "Extrusion tools developed internally",
+          "Industrial production of the component"
+        ],
+        "result": "The product is now used in solar energy generation projects in Brazil."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Process",
+    "titleLine1": "How we develop",
+    "titleLine2": "industrial solutions",
+    "subtitle": "A structured technical process to transform operational needs into reliable, durable industrial solutions applicable to logistics reality.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Technical diagnosis",
+        "description": "Detailed analysis of the application, load type, operational environment and risks involved in transport, handling and storage."
+      },
+      {
+        "number": "02",
+        "title": "Engineering and design",
+        "description": "Reverse engineering or development from scratch — definition of materials, geometries and production tools according to operational needs."
+      },
+      {
+        "number": "03",
+        "title": "Production and validation",
+        "description": "Manufacturing, functional tests and delivery with quality control, traceability and compliance with industrial standards."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's talk about your project?",
+    "description": "Speak with Dutex's sales team for quotes, technical specifications or custom solutions in steel and engineering plastics."
+  },
+  "testimonials": {
+    "badge": "Trust",
+    "title": "Reliability for industrial operations",
+    "subtitle": "We serve industries with high technical requirements, where logistics failures are not an option.",
+    "items": [
+      {
+        "quote": "Dutex's cradles significantly reduced damage during coil transport. Applied engineering for our operation made all the difference — it's not an off-the-shelf product.",
+        "author": "Carlos Mendes",
+        "role": "Logistics Manager",
+        "company": "Steel Service Center"
+      },
+      {
+        "quote": "We brought a sample of an imported component and Dutex verticalized national production. We eliminated import dependency and reduced costs and delivery time.",
+        "author": "Fernanda Oliveira",
+        "role": "Process Engineering",
+        "company": "Metalmecânica Industry"
+      },
+      {
+        "quote": "Steel and plastic integration in a single supplier simplified our entire chain. Traceability, dimensional control and on-time delivery — Dutex delivers on its promise.",
+        "author": "Rafael Costa",
+        "role": "Supply Coordinator",
+        "company": "Road Equipment"
+      }
+    ],
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {n}"
+  }
+}

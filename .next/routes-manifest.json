@@ -18,31 +18,38 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
-  "staticRoutes": [
+  "dynamicRoutes": [
     {
-      "page": "/",
-      "regex": "^/(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/(?:/)?$"
+      "page": "/[locale]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)(?:/)?$"
     },
+    {
+      "page": "/[locale]/compliance",
+      "regex": "^/([^/]+?)/compliance(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/compliance(?:/)?$"
+    },
+    {
+      "page": "/[locale]/sobre",
+      "regex": "^/([^/]+?)/sobre(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/sobre(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
     {
       "page": "/_not-found",
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/compliance",
-      "regex": "^/compliance(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/compliance(?:/)?$"
-    },
-    {
-      "page": "/sobre",
-      "regex": "^/sobre(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/sobre(?:/)?$"
     }
   ],
   "dataRoutes": [],

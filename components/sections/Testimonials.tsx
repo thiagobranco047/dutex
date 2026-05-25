@@ -1,22 +1,34 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useMemo, useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
-import { testimonials } from "@/lib/data";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
+interface TestimonialItem {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
+
 export default function Testimonials() {
+  const t = useTranslations("testimonials");
+  const testimonials = useMemo(
+    () => t.raw("items") as TestimonialItem[],
+    [t]
+  );
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % testimonials.length);
-  }, []);
+  }, [testimonials.length]);
 
   const prev = useCallback(() => {
     setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  }, []);
+  }, [testimonials.length]);
 
   const visibleDesktop = [
     testimonials[current % testimonials.length],
@@ -27,14 +39,13 @@ export default function Testimonials() {
     <section id="depoimentos" className="bg-gray-light py-20 lg:py-28">
       <Container>
         <SectionHeading
-          badgeText="Confiança"
-          title="Confiabilidade para operações industriais"
-          subtitle="Atendemos indústrias com alta exigência técnica, onde falhas logísticas não são uma opção."
+          badgeText={t("badge")}
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
 
-        {/* Desktop: 2 cards */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-8">
-          {visibleDesktop.map((t, i) => (
+          {visibleDesktop.map((item, i) => (
             <Card key={`${current}-${i}`} className="p-8">
               <Quote
                 size={32}
@@ -42,18 +53,18 @@ export default function Testimonials() {
                 strokeWidth={1.5}
               />
               <blockquote className="text-base leading-relaxed text-gray-700">
-                &ldquo;{t.quote}&rdquo;
+                &ldquo;{item.quote}&rdquo;
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-                  {t.author[0]}
+                  {item.author[0]}
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-900">
-                    {t.author}
+                    {item.author}
                   </div>
                   <div className="text-xs text-gray-text">
-                    {t.role} | {t.company}
+                    {item.role} | {item.company}
                   </div>
                 </div>
               </div>
@@ -61,7 +72,6 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Mobile: 1 card */}
         <div className="lg:hidden">
           <Card className="p-6">
             <Quote
@@ -81,8 +91,7 @@ export default function Testimonials() {
                   {testimonials[current].author}
                 </div>
                 <div className="text-xs text-gray-text">
-                  {testimonials[current].role} |{" "}
-                  {testimonials[current].company}
+                  {testimonials[current].role} | {testimonials[current].company}
                 </div>
               </div>
             </div>
@@ -93,7 +102,7 @@ export default function Testimonials() {
           <button
             onClick={prev}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-border bg-white text-gray-500 hover:border-primary hover:text-primary transition-colors cursor-pointer"
-            aria-label="Depoimento anterior"
+            aria-label={t("prev")}
           >
             <ChevronLeft size={18} />
           </button>
@@ -108,7 +117,7 @@ export default function Testimonials() {
                     ? "w-6 bg-primary"
                     : "w-2 bg-gray-border hover:bg-gray-300"
                 }`}
-                aria-label={`Ir para depoimento ${i + 1}`}
+                aria-label={t("goTo", { n: i + 1 })}
               />
             ))}
           </div>
@@ -116,7 +125,7 @@ export default function Testimonials() {
           <button
             onClick={next}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-border bg-white text-gray-500 hover:border-primary hover:text-primary transition-colors cursor-pointer"
-            aria-label="Próximo depoimento"
+            aria-label={t("next")}
           >
             <ChevronRight size={18} />
           </button>

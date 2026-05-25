@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import {
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import { contactInfo } from "@/lib/data";
+import { isPhoneLine, toTelHref } from "@/lib/utils";
+import { routing, type Locale } from "@/i18n/routing";
 import {
   Shield,
   Clock,
@@ -16,85 +23,51 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Compliance & Integridade — Dutex",
-  description:
-    "A Dutex opera com tolerância zero a condutas antiéticas, assédio e discriminação. Conheça nosso programa de integridade.",
+const pillarIcons = [Shield, Clock, Lock, Users] as const;
+const channelIcons = [Phone, Mail, LayoutGrid] as const;
+
+type PillarItem = {
+  title: string;
+  description: string;
 };
 
-const pillars = [
-  {
-    icon: Shield,
-    title: "Tolerância Zero",
-    description:
-      "Nenhuma conduta de assédio moral, assédio sexual ou discriminação é tolerada — independentemente de cargo, hierarquia ou tempo de empresa.",
-  },
-  {
-    icon: Clock,
-    title: "Processo Estruturado",
-    description:
-      "Todas as denúncias são apuradas por comissão independente, com contraditório, ampla defesa e prazo máximo de 30 dias para resolução.",
-  },
-  {
-    icon: Lock,
-    title: "Sigilo e Proteção",
-    description:
-      "O denunciante pode optar pelo anonimato. Qualquer retaliação a vítimas ou testemunhas é tratada como infração autônoma e punível.",
-  },
-  {
-    icon: Users,
-    title: "Abrangência Total",
-    description:
-      "O programa vincula colaboradores, terceiros, fornecedores e representantes comerciais. A adesão é obrigatória e parte do contrato.",
-  },
-];
+type ChannelItem = {
+  title: string;
+  lines: string[];
+};
 
-const laws = [
-  "Lei 14.457/2022",
-  "Lei 14.540/2023",
-  "OIT — Conv. 190",
-  "CLT",
-  "CF / 1988",
-  "LGPD",
-];
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "compliancePage" });
 
-const channels = [
-  {
-    icon: Phone,
-    title: "Canal de Compliance",
-    lines: [
-      { text: "compliance@dutex.com.br", href: "mailto:compliance@dutex.com.br" },
-      { text: "+55 47 9168-9143", href: "tel:+554791689143" },
-    ],
-  },
-  {
-    icon: Mail,
-    title: "Canal de Denúncias",
-    lines: [
-      { text: "denuncia@dutex.com.br", href: "mailto:denuncia@dutex.com.br" },
-      { text: "Anônimo · Sigiloso · Disponível 24h" },
-    ],
-  },
-  {
-    icon: LayoutGrid,
-    title: "LGPD / Privacidade",
-    lines: [
-      { text: "privacidade@dutex.com.br", href: "mailto:privacidade@dutex.com.br" },
-      { text: "Titular de dados · Requisições LGPD" },
-    ],
-  },
-];
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
 
-const principles = [
-  "Dignidade da Pessoa Humana",
-  "Igualdade Material e Não Discriminação",
-  "Confidencialidade e Proteção ao Denunciante",
-  "Responsabilidade e Sanção Proporcional",
-  "Transparência e Governança Ética",
-  "Prevenção e Educação Permanente",
-];
+export default async function CompliancePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
 
-export default function CompliancePage() {
+  if (routing.locales.includes(locale as Locale)) {
+    setRequestLocale(locale);
+  }
+
+  const t = await getTranslations();
+
+  const pillars = t.raw("compliancePage.pillars.items") as PillarItem[];
+  const laws = t.raw("compliancePage.legal.laws") as string[];
+  const channels = t.raw("compliancePage.legal.channels") as ChannelItem[];
+  const principles = t.raw("compliancePage.principles.items") as string[];
+
   return (
     <>
       <Header />
@@ -105,23 +78,23 @@ export default function CompliancePage() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
               <div>
                 <Badge variant="white" className="mb-5">
-                  Governança Corporativa
+                  {t("compliancePage.hero.badge")}
                 </Badge>
                 <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-                  Compliance &<br />
-                  <span className="text-green-accent">Integridade</span>
+                  {t("compliancePage.hero.titleLine1")}
+                  <br />
+                  <span className="text-green-accent">
+                    {t("compliancePage.hero.titleHighlight")}
+                  </span>
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-white/55 sm:text-lg max-w-xl">
-                  A Dutex opera com tolerância zero a condutas antiéticas,
-                  assédio e discriminação. Nosso programa de integridade é
-                  condição de entrada para qualquer relação comercial ou de
-                  trabalho com a empresa.
+                  {t("compliancePage.hero.description")}
                 </p>
               </div>
               <div className="hidden lg:flex flex-col items-center gap-3 border border-green-accent/25 rounded-lg bg-primary/25 px-8 py-7 self-center justify-self-end">
                 <ShieldCheck size={40} className="text-green-accent" />
                 <span className="text-[10px] font-semibold tracking-[3px] uppercase text-green-accent">
-                  Certificado
+                  {t("compliancePage.hero.certified")}
                 </span>
                 <span className="text-lg font-bold text-white tracking-wide">
                   ISO 9001:2015
@@ -135,22 +108,24 @@ export default function CompliancePage() {
         <section className="bg-white py-20 lg:py-28">
           <Container>
             <Badge variant="green" className="mb-5">
-              Nossos Pilares
+              {t("compliancePage.pillars.badge")}
             </Badge>
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-tight mb-12">
-              Quatro fundamentos que guiam nossa conduta
+              {t("compliancePage.pillars.title")}
             </h2>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {pillars.map((pillar, i) => {
-                const Icon = pillar.icon;
+                const Icon = pillarIcons[i] ?? Shield;
                 return (
                   <div
                     key={pillar.title}
                     className="bg-white border border-gray-border border-t-[3px] border-t-primary p-7 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 transition-all duration-200 group"
                   >
                     <p className="text-[10px] font-bold tracking-[3px] uppercase text-primary mb-5">
-                      {String(i + 1).padStart(2, "0")} / pilar
+                      {t("compliancePage.pillars.counter", {
+                        n: String(i + 1).padStart(2, "0"),
+                      })}
                     </p>
                     <Icon
                       size={32}
@@ -176,21 +151,19 @@ export default function CompliancePage() {
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
               <div>
                 <Badge variant="white" className="mb-5">
-                  Base Legal
+                  {t("compliancePage.legal.badge")}
                 </Badge>
                 <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-[2.5rem] lg:leading-tight mb-5">
-                  Conformidade com a{" "}
-                  <span className="text-green-accent">legislação vigente</span>
+                  {t("compliancePage.legal.titleBefore")}{" "}
+                  <span className="text-green-accent">
+                    {t("compliancePage.legal.titleHighlight")}
+                  </span>
                 </h2>
                 <p className="text-sm leading-relaxed text-white/50 mb-3">
-                  O Programa de Integridade da Dutex é elaborado por assessoria
-                  jurídica especializada e atualizado anualmente para refletir a
-                  evolução normativa brasileira.
+                  {t("compliancePage.legal.paragraph1")}
                 </p>
                 <p className="text-sm leading-relaxed text-white/50">
-                  Fornecedores e parceiros que operam conosco aderem formalmente
-                  às nossas diretrizes éticas como condição contratual — sem
-                  exceção.
+                  {t("compliancePage.legal.paragraph2")}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-7">
                   {laws.map((law) => (
@@ -206,11 +179,11 @@ export default function CompliancePage() {
 
               <div>
                 <Badge variant="white" className="mb-5">
-                  Canais Oficiais
+                  {t("compliancePage.legal.channelsBadge")}
                 </Badge>
                 <div className="flex flex-col gap-3">
-                  {channels.map((ch) => {
-                    const Icon = ch.icon;
+                  {channels.map((ch, i) => {
+                    const Icon = channelIcons[i] ?? Phone;
                     return (
                       <div
                         key={ch.title}
@@ -226,20 +199,28 @@ export default function CompliancePage() {
                             {ch.title}
                           </h4>
                           {ch.lines.map((line) =>
-                            line.href ? (
+                            line.includes("@") ? (
                               <a
-                                key={line.text}
-                                href={line.href}
+                                key={line}
+                                href={`mailto:${line}`}
                                 className="block text-xs text-white/40 hover:text-green-accent transition-colors"
                               >
-                                {line.text}
+                                {line}
+                              </a>
+                            ) : isPhoneLine(line) ? (
+                              <a
+                                key={line}
+                                href={toTelHref(line)}
+                                className="block text-xs text-white/40 hover:text-green-accent transition-colors"
+                              >
+                                {line}
                               </a>
                             ) : (
                               <span
-                                key={line.text}
+                                key={line}
                                 className="block text-xs text-white/40 leading-relaxed"
                               >
-                                {line.text}
+                                {line}
                               </span>
                             )
                           )}
@@ -257,10 +238,10 @@ export default function CompliancePage() {
         <section className="bg-primary py-20 lg:py-28 relative overflow-hidden">
           <Container className="relative z-10">
             <Badge variant="white" className="mb-5">
-              Princípios
+              {t("compliancePage.principles.badge")}
             </Badge>
             <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-[2.5rem] lg:leading-tight mb-12">
-              A ética como fundamento operacional
+              {t("compliancePage.principles.title")}
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[2px]">
@@ -287,21 +268,20 @@ export default function CompliancePage() {
             <div className="bg-white border border-gray-border border-l-4 border-l-primary p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-1">
-                  Quer qualificar a Dutex como fornecedor?
+                  {t("compliancePage.cta.title")}
                 </h3>
                 <p className="text-sm text-gray-text">
-                  Solicite nosso pacote de credenciais — ISO 9001 + Programa de
-                  Compliance
+                  {t("compliancePage.cta.description")}
                 </p>
               </div>
               <Button
                 variant="primary"
                 size="lg"
-                href="mailto:comercial@dutex.ind.br"
+                href={`mailto:${contactInfo.email}`}
                 className="shrink-0"
               >
                 <span className="w-2 h-2 rounded-full bg-green-accent" />
-                Solicitar credenciais
+                {t("compliancePage.cta.button")}
               </Button>
             </div>
           </Container>

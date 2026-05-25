@@ -1,8 +1,10 @@
 "use client";
 
 import { X } from "lucide-react";
-import { navLinks } from "@/lib/data";
+import { useTranslations } from "next-intl";
+import { navHrefs } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -10,6 +12,10 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
+  const tA11y = useTranslations("a11y");
+
   return (
     <>
       {isOpen && (
@@ -26,25 +32,29 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-5">
-          <span className="text-lg font-bold text-white">Menu</span>
+          <span className="text-lg font-bold text-white">{tCommon("menu")}</span>
           <button
             onClick={onClose}
-            aria-label="Fechar menu"
+            aria-label={tA11y("closeMenu")}
             className="rounded-lg p-2 text-white/70 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
           >
             <X size={20} />
           </button>
         </div>
 
+        <div className="px-6 mb-4">
+          <LanguageSwitcher className="w-full justify-center" />
+        </div>
+
         <nav className="flex flex-col px-6 gap-1">
-          {navLinks.map((link) => (
+          {navHrefs.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={onClose}
               className="rounded-lg px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
             >
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
         </nav>
@@ -56,7 +66,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             href="/#contato"
             className="w-full justify-center"
           >
-            Vamos conversar!
+            {t("cta")}
           </Button>
         </div>
       </div>

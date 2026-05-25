@@ -1,0 +1,170 @@
+{
+  "hero": {
+    "badge": "Dutex Industrial",
+    "titleLine1": "Soluciones que Impulsan",
+    "titleLine2": "la Industria",
+    "subtitle": "Soluciones industriales en acero y plásticos de ingeniería para transformación de materiales, protección de cargas y eficiencia logística — desde la línea de producción hasta el destino final."
+  },
+  "about": {
+    "badge": "Acerca de Dutex",
+    "introBefore": "Dutex integra",
+    "introHighlight": "transformación de acero, plásticos de ingeniería y sistemas de protección",
+    "introAfter": "para optimizar operaciones industriales con bobinas, chapas y materiales críticos."
+  },
+  "stats": {
+    "items": [
+      { "value": "12+", "label": "Años de experiencia" },
+      { "value": "1.500+", "label": "Aplicaciones técnicas" },
+      { "value": "47+", "label": "Industrias atendidas (cadena siderúrgica)" },
+      { "value": "ZERO", "label": "Averías reportadas en 2024" }
+    ]
+  },
+  "solutions": {
+    "badge": "Nuestras Soluciones",
+    "title": "Soluciones industriales para transformación y protección",
+    "subtitle": "Dutex actúa en los dos extremos de la operación. Entrega el material transformado listo para producción. Y protege la carga desde el punto de origen hasta la línea de producción.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Transformación de Acero",
+        "description": "Acero transformado con precisión industrial — bobinas, chapas a medida, slitter y blancos en ZC, FF y FQ con espesores hasta 40mm. Materia prima lista para su producción."
+      },
+      {
+        "number": "02",
+        "title": "Plásticos de Ingeniería",
+        "description": "Componentes industriales en PP virgen o reciclado por inyección (240 a 650 ton) y extrusión. Protectores de cantos, separadores y protectores con alta absorción de impacto."
+      },
+      {
+        "number": "03",
+        "title": "Protección y Logística",
+        "description": "Cunas para bobinas de 3 a 20 toneladas, manguitos, collares, protectores elastoméricos y protectores tipo panal. Protección desde la línea de producción hasta el destino final."
+      }
+    ]
+  },
+  "whyDutex": {
+    "badge": "Diferenciales",
+    "title": "¿Por qué Dutex?",
+    "intro": "Dutex fabrica internamente con estructura completa — control total sobre calidad, plazo y personalización, sin depender de terceros. Soluciones personalizadas para cada cliente y tipo de carga.",
+    "items": [
+      {
+        "title": "Ingeniería aplicada a la operación",
+        "subtitle": "No es un producto de estantería. Cada solución está diseñada para la realidad del cliente."
+      },
+      {
+        "title": "Producción integrada acero + plástico",
+        "subtitle": "Integración vertical completa: materiales, ingeniería, operación y logística en una sola empresa."
+      },
+      {
+        "title": "Trazabilidad y control",
+        "subtitle": "Control dimensional en cada lote con certificación ISO 9001:2015."
+      },
+      {
+        "title": "Fabricación 100% propia",
+        "subtitle": "Inyección de plástico, extrusión en PP y calderería metálica — sin depender de terceros."
+      }
+    ]
+  },
+  "applications": {
+    "badge": "Ingeniería Aplicada",
+    "titleLine1": "Cuando el mercado no tiene",
+    "titleLine2": "la solución, Dutex la desarrolla.",
+    "subtitle": "Diversas soluciones de Dutex nacieron a partir de necesidades específicas de clientes industriales. La empresa analiza el problema, desarrolla la ingeniería, diseña las herramientas y fabrica internamente.",
+    "items": [
+      {
+        "id": "01",
+        "badge": "Siderurgia",
+        "title": "Líder del sector siderúrgico",
+        "subtitle": "Protector de Cantos Plástico Coextruido",
+        "description": "Un gran actor de la siderurgia nacional buscó a Dutex en busca de una solución de protección para materiales metálicos. Trajo una referencia y preguntó si sería posible desarrollar algo similar.",
+        "steps": [
+          "Análisis técnico de ingeniería inversa del producto de referencia",
+          "Desarrollo de herramientas de extrusión especializadas",
+          "Adaptación del proceso de coextrusión con tela no tejida (TNT)"
+        ],
+        "result": "El resultado fue el protector de cantos plástico coextruido con tela no tejida, hoy utilizado en las operaciones de diversos clientes. Este proyecto abrió camino para toda la línea de productos logísticos de Dutex."
+      },
+      {
+        "id": "02",
+        "badge": "Industria",
+        "title": "Gran actor industrial",
+        "subtitle": "Integración vertical de producto importado",
+        "description": "Una industria utilizaba un componente importado de Corea. Trajo una muestra y preguntó si sería posible fabricar el producto en Brasil.",
+        "steps": [
+          "Ingeniería inversa del producto importado",
+          "Desarrollo de herramientas de producción propias",
+          "Industrialización y producción nacional del componente"
+        ],
+        "result": "Dutex integró verticalmente la producción nacional de este componente, eliminando la dependencia de importación y reduciendo costos y plazos de entrega."
+      },
+      {
+        "id": "03",
+        "badge": "Energía renovable",
+        "title": "Sector de energía solar",
+        "subtitle": "Perfil especial en PP para energía solar",
+        "description": "Una empresa del sector de energía solar presentó un perfil encontrado en Europa para señalización y protección de cables en plantas solares. Preguntó si Dutex podía desarrollarlo en Brasil.",
+        "steps": [
+          "Desarrollo de la ingeniería y diseño técnico",
+          "Herramientas de extrusión desarrolladas internamente",
+          "Producción industrial del componente"
+        ],
+        "result": "El producto pasó a utilizarse en proyectos de generación de energía solar en Brasil."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Proceso",
+    "titleLine1": "Cómo desarrollamos",
+    "titleLine2": "soluciones industriales",
+    "subtitle": "Un proceso técnico estructurado para transformar necesidades operacionales en soluciones industriales confiables, duraderas y aplicables a la realidad logística.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Diagnóstico técnico",
+        "description": "Análisis detallado de la aplicación, tipo de carga, ambiente operacional y riesgos involucrados en el transporte, manipulación y almacenamiento."
+      },
+      {
+        "number": "02",
+        "title": "Ingeniería y proyecto",
+        "description": "Ingeniería inversa o desarrollo desde cero — definición de materiales, geometrías y herramientas de producción conforme a la necesidad de la operación."
+      },
+      {
+        "number": "03",
+        "title": "Producción y validación",
+        "description": "Fabricación, pruebas funcionales y entrega con control de calidad, trazabilidad y conformidad con los estándares industriales."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contacto",
+    "title": "¿Conversemos sobre su proyecto?",
+    "description": "Hable con el equipo comercial de Dutex para cotizaciones, especificaciones técnicas o soluciones personalizadas en acero y plásticos de ingeniería."
+  },
+  "testimonials": {
+    "badge": "Confianza",
+    "title": "Confiabilidad para operaciones industriales",
+    "subtitle": "Atendemos industrias con alta exigencia técnica, donde las fallas logísticas no son una opción.",
+    "items": [
+      {
+        "quote": "Las cunas de Dutex redujeron significativamente las avarias en el transporte de bobinas. La ingeniería aplicada a nuestra operación marcó toda la diferencia — no es un producto estándar.",
+        "author": "Carlos Mendes",
+        "role": "Gerente de Logística",
+        "company": "Centro de Servicio de Acero"
+      },
+      {
+        "quote": "Trajimos una muestra de un componente importado y Dutex verticalizó la producción nacional. Eliminamos la dependencia de importación y redujimos costos y plazo de entrega.",
+        "author": "Fernanda Oliveira",
+        "role": "Ingeniería de Procesos",
+        "company": "Industria Metalmecánica"
+      },
+      {
+        "quote": "La integración acero y plástico en un único proveedor simplificó toda nuestra cadena. Trazabilidad, control dimensional y entrega a tiempo — Dutex cumple lo que promete.",
+        "author": "Rafael Costa",
+        "role": "Coordinador de Suministros",
+        "company": "Implementos Rodoviarios"
+      }
+    ],
+    "prev": "Testimonio anterior",
+    "next": "Próximo testimonio",
+    "goTo": "Ir al testimonio {n}"
+  }
+}

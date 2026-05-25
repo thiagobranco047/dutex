@@ -1,7 +1,11 @@
+import { getTranslations } from "next-intl/server";
 import Container from "@/components/ui/Container";
 import { ArrowRight } from "lucide-react";
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations("hero");
+  const tCommon = await getTranslations("common");
+
   return (
     <section
       id="home"
@@ -20,34 +24,29 @@ export default function Hero() {
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-4xl text-center">
-          {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-green-accent" />
             <span className="text-sm font-medium text-white/80">
-              Dutex Industrial
+              {t("badge")}
             </span>
           </div>
 
           <h1 className="text-5xl font-medium leading-[1.15] text-white sm:text-6xl md:text-7xl lg:text-[5.25rem] lg:leading-[1.1]">
-            Soluções que movem
+            {t("titleLine1")}
             <br />
-            a indústria
+            {t("titleLine2")}
           </h1>
 
-          {/* Subtitle */}
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/55 sm:text-lg">
-            Soluções industriais em aço e plásticos de engenharia para
-            transformação de materiais, proteção de cargas e eficiência
-            logística — da linha de produção até o destino final.
+            {t("subtitle")}
           </p>
 
-          {/* CTA */}
           <div className="mt-10">
             <a
               href="#contato"
               className="inline-flex items-center gap-3 rounded-lg border border-white/25 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
-              Entrar em contato
+              {tCommon("contactUs")}
               <ArrowRight size={16} />
             </a>
           </div>

@@ -36,28 +36,28 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
-// Validate ../../app/compliance/page.tsx
+// Validate ../../app/[locale]/compliance/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/compliance">> = Specific
-  const handler = {} as typeof import("../../app/compliance/page.js")
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/compliance">> = Specific
+  const handler = {} as typeof import("../../app/[locale]/compliance/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
 }
 
-// Validate ../../app/page.tsx
+// Validate ../../app/[locale]/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
-  const handler = {} as typeof import("../../app/page.js")
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]">> = Specific
+  const handler = {} as typeof import("../../app/[locale]/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
 }
 
-// Validate ../../app/sobre/page.tsx
+// Validate ../../app/[locale]/sobre/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/sobre">> = Specific
-  const handler = {} as typeof import("../../app/sobre/page.js")
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/sobre">> = Specific
+  const handler = {} as typeof import("../../app/[locale]/sobre/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -68,6 +68,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 
 
 
+
+// Validate ../../app/[locale]/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/[locale]">> = Specific
+  const handler = {} as typeof import("../../app/[locale]/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../app/layout.tsx
 {

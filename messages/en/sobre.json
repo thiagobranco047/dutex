@@ -1,0 +1,124 @@
+{
+  "sobrePage": {
+    "meta": {
+      "title": "Who We Are — Dutex Industrial",
+      "description": "From the production line to the final destination, Dutex is the company that sees the problem before the client — and delivers the solution before the competition."
+    },
+    "hero": {
+      "badge": "About Dutex",
+      "titleBefore": "Here, solving is culture — and innovating",
+      "titleHighlight": "is an obligation.",
+      "description": "From the production line to the final destination, Dutex is the company that sees the problem before the client — and delivers the solution before the competition.",
+      "pillars": ["Solve.", "Innovate.", "Deliver."],
+      "pillarLabel": "Pillar {n}"
+    },
+    "history": {
+      "badge": "Our History",
+      "titleBefore": "A company born from",
+      "titleHighlight": "friendship",
+      "titleAfter": ", resilience and the will to create.",
+      "paragraphs": [
+        "It all began in the 2000s, when Carlos Garcez, then a sales representative, met Oebier dos Santos, responsible for packaging approval at Tigre Tubos e Conexões. Many trips, many visits — and a friendship that became a partnership.",
+        "Oebier introduced his brother Alexandre dos Santos, and the trio was formed. Between 2008 and 2010, Alexandre established residence in Porto Velho to serve Camargo Corrêa projects on the Rio Madeira. Carlos organized purchases from the South. Oebier joined the trips. The idea of entrepreneurship grew with every conversation.",
+        "In 2010, Carlos was diagnosed with lymphoma. Two years of treatment. But the idea never stopped. At a dinner during treatment, Carlos presented the project to his friend Robson, who joined the group as an investor.",
+        "In 2013, Dutex Indústria Plástica was born. In 2018, Carlos, Alexandre and Oebier acquired 100% of the company — and the story continues."
+      ],
+      "quote": "While I was in treatment, I thought: if this passes, I'll build something that lasts. Dutex is that — built against all odds.",
+      "quoteAuthor": "Carlos Garcez",
+      "quoteRole": "Co-founder & Partner, Dutex Industrial",
+      "timelineBadge": "Timeline",
+      "timeline": [
+        { "year": "2000s", "title": "The trio forms", "description": "Carlos Garcez meets Oebier dos Santos at Tigre. Oebier introduces his brother Alexandre. Three friends, one shared calling." },
+        { "year": "2008 – 2010", "title": "Porto Velho & Rio Madeira", "description": "Alexandre moves to Rondônia to serve Camargo Corrêa projects. Carlos develops suppliers in the South. The entrepreneurship project takes shape." },
+        { "year": "2010 – 2012", "title": "Diagnosis & Resilience", "description": "Carlos receives a lymphoma diagnosis. Two years of treatment. The idea doesn't stop — at a dinner, Robson is introduced to the project and decides to invest." },
+        { "year": "2013", "title": "Dutex is born", "description": "After many meetings, Dutex Indústria Plástica is founded in Garuva, SC. From the idea gestated in Porto Velho to the first injection machine turned on." },
+        { "year": "2018", "title": "100% founder-owned", "description": "Carlos, Alexandre and Oebier acquire 100% of the company. Dutex becomes Dutex Industrial — integrated steel, plastic and logistics." },
+        { "year": "Today", "title": "And the story continues…", "description": "ISO 9001:2015, closed loop with Brazil's largest steel companies, and a new expansion phase underway." }
+      ]
+    },
+    "culture": {
+      "badge": "Dutex Culture 2025",
+      "titleBefore": "What we believe — and how that",
+      "titleHighlight": "defines every delivery.",
+      "intro": "Eight beliefs that aren't on a wall. They're on the factory floor, in client conversations and in every technical decision.",
+      "beliefs": [
+        { "title": "Solve before selling", "description": "Solving is the priority — not the product. We eliminate risk, reduce loss, improve operations. If it doesn't solve, it doesn't serve." },
+        { "title": "Efficiency over ego", "description": "Simple process, fast decisions, zero noise. Efficiency operates first; ego stays outside." },
+        { "title": "Trust in the details", "description": "From PP to steel, everything follows standards. ISO 9001:2015 isn't a badge — it's daily discipline." },
+        { "title": "Clarity always wins", "description": "Predictability over guesswork. We explain, align, deliver. Always." },
+        { "title": "Innovate to solve", "description": "Innovation isn't fluff. It's practice: real pain → real technical solution. Engineering, prototype, test, validation." },
+        { "title": "Responsibility for impact", "description": "Every piece protects people, avoids cost, improves operations. The impact exists — and the team knows it." },
+        { "title": "Partnership over transaction", "description": "Client, supplier, carrier, operator. We work together. We win together." },
+        { "title": "Growth with courage", "description": "Better before bigger. Courage to see what the industry will only notice tomorrow." }
+      ]
+    },
+    "mvv": {
+      "badge": "Purpose",
+      "title": "Mission, Vision & Values",
+      "missionLabel": "Mission",
+      "mission": "To provide innovative solutions, products and services, while committing to society and the environment.",
+      "visionLabel": "Vision",
+      "vision": "Expand the portfolio of products, services and projects to achieve planned revenue, with a focus on profitability, sustainability and quality of work life.",
+      "valuesLabel": "Values",
+      "values": ["Socio-environmental responsibility", "Quality", "Empathy", "Optimism", "Commitment", "Harmony"],
+      "qualityPolicyTitle": "Quality Policy",
+      "qualityPolicy": "Dutex is committed to society, the environment and the quality of its products and services — meeting applicable requirements and seeking continuous improvement in every process."
+    },
+    "esg": {
+      "badge": "ESG & Circularity",
+      "titleBefore": "Their steel becomes a solution that protects…",
+      "titleHighlight": "their steel.",
+      "paragraph1": "Dutex operates in a closed loop with Brazil's largest steel companies. We buy their plastic waste, transform it into protection and logistics products, and return it as a solution — reducing emissions, eliminating landfill and generating efficiency across the entire chain.",
+      "paragraph2": "The vast majority of our logistics products use recycled PP. Where the technical application requires greater strength or purity, we use virgin PP — because load performance and safety are non-negotiable.",
+      "calloutLabel": "Real industrial circularity:",
+      "callout": "client waste becomes Dutex raw material — which becomes a product that returns to the client.",
+      "stats": [
+        { "value": "+70%", "label": "Mostly Recycled", "description": "Most logistics products use recycled PP. Virgin PP is applied where the technical specification requires it." },
+        { "value": "−1.2t", "label": "CO₂ per ton", "description": "Replacing virgin PP with recycled avoids up to 1.2 tCO₂ per processed ton." },
+        { "value": "10×", "label": "Service life — metal pallet", "description": "Dutex metal pallets vs. disposable wooden pallet. Less waste, lower cost." },
+        { "value": "0", "label": "Burrs to landfill", "description": "Extrusion scraps and trim are reprocessed internally — zero productive waste." }
+      ],
+      "circularTitle": "Dutex Circular®",
+      "circularDescription": "Industrial circularity program in development — official report with major steel companies and partner industries · 2025",
+      "certificationBadge": "In certification",
+      "footnote": "* CO₂ data based on global reference factors (virgin PP ≈ 1.7 tCO₂/t · recycled PP ≈ 0.5 tCO₂/t). Circularity report with audited data in preparation."
+    },
+    "cases": {
+      "badge": "Real results",
+      "title": "Engineering that solves. Projects that prove it.",
+      "intro": "Every project starts with a real problem. The result is always the same: less damage, lower cost, greater operational reliability.",
+      "challengeLabel": "Challenge",
+      "solutionLabel": "Dutex Solution",
+      "resultLabel": "Result",
+      "footnote": "* Cases presented anonymously due to client confidentiality policy.",
+      "items": [
+        {
+          "tag": "Steel industry · Coil Protection",
+          "challenge": "Recurring damage to coil edges during internal movement and transport — generating rework and scrap on the production line.",
+          "solution": "Development of co-extruded corner protector with TNT reinforcement, specified for the client's coil weight and format.",
+          "result": "Significant reduction in logistics damage and greater stability in stacking."
+        },
+        {
+          "tag": "Steel industry · Coil Logistics",
+          "challenge": "Use of disposable wooden cradles for heavy coil support — high recurring cost, low durability and waste generation.",
+          "solution": "Design and manufacture of custom reusable metal cradles, sized for coils from 3 to 20 tons.",
+          "result": "Service life up to 10× longer than the previous solution, with elimination of recurring disposal cost."
+        },
+        {
+          "tag": "Metalworking · Steel Processing",
+          "challenge": "Need for custom sheets and blanks with ZC/FF/FQ surface quality — short lead time and strict technical specification.",
+          "solution": "Own slitter and cross-cutting, integrated production of blanks to the required standard, with traceability and quality inspection.",
+          "result": "On-time delivery with certified material — no intermediary, no rework."
+        }
+      ]
+    },
+    "cta": {
+      "badge": "Next step",
+      "titleLine1": "Have a challenge in your",
+      "titleLine2": "industrial operation?",
+      "description": "Our engineering evaluates your application and proposes the ideal technical solution — at no cost, no commitment.",
+      "requestDiagnosis": "Request technical diagnosis",
+      "talkToSales": "Talk to sales"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "compliancePage": {
+    "meta": {
+      "title": "Compliance & Integrity — Dutex",
+      "description": "Dutex operates with zero tolerance for unethical conduct, harassment and discrimination. Learn about our integrity program."
+    },
+    "hero": {
+      "badge": "Corporate Governance",
+      "titleLine1": "Compliance &",
+      "titleHighlight": "Integrity",
+      "description": "Dutex operates with zero tolerance for unethical conduct, harassment and discrimination. Our integrity program is a prerequisite for any commercial or employment relationship with the company.",
+      "certified": "Certified"
+    },
+    "pillars": {
+      "badge": "Our Pillars",
+      "title": "Four foundations that guide our conduct",
+      "counter": "{n} / pillar",
+      "items": [
+        {
+          "title": "Zero Tolerance",
+          "description": "No conduct involving moral harassment, sexual harassment or discrimination is tolerated — regardless of position, hierarchy or tenure."
+        },
+        {
+          "title": "Structured Process",
+          "description": "All reports are investigated by an independent commission, with due process, full defense and a maximum 30-day resolution period."
+        },
+        {
+          "title": "Confidentiality and Protection",
+          "description": "The reporter may choose anonymity. Any retaliation against victims or witnesses is treated as an independent offense and is punishable."
+        },
+        {
+          "title": "Full Scope",
+          "description": "The program binds employees, third parties, suppliers and sales representatives. Adherence is mandatory and part of the contract."
+        }
+      ]
+    },
+    "legal": {
+      "badge": "Legal Basis",
+      "titleBefore": "Compliance with",
+      "titleHighlight": "applicable legislation",
+      "paragraph1": "Dutex's Integrity Program is developed by specialized legal counsel and updated annually to reflect the evolution of Brazilian regulations.",
+      "paragraph2": "Suppliers and partners who work with us formally adhere to our ethical guidelines as a contractual condition — without exception.",
+      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "ILO — Conv. 190", "CLT", "CF / 1988", "GDPR"],
+      "channelsBadge": "Official Channels",
+      "channels": [
+        {
+          "title": "Compliance Channel",
+          "lines": ["compliance@dutex.com.br", "+55 47 9168-9143"]
+        },
+        {
+          "title": "Reporting Channel",
+          "lines": ["denuncia@dutex.com.br", "Anonymous · Confidential · Available 24h"]
+        },
+        {
+          "title": "GDPR / Privacy",
+          "lines": ["privacidade@dutex.com.br", "Data subject · GDPR requests"]
+        }
+      ]
+    },
+    "principles": {
+      "badge": "Principles",
+      "title": "Ethics as an operational foundation",
+      "items": [
+        "Human Dignity",
+        "Material Equality and Non-Discrimination",
+        "Confidentiality and Whistleblower Protection",
+        "Responsibility and Proportional Sanction",
+        "Transparency and Ethical Governance",
+        "Prevention and Ongoing Education"
+      ]
+    },
+    "cta": {
+      "title": "Want to qualify Dutex as a supplier?",
+      "description": "Request our credentials package — ISO 9001 + Compliance Program",
+      "button": "Request credentials"
+    }
+  }
+}

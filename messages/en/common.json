@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Dutex — Solutions Powering Industry",
+    "description": "Technical solutions in steel and engineering plastics for load protection, logistics efficiency and reduction of operational risks.",
+    "keywords": "Dutex,industrial solutions,load protection,logistics,B2B,steel,polymers"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "solutions": "Solutions",
+    "whyDutex": "Why Dutex?",
+    "applications": "Applications",
+    "process": "Process",
+    "contact": "Contact",
+    "cta": "Let's talk!"
+  },
+  "footer": {
+    "newsletterTitle": "Receive our technical materials",
+    "newsletterDescription": "Technical updates, catalogs and institutional content from Dutex delivered directly to your email.",
+    "emailPlaceholder": "Your best email",
+    "subscribe": "Subscribe",
+    "sending": "Sending...",
+    "subscribeSuccess": "Subscription successful!",
+    "subscribeError": "Error subscribing. Please try again.",
+    "newsletterSubject": "New newsletter subscription — Dutex Website",
+    "description": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency — from the production line to the final destination.",
+    "company": "Company",
+    "followUs": "Follow us",
+    "allSocial": "All social media",
+    "contactDutex": "Contact Dutex",
+    "speakSpecialist": "Speak with a specialist",
+    "complianceChannel": "Compliance Channel",
+    "privacy": "GDPR / Privacy",
+    "copyright": "© 2026 Dutex. All rights reserved.",
+    "nationalProduction": "National industrial production | ISO 9001:2015",
+    "credits": "Lab. 334 Marketing"
+  },
+  "common": {
+    "brand": "Dutex",
+    "brandIndustrial": "Dutex Industrial",
+    "learnAboutUs": "Learn about our company",
+    "compliance": "Compliance",
+    "contactUs": "Contact us",
+    "backToTop": "Back to top",
+    "whatsapp": "WhatsApp",
+    "commercialEmail": "Commercial email",
+    "menu": "Menu"
+  },
+  "whatsapp": {
+    "generalMessage": "Hello! I would like to learn more about Dutex solutions.",
+    "diagnosisMessage": "Hello Dutex, I would like a technical diagnosis",
+    "ariaLabel": "Contact us on WhatsApp"
+  },
+  "a11y": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "facade": "Dutex building facade",
+    "viewCase": "View case {id}: {title}",
+    "videoPlayPause": "Pause or play video — click on the video area",
+    "closeChapter": "Close chapter information",
+    "videoChapters": "Video chapters",
+    "chapterLabel": "Chapter {id}",
+    "videoUnsupported": "Your browser does not support HTML5 video."
+  }
+}

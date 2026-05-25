@@ -1,20 +1,28 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { solutions } from "@/lib/data";
+import { solutionImages } from "@/lib/data";
 
-export default function Solutions() {
+export default async function Solutions() {
+  const t = await getTranslations("solutions");
+  const items = t.raw("items") as {
+    number: string;
+    title: string;
+    description: string;
+  }[];
+
   return (
     <section id="solucoes" className="bg-gray-light py-20 lg:py-28">
       <Container>
         <SectionHeading
-          badgeText="Nossas soluções"
-          title="Soluções industriais para transformação e proteção"
-          subtitle="A Dutex atua nas duas pontas da operação. Entrega o material transformado pronto para produção. E protege a carga do ponto de origem até a linha de produção."
+          badgeText={t("badge")}
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          {solutions.map((solution) => (
+          {items.map((solution, index) => (
             <div key={solution.number}>
               <span className="text-sm font-bold text-green-accent">
                 {solution.number}
@@ -28,7 +36,7 @@ export default function Solutions() {
 
               <div className="mt-6 relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-200">
                 <Image
-                  src={solution.image}
+                  src={solutionImages[index]}
                   alt={solution.title}
                   fill
                   className="object-cover"

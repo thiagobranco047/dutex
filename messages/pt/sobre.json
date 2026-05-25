@@ -1,0 +1,124 @@
+{
+  "sobrePage": {
+    "meta": {
+      "title": "Quem Somos — Dutex Industrial",
+      "description": "Da linha de produção ao destino final, a Dutex é a empresa que enxerga o problema antes do cliente — e entrega a solução antes da concorrência."
+    },
+    "hero": {
+      "badge": "Sobre a Dutex",
+      "titleBefore": "Aqui, resolver é cultura — e inovar",
+      "titleHighlight": "é obrigação.",
+      "description": "Da linha de produção ao destino final, a Dutex é a empresa que enxerga o problema antes do cliente — e entrega a solução antes da concorrência.",
+      "pillars": ["Resolver.", "Inovar.", "Entregar."],
+      "pillarLabel": "Pilar {n}"
+    },
+    "history": {
+      "badge": "Nossa História",
+      "titleBefore": "Uma empresa nascida da",
+      "titleHighlight": "amizade",
+      "titleAfter": ", da superação e da vontade de criar.",
+      "paragraphs": [
+        "Tudo começou nos anos 2000, quando Carlos Garcez, então representante comercial, conheceu Oebier dos Santos, responsável pela homologação de embalagens na Tigre Tubos e Conexões. Muitas viagens, muitas visitas — e uma amizade que virou sociedade.",
+        "Oebier apresentou seu irmão Alexandre dos Santos, e a trinca estava formada. Entre 2008 e 2010, Alexandre firmou residência em Porto Velho para atender obras da Camargo Corrêa no Rio Madeira. Carlos organizava as compras do Sul. Oebier participava das viagens. A ideia de empreender crescia a cada conversa.",
+        "Em 2010, Carlos recebeu o diagnóstico de linfoma. Dois anos de tratamento. Mas a ideia nunca parou. Numa janta durante o tratamento, Carlos apresentou o projeto ao amigo Robson, que se juntou ao grupo como investidor.",
+        "Em 2013, a Dutex Indústria Plástica nasceu. Em 2018, Carlos, Alexandre e Oebier adquiriram 100% da empresa — e a história continua."
+      ],
+      "quote": "Enquanto estava em tratamento, eu pensava: se isso passar, vou construir algo que dure. A Dutex é isso — construída contra todas as probabilidades.",
+      "quoteAuthor": "Carlos Garcez",
+      "quoteRole": "Co-fundador & Sócio, Dutex Industrial",
+      "timelineBadge": "Linha do Tempo",
+      "timeline": [
+        { "year": "Anos 2000", "title": "A trinca se forma", "description": "Carlos Garcez conhece Oebier dos Santos na Tigre. Oebier apresenta seu irmão Alexandre. Três amigos, uma vocação em comum." },
+        { "year": "2008 – 2010", "title": "Porto Velho & Rio Madeira", "description": "Alexandre parte para Rondônia para atender obras da Camargo Corrêa. Carlos desenvolve fornecedores do Sul. O projeto de empreender ganha forma." },
+        { "year": "2010 – 2012", "title": "Diagnóstico & Superação", "description": "Carlos recebe diagnóstico de linfoma. Dois anos de tratamento. A ideia não para — numa janta, Robson é apresentado ao projeto e decide investir." },
+        { "year": "2013", "title": "Dutex nasce", "description": "Após muitas reuniões, a Dutex Indústria Plástica é fundada em Garuva, SC. Da ideia gestada em Porto Velho à primeira injetora ligada." },
+        { "year": "2018", "title": "100% dos fundadores", "description": "Carlos, Alexandre e Oebier adquirem 100% da empresa. A Dutex se torna Dutex Industrial — aço, plástico e logística integrados." },
+        { "year": "Hoje", "title": "E a história continua…", "description": "ISO 9001:2015, ciclo fechado com as maiores siderúrgicas do Brasil, e uma nova fase de expansão em curso." }
+      ]
+    },
+    "culture": {
+      "badge": "Cultura Dutex 2025",
+      "titleBefore": "O que acreditamos — e como isso",
+      "titleHighlight": "define cada entrega.",
+      "intro": "Oito crenças que não estão num quadro. Estão no chão de fábrica, na conversa com o cliente e em cada decisão técnica.",
+      "beliefs": [
+        { "title": "Resolver antes de vender", "description": "Resolver é prioridade — não o produto. Eliminamos risco, reduzimos perda, melhoramos operação. Se não resolve, não serve." },
+        { "title": "Eficiência acima de ego", "description": "Processo simples, decisão rápida, zero ruído. Eficiência opera primeiro; ego fica do lado de fora." },
+        { "title": "Confiança no detalhe", "description": "Do PP ao aço, tudo segue padrão. ISO 9001:2015 não é selo — é disciplina diária." },
+        { "title": "Clareza sempre vence", "description": "Previsibilidade acima de achismo. Explicamos, alinhamos, entregamos. Sempre." },
+        { "title": "Inovar para resolver", "description": "Inovação não é firula. É prática: dor real → solução técnica real. Engenharia, protótipo, teste, validação." },
+        { "title": "Responsabilidade pelo impacto", "description": "Cada peça protege gente, evita custo, melhora operações. O impacto existe — e a equipe sabe disso." },
+        { "title": "Parceria acima de transação", "description": "Cliente, fornecedor, transportadora, operador. Trabalhamos juntos. Ganhamos juntos." },
+        { "title": "Crescimento com coragem", "description": "Melhor antes de maior. Coragem para enxergar o que a indústria vai perceber só amanhã." }
+      ]
+    },
+    "mvv": {
+      "badge": "Propósito",
+      "title": "Missão, Visão & Valores",
+      "missionLabel": "Missão",
+      "mission": "Fornecer soluções, produtos e serviços inovadores, enquanto nos comprometemos com a sociedade e o meio ambiente.",
+      "visionLabel": "Visão",
+      "vision": "Ampliar o portfólio de produtos, serviços e projetos para atingir o faturamento planejado, com foco em rentabilidade, sustentabilidade e qualidade de vida no trabalho.",
+      "valuesLabel": "Valores",
+      "values": ["Responsabilidade socioambiental", "Qualidade", "Empatia", "Otimismo", "Compromisso", "Harmonia"],
+      "qualityPolicyTitle": "Política da Qualidade",
+      "qualityPolicy": "A Dutex é comprometida com a sociedade, o meio ambiente e a qualidade de seus produtos e serviços — cumprindo com os requisitos aplicáveis e buscando melhoria contínua em cada processo."
+    },
+    "esg": {
+      "badge": "ESG & Circularidade",
+      "titleBefore": "O aço deles vira solução que protege…",
+      "titleHighlight": "o aço deles.",
+      "paragraph1": "A Dutex opera num ciclo fechado com as maiores siderúrgicas do Brasil. Compramos resíduos plásticos deles, transformamos em produtos de proteção e logística, e devolvemos como solução — reduzindo emissões, eliminando aterro e gerando eficiência na cadeia inteira.",
+      "paragraph2": "A grande maioria dos nossos produtos logísticos utiliza PP reciclado. Onde a aplicação técnica exige maior resistência ou pureza, utilizamos PP virgem — porque performance e segurança da carga não se negociam.",
+      "calloutLabel": "Circularidade industrial real:",
+      "callout": "resíduo do cliente vira matéria-prima Dutex — que vira produto que volta para o cliente.",
+      "stats": [
+        { "value": "+70%", "label": "Majoritariamente Reciclado", "description": "A maior parte dos produtos logísticos usa PP reciclado. PP virgem é aplicado onde a especificação técnica exige." },
+        { "value": "−1,2t", "label": "CO₂ por tonelada", "description": "Substituição de PP virgem por reciclado evita até 1,2 tCO₂ por tonelada processada." },
+        { "value": "10×", "label": "Vida útil — palete metálico", "description": "Paletes metálicos Dutex vs. palete de madeira descartável. Menos resíduo, menos custo." },
+        { "value": "0", "label": "Rebarbas para aterro", "description": "Sobras de extrusão e refile são reprocessados internamente — zero descarte produtivo." }
+      ],
+      "circularTitle": "Dutex Circular®",
+      "circularDescription": "Programa de circularidade industrial em desenvolvimento — relatório oficial com as principais siderúrgicas e indústrias parceiras · 2025",
+      "certificationBadge": "Em certificação",
+      "footnote": "* Dados de CO₂ baseados em fatores globais de referência (PP virgem ≈ 1,7 tCO₂/t · PP reciclado ≈ 0,5 tCO₂/t). Relatório de circularidade com dados auditados em elaboração."
+    },
+    "cases": {
+      "badge": "Resultados reais",
+      "title": "Engenharia que resolve. Projetos que provam.",
+      "intro": "Cada projeto começa com um problema real. O resultado é sempre o mesmo: menos dano, menos custo, mais confiabilidade operacional.",
+      "challengeLabel": "Desafio",
+      "solutionLabel": "Solução Dutex",
+      "resultLabel": "Resultado",
+      "footnote": "* Cases apresentados de forma anônima por política de confidencialidade com clientes.",
+      "items": [
+        {
+          "tag": "Siderurgia · Proteção de Bobinas",
+          "challenge": "Avarias recorrentes em bordas de bobinas durante movimentação interna e transporte — gerando retrabalho e refugo na linha de produção.",
+          "solution": "Desenvolvimento de cantoneira coextrusada com reforço em TNT, especificada para o peso e formato das bobinas do cliente.",
+          "result": "Redução significativa de danos logísticos e maior estabilidade no empilhamento."
+        },
+        {
+          "tag": "Siderurgia · Logística de Bobinas",
+          "challenge": "Uso de berços de madeira descartáveis para apoio de bobinas pesadas — alto custo recorrente, baixa durabilidade e geração de resíduo.",
+          "solution": "Projeto e fabricação de berços metálicos reutilizáveis sob medida, dimensionados para bobinas de 3 a 20 toneladas.",
+          "result": "Vida útil até 10× maior que a solução anterior, com eliminação de custo recorrente de descarte."
+        },
+        {
+          "tag": "Metalmecânica · Transformação de Aço",
+          "challenge": "Necessidade de chapas e blanks sob medida com qualidade de superfície ZC/FF/FQ — prazo curto e especificação técnica rígida.",
+          "solution": "Slitter e corte transversal próprios, produção integrada de blanks no padrão exigido, com rastreabilidade e inspeção de qualidade.",
+          "result": "Entrega no prazo com material certificado — sem intermediário, sem retrabalho."
+        }
+      ]
+    },
+    "cta": {
+      "badge": "Próximo passo",
+      "titleLine1": "Tem um desafio na sua",
+      "titleLine2": "operação industrial?",
+      "description": "Nossa engenharia avalia sua aplicação e propõe a solução técnica ideal — sem custo, sem compromisso.",
+      "requestDiagnosis": "Solicitar diagnóstico técnico",
+      "talkToSales": "Falar com o comercial"
+    }
+  }
+}

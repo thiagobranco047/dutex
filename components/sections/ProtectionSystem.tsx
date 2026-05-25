@@ -1,10 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
-import { protectionChapters, type ProtectionChapter } from "@/lib/protectionSystemChapters";
+import { protectionChapterTimes } from "@/lib/data";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+interface ProtectionChapter {
+  id: string;
+  startTime: number;
+  title: string;
+  description: string;
+}
 
 function activeChapterIndex(currentTime: number, chapters: ProtectionChapter[]): number {
   if (chapters.length === 0) return -1;
@@ -20,6 +28,22 @@ function activeChapterIndex(currentTime: number, chapters: ProtectionChapter[]):
 }
 
 export default function ProtectionSystem() {
+  const t = useTranslations("protection");
+  const tChapters = useTranslations("protectionChapters");
+  const tA11y = useTranslations("a11y");
+
+  const protectionChapters = useMemo(() => {
+    const items = tChapters.raw("items") as {
+      id: string;
+      title: string;
+      description: string;
+    }[];
+    return items.map((item, index) => ({
+      ...item,
+      startTime: protectionChapterTimes[index]?.startTime ?? 0,
+    }));
+  }, [tChapters]);
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const [popupChapter, setPopupChapter] = useState<ProtectionChapter | null>(null);
   const [highlightIndex, setHighlightIndex] = useState(-1);
@@ -28,7 +52,7 @@ export default function ProtectionSystem() {
     const el = videoRef.current;
     if (!el) return;
     setHighlightIndex(activeChapterIndex(el.currentTime, protectionChapters));
-  }, []);
+  }, [protectionChapters]);
 
   const onTimeUpdate = useCallback(() => {
     syncHighlight();
@@ -71,17 +95,14 @@ export default function ProtectionSystem() {
             id="protection-system-heading"
             className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-[2.5rem] lg:leading-tight"
           >
-            Proteção e transporte de bobinas
+            {t("title")}
           </h2>
           <p className="text-sm leading-relaxed text-gray-text sm:text-base lg:pt-1">
-            Visualize, em 3D, como as soluções metálicas e elastoméricas da
-            Dutex atuam na proteção de bobinas durante o transporte, manuseio e
-            armazenamento em operações industriais críticas.
+            {t("description")}
           </p>
         </div>
       </Container>
 
-      {/* Vídeo em largura total da viewport; capítulos e popup sobrepostos */}
       <div
         className="relative mt-12 w-screen max-w-[100vw] bg-dark-deep lg:mt-16"
         style={{ marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
@@ -100,13 +121,13 @@ export default function ProtectionSystem() {
               src="/videos/video-protecao-bobinas-dutex.webm"
               type="video/webm"
             />
-            Seu navegador não suporta vídeo HTML5.
+            {tA11y("videoUnsupported")}
           </video>
 
           <button
             type="button"
             className="absolute inset-0 z-10 cursor-pointer border-0 bg-transparent"
-            aria-label="Pausar ou reproduzir vídeo — clique na área do vídeo"
+            aria-label={tA11y("videoPlayPause")}
             onClick={togglePlayPause}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -116,7 +137,6 @@ export default function ProtectionSystem() {
             }}
           />
 
-          {/* Legibilidade da faixa inferior */}
           <div
             className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 via-black/45 to-transparent"
             aria-hidden
@@ -133,7 +153,7 @@ export default function ProtectionSystem() {
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-green-accent-dark">
-                      Capítulo {popupChapter.id}
+                      {tA11y("chapterLabel", { id: popupChapter.id })}
                     </p>
                     <h3
                       id="protection-popup-title"
@@ -146,7 +166,7 @@ export default function ProtectionSystem() {
                     type="button"
                     onClick={() => setPopupChapter(null)}
                     className="shrink-0 rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-200 hover:text-gray-900"
-                    aria-label="Fechar informações do capítulo"
+                    aria-label={tA11y("closeChapter")}
                   >
                     <X size={20} />
                   </button>
@@ -160,7 +180,7 @@ export default function ProtectionSystem() {
             <div
               className="flex w-full max-w-[1120px] overflow-x-auto rounded-lg border border-white/25 bg-black/35 shadow-lg backdrop-blur-md"
               role="tablist"
-              aria-label="Capítulos do vídeo"
+              aria-label={tA11y("videoChapters")}
             >
               {protectionChapters.map((chapter, index) => {
                 const isActive = index === highlightIndex;
@@ -186,8 +206,7 @@ export default function ProtectionSystem() {
               })}
             </div>
             <p className="pointer-events-none max-w-3xl px-2 text-center text-xs leading-relaxed text-white sm:text-sm">
-              Reproduza o vídeo do início ao fim ou selecione um capítulo para ir
-              direto ao trecho e abrir os detalhes técnicos.
+              {t("instructions")}
             </p>
           </div>
         </div>

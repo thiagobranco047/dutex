@@ -1,0 +1,76 @@
+{
+  "protection": {
+    "title": "Protección y Transporte de Bobinas",
+    "description": "Visualice, en 3D, cómo las soluciones metálicas y elastoméricas de Dutex actúan en la protección de bobinas durante el transporte, manipulación y almacenamiento en operaciones industriales críticas.",
+    "instructions": "Reproduzca el video de inicio a fin o seleccione un capítulo para ir directamente al segmento y abrir los detalles técnicos."
+  },
+  "protectionChapters": {
+    "items": [
+      {
+        "id": "00",
+        "title": "Apertura",
+        "description": "Introducción a la línea de protección Dutex: visión general del video, transición entre escenarios 3D y lo que verá a continuación — de la línea metálica a la línea plástica, componente a componente."
+      },
+      {
+        "id": "01",
+        "title": "Línea Metálica",
+        "description": "Familia de componentes en acero para cunas, refuerzos y protección estructural de la bobina: alta rigidez, estandarización Dutex y compatibilidad con amarre y movimiento en ambientes industriales exigentes."
+      },
+      {
+        "id": "02",
+        "title": "Protector de Cantos Plástico 70×40 mm",
+        "description": "Perfil en polímero en dimensiones 70×40 mm para amortiguar impactos y preservar bordes externos durante transporte y almacenamiento, sin marcar ni contaminar el material enrollado."
+      },
+      {
+        "id": "03",
+        "title": "Chapa metálica",
+        "description": "Elemento plano de acero que refuerza zonas de apoyo o cierre, distribuyendo cargas puntuales y contribuyendo a la estabilidad geométrica del conjunto en la bobina."
+      },
+      {
+        "id": "04",
+        "title": "Protector de cantos metálico plegado",
+        "description": "Protector de cantos en chapa con pliegues que elevan el momento de inercia y la resistencia a torsión: protección de esquinas con menos peso muerto y mejor aprovechamiento del acero."
+      },
+      {
+        "id": "05",
+        "title": "Manguito en acero",
+        "description": "Manga metálica que envuelve tramos sensibles del núcleo o del eje efectivo, reduciendo riesgo de aplastamiento, desgaste por fricción y contaminación en la manipulación con equipos."
+      },
+      {
+        "id": "06",
+        "title": "Protector tubular",
+        "description": "Componente tubular que circunda o apoya la periferia de la bobina, evitando deformaciones locales y ofreciendo una superficie de contención continua durante rodado y fijación."
+      },
+      {
+        "id": "07",
+        "title": "Línea Plástica",
+        "description": "Conjunto de soluciones en plásticos de ingeniería para absorción de impacto, sellado ligero y protección superficial — complementario a la línea metálica en la misma filosofía de proyecto Dutex."
+      },
+      {
+        "id": "08",
+        "title": "Protector de Cantos Plástico 70×40 mm",
+        "description": "Refuerzo de borde en formato 70×40 mm aplicado en nueva configuración en el video: encaje pensado para diferentes diámetros y alturas de paquete, manteniendo el mismo perfil de protección elastomérica."
+      },
+      {
+        "id": "09",
+        "title": "Manta de espuma",
+        "description": "Capa de espuma técnica que uniformiza presiones de contacto, absorbe vibraciones en transporte y protege acabados sensibles de la cinta o metales nobles contra microaverías."
+      },
+      {
+        "id": "10",
+        "title": "Protector de Cantos Plástico 135×70 mm",
+        "description": "Perfil mayor (135×70 mm) para vanos y radios mayores: cubre una franja más amplia del lateral de la bobina, ideal cuando el empaquetado exige mayor área de distribución de impacto."
+      },
+      {
+        "id": "11",
+        "title": "Anillo cartola",
+        "description": "Anillo con geometría característica de 'cartola' para proteger caras o collares de la bobina, centralizar esfuerzos y facilitar alineación con cinchas, tapas o dispositivos de izaje."
+      },
+      {
+        "id": "12",
+        "title": "Cuna individual",
+        "description": "Soporte dedicado a la bobina de forma aislada: posicionamiento estable, menor riesgo de contacto bobina a bobina y operación más segura en carga, descarga y apilamiento controlado."
+      }
+    ]
+  }
+}

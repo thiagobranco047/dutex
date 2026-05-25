@@ -1,0 +1,78 @@
+{
+  "compliancePage": {
+    "meta": {
+      "title": "Compliance & Integridade — Dutex",
+      "description": "A Dutex opera com tolerância zero a condutas antiéticas, assédio e discriminação. Conheça nosso programa de integridade."
+    },
+    "hero": {
+      "badge": "Governança Corporativa",
+      "titleLine1": "Compliance &",
+      "titleHighlight": "Integridade",
+      "description": "A Dutex opera com tolerância zero a condutas antiéticas, assédio e discriminação. Nosso programa de integridade é condição de entrada para qualquer relação comercial ou de trabalho com a empresa.",
+      "certified": "Certificado"
+    },
+    "pillars": {
+      "badge": "Nossos Pilares",
+      "title": "Quatro fundamentos que guiam nossa conduta",
+      "counter": "{n} / pilar",
+      "items": [
+        {
+          "title": "Tolerância Zero",
+          "description": "Nenhuma conduta de assédio moral, assédio sexual ou discriminação é tolerada — independentemente de cargo, hierarquia ou tempo de empresa."
+        },
+        {
+          "title": "Processo Estruturado",
+          "description": "Todas as denúncias são apuradas por comissão independente, com contraditório, ampla defesa e prazo máximo de 30 dias para resolução."
+        },
+        {
+          "title": "Sigilo e Proteção",
+          "description": "O denunciante pode optar pelo anonimato. Qualquer retaliação a vítimas ou testemunhas é tratada como infração autônoma e punível."
+        },
+        {
+          "title": "Abrangência Total",
+          "description": "O programa vincula colaboradores, terceiros, fornecedores e representantes comerciais. A adesão é obrigatória e parte do contrato."
+        }
+      ]
+    },
+    "legal": {
+      "badge": "Base Legal",
+      "titleBefore": "Conformidade com a",
+      "titleHighlight": "legislação vigente",
+      "paragraph1": "O Programa de Integridade da Dutex é elaborado por assessoria jurídica especializada e atualizado anualmente para refletir a evolução normativa brasileira.",
+      "paragraph2": "Fornecedores e parceiros que operam conosco aderem formalmente às nossas diretrizes éticas como condição contratual — sem exceção.",
+      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "OIT — Conv. 190", "CLT", "CF / 1988", "LGPD"],
+      "channelsBadge": "Canais Oficiais",
+      "channels": [
+        {
+          "title": "Canal de Compliance",
+          "lines": ["compliance@dutex.com.br", "+55 47 9168-9143"]
+        },
+        {
+          "title": "Canal de Denúncias",
+          "lines": ["denuncia@dutex.com.br", "Anônimo · Sigiloso · Disponível 24h"]
+        },
+        {
+          "title": "LGPD / Privacidade",
+          "lines": ["privacidade@dutex.com.br", "Titular de dados · Requisições LGPD"]
+        }
+      ]
+    },
+    "principles": {
+      "badge": "Princípios",
+      "title": "A ética como fundamento operacional",
+      "items": [
+        "Dignidade da Pessoa Humana",
+        "Igualdade Material e Não Discriminação",
+        "Confidencialidade e Proteção ao Denunciante",
+        "Responsabilidade e Sanção Proporcional",
+        "Transparência e Governança Ética",
+        "Prevenção e Educação Permanente"
+      ]
+    },
+    "cta": {
+      "title": "Quer qualificar a Dutex como fornecedor?",
+      "description": "Solicite nosso pacote de credenciais — ISO 9001 + Programa de Compliance",
+      "button": "Solicitar credenciais"
+    }
+  }
+}

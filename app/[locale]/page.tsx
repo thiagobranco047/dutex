@@ -10,8 +10,20 @@ import RealApplications from "@/components/sections/RealApplications";
 import Process from "@/components/sections/Process";
 import FinalCta from "@/components/sections/FinalCta";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import { setRequestLocale } from "next-intl/server";
+import { routing, type Locale } from "@/i18n/routing";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (routing.locales.includes(locale as Locale)) {
+    setRequestLocale(locale);
+  }
+
   return (
     <>
       <Header />
@@ -24,7 +36,6 @@ export default function Home() {
         <ParallaxBreak />
         <RealApplications />
         <Process />
-        {/* <Testimonials /> */}
         <FinalCta />
       </main>
       <Footer />

@@ -1,0 +1,170 @@
+{
+  "hero": {
+    "badge": "Dutex Industrial",
+    "titleLine1": "Soluções que movem",
+    "titleLine2": "a indústria",
+    "subtitle": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística — da linha de produção até o destino final."
+  },
+  "about": {
+    "badge": "Sobre a Dutex",
+    "introBefore": "A Dutex integra",
+    "introHighlight": "transformação de aço, plásticos de engenharia e sistemas de proteção",
+    "introAfter": "para otimizar operações industriais com bobinas, chapas e materiais críticos."
+  },
+  "stats": {
+    "items": [
+      { "value": "12+", "label": "Anos de atuação" },
+      { "value": "1.500+", "label": "Aplicações técnicas" },
+      { "value": "47+", "label": "Indústrias atendidas (cadeia siderúrgica)" },
+      { "value": "ZERO", "label": "Avarias reportadas em 2024" }
+    ]
+  },
+  "solutions": {
+    "badge": "Nossas Soluções",
+    "title": "Soluções industriais para transformação e proteção",
+    "subtitle": "A Dutex atua nas duas pontas da operação. Entrega o material transformado pronto para produção. E protege a carga do ponto de origem até a linha de produção.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Transformação de Aço",
+        "description": "Aço transformado com precisão industrial — bobinas, chapas sob medida, slitter e blanks em ZC, FF e FQ com espessuras até 40mm. Matéria-prima pronta para sua produção."
+      },
+      {
+        "number": "02",
+        "title": "Plásticos de Engenharia",
+        "description": "Componentes industriais em PP virgem ou reciclado por injeção (240 a 650 ton) e extrusão. Cantoneiras, separadores e protetores com alta absorção de impacto."
+      },
+      {
+        "number": "03",
+        "title": "Proteção e Logística",
+        "description": "Berços para bobinas de 3 a 20 toneladas, luvas, colarinhos, protetores emborrachados e colmeias. Proteção da linha de produção até o destino final."
+      }
+    ]
+  },
+  "whyDutex": {
+    "badge": "Diferenciais",
+    "title": "Por que a Dutex?",
+    "intro": "A Dutex fabrica internamente com estrutura completa — controle total sobre qualidade, prazo e customização, sem depender de terceiros. Soluções customizadas para cada cliente e tipo de carga.",
+    "items": [
+      {
+        "title": "Engenharia aplicada à operação",
+        "subtitle": "Não é produto de prateleira. Cada solução é projetada para a realidade do cliente."
+      },
+      {
+        "title": "Produção integrada aço + plástico",
+        "subtitle": "Integração vertical completa: materiais, engenharia, operação e logística em uma única empresa."
+      },
+      {
+        "title": "Rastreabilidade e controle",
+        "subtitle": "Controle dimensional em cada lote com certificação ISO 9001:2015."
+      },
+      {
+        "title": "Fabricação 100% própria",
+        "subtitle": "Injeção plástica, extrusão em PP e caldeiraria metálica — sem depender de terceiros."
+      }
+    ]
+  },
+  "applications": {
+    "badge": "Engenharia Aplicada",
+    "titleLine1": "Quando o mercado não tem",
+    "titleLine2": "a solução, a Dutex desenvolve.",
+    "subtitle": "Diversas soluções da Dutex nasceram a partir de necessidades específicas de clientes industriais. A empresa analisa o problema, desenvolve a engenharia, projeta as ferramentas e fabrica internamente.",
+    "items": [
+      {
+        "id": "01",
+        "badge": "Siderurgia",
+        "title": "Líder do setor siderúrgico",
+        "subtitle": "Protetor de Cantos Plástico Co-extrusado",
+        "description": "Um grande player da siderurgia nacional procurou a Dutex buscando solução de proteção para materiais metálicos. Trouxe uma referência e perguntou se seria possível desenvolver algo semelhante.",
+        "steps": [
+          "Análise técnica reversa do produto de referência",
+          "Desenvolvimento de ferramentas de extrusão especializadas",
+          "Adaptação do processo de co-extrusão com não-tecido (TNT)"
+        ],
+        "result": "O resultado foi o protetor de cantos plástico co-extrusado com não-tecido, hoje utilizado nas operações de diversos clientes. Esse projeto abriu caminho para toda a linha de produtos logísticos da Dutex."
+      },
+      {
+        "id": "02",
+        "badge": "Indústria",
+        "title": "Grande player industrial",
+        "subtitle": "Verticalização de produto importado",
+        "description": "Uma indústria utilizava um componente importado da Coreia. Trouxe uma amostra e perguntou se seria possível fabricar o produto no Brasil.",
+        "steps": [
+          "Engenharia reversa do produto importado",
+          "Desenvolvimento de ferramentas de produção próprias",
+          "Industrialização e produção nacional do componente"
+        ],
+        "result": "A Dutex verticalizou a produção nacional desse componente, eliminando a dependência de importação e reduzindo custos e prazo de entrega."
+      },
+      {
+        "id": "03",
+        "badge": "Energia renovável",
+        "title": "Setor de energia solar",
+        "subtitle": "Perfil especial em PP para energia solar",
+        "description": "Uma empresa do setor de energia solar apresentou um perfil encontrado na Europa para sinalização e proteção de cabos em usinas solares. Perguntou se a Dutex conseguia desenvolver no Brasil.",
+        "steps": [
+          "Desenvolvimento da engenharia e desenho técnico",
+          "Ferramentas de extrusão desenvolvidas internamente",
+          "Produção industrial do componente"
+        ],
+        "result": "O produto passou a ser utilizado em projetos de geração de energia solar no Brasil."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Processo",
+    "titleLine1": "Como desenvolvemos",
+    "titleLine2": "soluções industriais",
+    "subtitle": "Um processo técnico estruturado para transformar necessidades operacionais em soluções industriais confiáveis, duráveis e aplicáveis à realidade logística.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Diagnóstico técnico",
+        "description": "Análise detalhada da aplicação, tipo de carga, ambiente operacional e riscos envolvidos no transporte, manuseio e armazenamento."
+      },
+      {
+        "number": "02",
+        "title": "Engenharia e projeto",
+        "description": "Engenharia reversa ou desenvolvimento do zero — definição de materiais, geometrias e ferramentas de produção conforme a necessidade da operação."
+      },
+      {
+        "number": "03",
+        "title": "Produção e validação",
+        "description": "Fabricação, testes funcionais e entrega com controle de qualidade, rastreabilidade e conformidade com os padrões industriais."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contato",
+    "title": "Vamos conversar sobre o seu projeto?",
+    "description": "Fale com a equipe comercial da Dutex para orçamentos, especificações técnicas ou soluções sob medida em aço e plásticos de engenharia."
+  },
+  "testimonials": {
+    "badge": "Confiança",
+    "title": "Confiabilidade para operações industriais",
+    "subtitle": "Atendemos indústrias com alta exigência técnica, onde falhas logísticas não são uma opção.",
+    "items": [
+      {
+        "quote": "Os berços da Dutex reduziram significativamente as avarias no transporte de bobinas. A engenharia aplicada à nossa operação fez toda a diferença — não é produto de prateleira.",
+        "author": "Carlos Mendes",
+        "role": "Gerente de Logística",
+        "company": "Centro de Serviço de Aço"
+      },
+      {
+        "quote": "Trouxemos uma amostra de um componente importado e a Dutex verticalizou a produção nacional. Eliminamos a dependência de importação e reduzimos custos e prazo de entrega.",
+        "author": "Fernanda Oliveira",
+        "role": "Engenharia de Processos",
+        "company": "Indústria Metalmecânica"
+      },
+      {
+        "quote": "A integração aço e plástico em um único fornecedor simplificou toda a nossa cadeia. Rastreabilidade, controle dimensional e entrega no prazo — a Dutex entrega o que promete.",
+        "author": "Rafael Costa",
+        "role": "Coordenador de Suprimentos",
+        "company": "Implementos Rodoviários"
+      }
+    ],
+    "prev": "Depoimento anterior",
+    "next": "Próximo depoimento",
+    "goTo": "Ir para depoimento {n}"
+  }
+}

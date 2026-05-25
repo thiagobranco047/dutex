@@ -1,13 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { applications } from "@/lib/data";
+import { applicationImages } from "@/lib/data";
 import { ChevronRight } from "lucide-react";
 
+interface ApplicationItem {
+  id: string;
+  badge: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  steps: string[];
+  result: string;
+}
+
 export default function RealApplications() {
+  const t = useTranslations("applications");
+  const tA11y = useTranslations("a11y");
+  const applications = useMemo(
+    () => t.raw("items") as ApplicationItem[],
+    [t]
+  );
   const [activeIndex, setActiveIndex] = useState(0);
   const active = applications[activeIndex];
 
@@ -15,17 +32,22 @@ export default function RealApplications() {
     <section id="aplicacoes" className="bg-primary py-20 lg:py-28">
       <Container>
         <SectionHeading
-          badgeText="Engenharia aplicada"
-          title={<>Quando o mercado não tem<br />a solução, a Dutex desenvolve.</>}
-          subtitle="Diversas soluções da Dutex nasceram a partir de necessidades específicas de clientes industriais. A empresa analisa o problema, desenvolve a engenharia, projeta as ferramentas e fabrica internamente."
+          badgeText={t("badge")}
+          title={
+            <>
+              {t("titleLine1")}
+              <br />
+              {t("titleLine2")}
+            </>
+          }
+          subtitle={t("subtitle")}
           dark
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Case image */}
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5">
             <Image
-              src={active.image}
+              src={applicationImages[activeIndex]}
               alt={active.subtitle}
               fill
               className="object-cover"
@@ -33,7 +55,6 @@ export default function RealApplications() {
             />
           </div>
 
-          {/* Case details */}
           <div className="flex flex-col justify-center">
             <span className="inline-flex self-start items-center rounded-full border border-green-accent px-4 py-1.5 text-xs font-semibold text-green-accent">
               {active.badge}
@@ -52,8 +73,14 @@ export default function RealApplications() {
 
             <ul className="mt-5 space-y-2">
               {active.steps.map((step) => (
-                <li key={step} className="flex items-start gap-2 text-sm text-white/80">
-                  <ChevronRight size={14} className="mt-0.5 shrink-0 text-green-accent" />
+                <li
+                  key={step}
+                  className="flex items-start gap-2 text-sm text-white/80"
+                >
+                  <ChevronRight
+                    size={14}
+                    className="mt-0.5 shrink-0 text-green-accent"
+                  />
                   {step}
                 </li>
               ))}
@@ -65,14 +92,13 @@ export default function RealApplications() {
           </div>
         </div>
 
-        {/* Navigation */}
         <div className="mt-10 flex items-center justify-center gap-6">
           {applications.map((app, index) => (
             <button
               key={app.id}
               onClick={() => setActiveIndex(index)}
               className="flex flex-col items-center gap-2 cursor-pointer group"
-              aria-label={`Ver caso ${app.id}: ${app.title}`}
+              aria-label={tA11y("viewCase", { id: app.id, title: app.title })}
             >
               <div
                 className={`h-[3px] w-14 rounded-full transition-colors duration-300 ${

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Dutex — Soluciones que Impulsan la Industria",
+    "description": "Soluciones técnicas en acero y plásticos de ingeniería para protección de cargas, eficiencia logística y reducción de riesgos operacionales.",
+    "keywords": "Dutex,soluciones industriales,protección de cargas,logística,B2B,acero,polímeros"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "solutions": "Soluciones",
+    "whyDutex": "¿Por qué Dutex?",
+    "applications": "Aplicaciones",
+    "process": "Proceso",
+    "contact": "Contacto",
+    "cta": "¡Conversemos!"
+  },
+  "footer": {
+    "newsletterTitle": "Reciba nuestros materiales técnicos",
+    "newsletterDescription": "Actualizaciones técnicas, catálogos y contenidos institucionales de Dutex enviados directamente a su correo electrónico.",
+    "emailPlaceholder": "Su mejor correo electrónico",
+    "subscribe": "Suscribirse",
+    "sending": "Enviando...",
+    "subscribeSuccess": "¡Suscripción realizada con éxito!",
+    "subscribeError": "Error al suscribirse. Inténtelo de nuevo.",
+    "newsletterSubject": "Nueva suscripción al boletín — Sitio web Dutex",
+    "description": "Soluciones industriales en acero y plásticos de ingeniería para transformación de materiales, protección de cargas y eficiencia logística — desde la línea de producción hasta el destino final.",
+    "company": "Empresa",
+    "followUs": "Síganos",
+    "allSocial": "Todas las redes sociales",
+    "contactDutex": "Contacte a Dutex",
+    "speakSpecialist": "Hable con un especialista",
+    "complianceChannel": "Canal de Compliance",
+    "privacy": "RGPD / Privacidad",
+    "copyright": "© 2026 Dutex. Todos los derechos reservados.",
+    "nationalProduction": "Producción industrial nacional | ISO 9001:2015",
+    "credits": "Lab. 334 Marketing"
+  },
+  "common": {
+    "brand": "Dutex",
+    "brandIndustrial": "Dutex Industrial",
+    "learnAboutUs": "Conozca nuestra empresa",
+    "compliance": "Compliance",
+    "contactUs": "Contáctenos",
+    "backToTop": "Volver al inicio",
+    "whatsapp": "WhatsApp",
+    "commercialEmail": "Correo comercial",
+    "menu": "Menú"
+  },
+  "whatsapp": {
+    "generalMessage": "¡Hola! Me gustaría saber más sobre las soluciones de Dutex.",
+    "diagnosisMessage": "Hola Dutex, me gustaría un diagnóstico técnico",
+    "ariaLabel": "Contáctenos por WhatsApp"
+  },
+  "a11y": {
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "facade": "Fachada de Dutex",
+    "viewCase": "Ver caso {id}: {title}",
+    "videoPlayPause": "Pausar o reproducir video — haga clic en el área del video",
+    "closeChapter": "Cerrar información del capítulo",
+    "videoChapters": "Capítulos del video",
+    "chapterLabel": "Capítulo {id}",
+    "videoUnsupported": "Su navegador no admite video HTML5."
+  }
+}

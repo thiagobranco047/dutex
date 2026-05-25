@@ -1,0 +1,76 @@
+{
+  "protection": {
+    "title": "Coil Protection and Transport",
+    "description": "Visualize in 3D how Dutex's metallic and elastomeric solutions protect coils during transport, handling and storage in critical industrial operations.",
+    "instructions": "Play the video from start to finish or select a chapter to go directly to that segment and open the technical details."
+  },
+  "protectionChapters": {
+    "items": [
+      {
+        "id": "00",
+        "title": "Opening",
+        "description": "Introduction to the Dutex protection line: overview of the video, transition between 3D scenarios and what you'll see next — from the metallic line to the plastic line, component by component."
+      },
+      {
+        "id": "01",
+        "title": "Metallic Line",
+        "description": "Family of steel components for cradles, reinforcements and structural coil protection: high rigidity, Dutex standardization and compatibility with strapping and movement in demanding industrial environments."
+      },
+      {
+        "id": "02",
+        "title": "Plastic Corner Protector 70×40 mm",
+        "description": "Polymer profile in 70×40 mm dimensions to absorb impacts and preserve outer edges during transport and storage, without marking or contaminating the wound material."
+      },
+      {
+        "id": "03",
+        "title": "Metal sheet",
+        "description": "Flat steel element that reinforces support or closure zones, distributing point loads and contributing to the geometric stability of the assembly on the coil."
+      },
+      {
+        "id": "04",
+        "title": "Folded metal corner protector",
+        "description": "Sheet corner protector with folds that increase moment of inertia and torsional resistance: edge protection with less dead weight and better steel utilization."
+      },
+      {
+        "id": "05",
+        "title": "Steel sleeve",
+        "description": "Metallic sleeve that wraps sensitive sections of the core or effective axis, reducing risk of crushing, friction wear and contamination during handling with equipment."
+      },
+      {
+        "id": "06",
+        "title": "Tubular protector",
+        "description": "Tubular component that surrounds or supports the coil periphery, preventing local deformations and offering a continuous containment surface during rolling and fastening."
+      },
+      {
+        "id": "07",
+        "title": "Plastic Line",
+        "description": "Set of engineering plastics solutions for impact absorption, light sealing and surface protection — complementary to the metallic line in the same Dutex design philosophy."
+      },
+      {
+        "id": "08",
+        "title": "Plastic Corner Protector 70×40 mm",
+        "description": "Edge reinforcement in 70×40 mm format applied in a new configuration in the video: fit designed for different diameters and package heights, maintaining the same elastomeric protection profile."
+      },
+      {
+        "id": "09",
+        "title": "Foam mat",
+        "description": "Technical foam layer that uniformizes contact pressures, absorbs vibrations in transport and protects sensitive finishes of tape or noble metals against micro-damage."
+      },
+      {
+        "id": "10",
+        "title": "Plastic Corner Protector 135×70 mm",
+        "description": "Larger profile (135×70 mm) for larger spans and radii: covers a wider area of the coil side, ideal when packaging requires a larger impact distribution area."
+      },
+      {
+        "id": "11",
+        "title": "Top hat ring",
+        "description": "Ring with characteristic 'top hat' geometry to protect faces or collars of the coil, center forces and facilitate alignment with straps, covers or lifting devices."
+      },
+      {
+        "id": "12",
+        "title": "Individual cradle",
+        "description": "Support dedicated to the coil individually: stable positioning, lower risk of coil-to-coil contact and safer operation during loading, unloading and controlled stacking."
+      }
+    ]
+  }
+}

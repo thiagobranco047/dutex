@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Dutex — Soluções que movem a indústria",
+    "description": "Soluções técnicas em aço e polímeros para proteção de cargas, eficiência logística e redução de riscos operacionais.",
+    "keywords": "Dutex,soluções industriais,proteção de cargas,logística,B2B,aço,polímeros"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "solutions": "Soluções",
+    "whyDutex": "Por que Dutex?",
+    "applications": "Aplicações",
+    "process": "Processo",
+    "contact": "Contato",
+    "cta": "Vamos conversar!"
+  },
+  "footer": {
+    "newsletterTitle": "Receba nossos materiais técnicos",
+    "newsletterDescription": "Atualizações técnicas, catálogos e conteúdos institucionais da Dutex enviados diretamente para seu e-mail.",
+    "emailPlaceholder": "Seu melhor e-mail",
+    "subscribe": "Inscrever-se",
+    "sending": "Enviando...",
+    "subscribeSuccess": "Inscrição realizada com sucesso!",
+    "subscribeError": "Erro ao inscrever. Tente novamente.",
+    "newsletterSubject": "Nova inscrição newsletter — Site Dutex",
+    "description": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística — da linha de produção até o destino final.",
+    "company": "Empresa",
+    "followUs": "Siga-nos",
+    "allSocial": "Todas as redes sociais",
+    "contactDutex": "Fale com a Dutex",
+    "speakSpecialist": "Fale com um especialista",
+    "complianceChannel": "Canal de Compliance",
+    "privacy": "LGPD / Privacidade",
+    "copyright": "© 2026 Dutex. Todos os direitos reservados.",
+    "nationalProduction": "Produção industrial nacional | ISO 9001:2015",
+    "credits": "Lab. 334 Marketing"
+  },
+  "common": {
+    "brand": "Dutex",
+    "brandIndustrial": "Dutex Industrial",
+    "learnAboutUs": "Conheça nossa empresa",
+    "compliance": "Compliance",
+    "contactUs": "Entrar em contato",
+    "backToTop": "Voltar ao início",
+    "whatsapp": "WhatsApp",
+    "commercialEmail": "E-mail comercial",
+    "menu": "Menu"
+  },
+  "whatsapp": {
+    "generalMessage": "Olá! Gostaria de saber mais sobre as soluções da Dutex.",
+    "diagnosisMessage": "Olá Dutex, gostaria de um diagnóstico técnico",
+    "ariaLabel": "Fale conosco pelo WhatsApp"
+  },
+  "a11y": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "facade": "Fachada da Dutex",
+    "viewCase": "Ver caso {id}: {title}",
+    "videoPlayPause": "Pausar ou reproduzir vídeo — clique na área do vídeo",
+    "closeChapter": "Fechar informações do capítulo",
+    "videoChapters": "Capítulos do vídeo",
+    "chapterLabel": "Capítulo {id}",
+    "videoUnsupported": "Seu navegador não suporta vídeo HTML5."
+  }
+}
