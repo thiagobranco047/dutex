@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { navHrefs } from "@/lib/data";
@@ -39,15 +39,57 @@ export default function Header() {
           </Link>
 
           <nav className="hidden xl:flex items-center gap-0.5">
-            {navHrefs.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="relative px-3 py-2 text-[13px] font-medium text-white/70 hover:text-white transition-colors"
-              >
-                {t(link.key)}
-              </a>
-            ))}
+            {navHrefs.map((link) => {
+              if (link.key === "about") {
+                return (
+                  <div key={link.href} className="relative group">
+                    <a
+                      href={link.href}
+                      className="relative inline-flex items-center gap-1 px-3 py-2 text-[13px] font-medium text-white/70 hover:text-white transition-colors"
+                    >
+                      {t(link.key)}
+                      <ChevronDown
+                        size={14}
+                        className="transition-transform group-hover:rotate-180"
+                      />
+                    </a>
+
+                    <div className="pointer-events-none absolute left-0 top-full pt-2 opacity-0 translate-y-1 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0">
+                      <div className="w-52 rounded-lg border border-white/15 bg-dark/95 p-1.5 backdrop-blur-md shadow-xl">
+                        <Link
+                          href="/sobre"
+                          className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
+                        >
+                          {tCommon("aboutCompany")}
+                        </Link>
+                        <Link
+                          href="/compliance"
+                          className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
+                        >
+                          {tCommon("compliance")}
+                        </Link>
+                        <Link
+                          href="/dutex-conecta"
+                          className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
+                        >
+                          {tCommon("dutexConecta")}
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="relative px-3 py-2 text-[13px] font-medium text-white/70 hover:text-white transition-colors"
+                >
+                  {t(link.key)}
+                </a>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">

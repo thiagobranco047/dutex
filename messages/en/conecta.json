@@ -1,0 +1,122 @@
+{
+  "conectaPage": {
+    "hero": {
+      "badge": "Open Innovation Channel",
+      "titleBefore": "You have the idea.",
+      "titleHighlight": "We have the factory.",
+      "description": "Dutex Conecta links ideas, technologies and solutions to real manufacturing capabilities in steel, PP, metalwork and applied engineering.",
+      "primaryCta": "Submit my idea",
+      "secondaryCta": "Chat on WhatsApp",
+      "panelTitle": "Open innovation with real industry",
+      "panelItems": [
+        "Manufacturing capacity to scale industrial solutions.",
+        "Applied engineering to turn ideas into reality.",
+        "Structured technical screening and fit assessment."
+      ]
+    },
+    "authority": {
+      "title": "Open innovation with a real factory",
+      "description": "Dutex has real capacity to turn ideas into industrial products with proprietary processes, applied engineering, production scale and certified quality. We are not just a hub: we are an industry."
+    },
+    "fit": {
+      "badge": "Idea profile",
+      "title": "What kind of idea fits?",
+      "items": [
+        "An industrial product idea",
+        "Improvements for processes or packaging",
+        "Technology applicable to industry",
+        "A prototype looking for a manufacturing partner",
+        "A solution for steel, plastics or manufacturing",
+        "A product for logistics or transportation",
+        "An application for agribusiness or construction",
+        "A real market pain point with a clear solution"
+      ]
+    },
+    "flow": {
+      "badge": "How it works",
+      "title": "You submit. Dutex evaluates.",
+      "description": "If there is fit and industrial application potential, we move forward to a technical conversation.",
+      "steps": [
+        {
+          "title": "Step 01",
+          "text": "You submit your proposal with the problem, solution and current stage."
+        },
+        {
+          "title": "Step 02",
+          "text": "The Dutex team evaluates fit with our industrial profile."
+        },
+        {
+          "title": "Step 03",
+          "text": "If it makes sense, we contact you for a deeper technical discussion."
+        }
+      ]
+    },
+    "form": {
+      "badge": "Idea form",
+      "title": "Share your idea",
+      "description": "Be objective: what problem it solves, where it applies and the current stage of your solution.",
+      "name": "Name *",
+      "company": "Company",
+      "email": "Email *",
+      "whatsapp": "WhatsApp",
+      "ideaTypePlaceholder": "Idea type",
+      "areaPlaceholder": "Related area",
+      "ideaTypes": [
+        "New industrial product",
+        "Process or packaging improvement",
+        "Technology applicable to industry",
+        "Prototype seeking a manufacturing partner",
+        "Commercial or supply partnership",
+        "Other"
+      ],
+      "areas": [
+        "Industrial protection",
+        "Steel and metallurgy",
+        "Plastics and PP",
+        "Metalwork and structures",
+        "Logistics and transport",
+        "Industrial automation",
+        "Agribusiness",
+        "Construction",
+        "Industrial packaging",
+        "Other"
+      ],
+      "ideaTitle": "Idea title *",
+      "problem": "What problem does it solve? *",
+      "solution": "Describe the solution *",
+      "termsPrefix": "I agree with the idea submission terms and authorize Dutex to review this proposal internally. For details, please see our",
+      "termsLink": "compliance page",
+      "subject": "New submission - Dutex Conecta",
+      "configError": "Form unavailable right now. Configure the Web3Forms key.",
+      "submit": "Submit proposal",
+      "disclaimer": "Submission does not create any automatic partnership or compensation obligation."
+    },
+    "contact": {
+      "title": "Dutex Conecta",
+      "description": "Questions about submitting a proposal? Talk to our team."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Who can submit an idea to Dutex Conecta?",
+          "answer": "Professionals, companies, inventors and teams with industrially applicable ideas can submit proposals for review."
+        },
+        {
+          "question": "Does submission guarantee a partnership with Dutex?",
+          "answer": "No. Submission starts a technical screening process. Progress depends on industrial fit, feasibility and mutual interest."
+        },
+        {
+          "question": "What kind of ideas usually have stronger fit?",
+          "answer": "Ideas with practical application in manufacturing, logistics, industrial protection, steel, polymers and process improvement usually have higher fit potential."
+        }
+      ]
+    }
+  },
+  "conectaHome": {
+    "badge": "Dutex Conecta",
+    "title": "Open innovation with real manufacturing",
+    "description": "A channel to receive ideas with industrial application and connect proposals to Dutex engineering, factory capability and production scale.",
+    "cta": "Explore Dutex Conecta",
+    "footnote": "Dutex + innovation + industry = greater impact"
+  }
+}

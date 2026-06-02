@@ -45,7 +45,7 @@
       "channels": [
         {
           "title": "Canal de Compliance",
-          "lines": ["compliance@dutex.com.br", "+55 47 9168-9143"]
+          "lines": ["compliance@dutex.com.br", "+55 47 99168-9143"]
         },
         {
           "title": "Canal de Denuncias",
@@ -73,6 +73,22 @@
       "title": "¿Desea calificar a Dutex como proveedor?",
       "description": "Solicite nuestro paquete de credenciales — ISO 9001 + Programa de Compliance",
       "button": "Solicitar credenciales"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿Quién puede utilizar el canal de compliance de Dutex?",
+          "answer": "Colaboradores, proveedores, socios, representantes y demás partes relacionadas pueden usar los canales oficiales de ética."
+        },
+        {
+          "question": "¿Es posible realizar denuncias anónimas?",
+          "answer": "Sí. El canal de denuncias permite anonimato y tratamiento confidencial, con protección contra represalias."
+        },
+        {
+          "question": "¿Cuál es el plazo de investigación de una denuncia?",
+          "answer": "Las investigaciones siguen un proceso estructurado con comisión independiente y plazo máximo de 30 días para resolución, según la política interna."
+        }
+      ]
     }
   }
 }

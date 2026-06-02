@@ -2,6 +2,7 @@
 
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { navHrefs } from "@/lib/data";
 import Button from "@/components/ui/Button";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
@@ -47,16 +48,55 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </div>
 
         <nav className="flex flex-col px-6 gap-1">
-          {navHrefs.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={onClose}
-              className="rounded-lg px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
-            >
-              {t(link.key)}
-            </a>
-          ))}
+          {navHrefs.map((link) => {
+            if (link.key === "about") {
+              return (
+                <div key={link.href} className="rounded-lg bg-white/[0.04]">
+                  <a
+                    href={link.href}
+                    onClick={onClose}
+                    className="block rounded-lg px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+                  >
+                    {t(link.key)}
+                  </a>
+                  <div className="px-3 pb-2 flex flex-col gap-1">
+                    <Link
+                      href="/sobre"
+                      onClick={onClose}
+                      className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
+                    >
+                      {tCommon("aboutCompany")}
+                    </Link>
+                    <Link
+                      href="/compliance"
+                      onClick={onClose}
+                      className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
+                    >
+                      {tCommon("compliance")}
+                    </Link>
+                    <Link
+                      href="/dutex-conecta"
+                      onClick={onClose}
+                      className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
+                    >
+                      {tCommon("dutexConecta")}
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={onClose}
+                className="rounded-lg px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+              >
+                {t(link.key)}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="px-6 mt-6">

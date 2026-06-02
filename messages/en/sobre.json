@@ -119,6 +119,22 @@
       "description": "Our engineering evaluates your application and proposes the ideal technical solution — at no cost, no commitment.",
       "requestDiagnosis": "Request technical diagnosis",
       "talkToSales": "Talk to sales"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Which industrial sectors does Dutex serve?",
+          "answer": "We primarily serve steel, metalworking, logistics and industrial operations that require protection, steel transformation and polymer solutions."
+        },
+        {
+          "question": "Does Dutex build custom solutions?",
+          "answer": "Yes. We develop custom technical projects based on the application, load profile, operating environment and performance requirements."
+        },
+        {
+          "question": "Does Dutex hold a quality certification?",
+          "answer": "Yes. The company operates with a quality management system aligned with ISO 9001:2015 and continuous improvement practices."
+        }
+      ]
     }
   }
 }

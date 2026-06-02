@@ -119,6 +119,22 @@
       "description": "Nossa engenharia avalia sua aplicação e propõe a solução técnica ideal — sem custo, sem compromisso.",
       "requestDiagnosis": "Solicitar diagnóstico técnico",
       "talkToSales": "Falar com o comercial"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Quais áreas industriais a Dutex atende?",
+          "answer": "Atendemos principalmente siderurgia, metalmecânica, logística e operações industriais que demandam proteção, transformação de aço e soluções em polímeros."
+        },
+        {
+          "question": "A Dutex fabrica soluções sob medida?",
+          "answer": "Sim. Desenvolvemos projetos técnicos customizados conforme aplicação, tipo de carga, ambiente operacional e requisitos de desempenho."
+        },
+        {
+          "question": "A Dutex possui certificação de qualidade?",
+          "answer": "Sim. A empresa opera com sistema de gestão da qualidade baseado na ISO 9001:2015 e foco contínuo em padronização e melhoria."
+        }
+      ]
     }
   }
 }

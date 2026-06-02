@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   getTranslations,
   setRequestLocale,
@@ -12,6 +13,7 @@ import Button from "@/components/ui/Button";
 import { contactInfo } from "@/lib/data";
 import { isPhoneLine, toTelHref } from "@/lib/utils";
 import { routing, type Locale } from "@/i18n/routing";
+import { absoluteUrl, localizedAlternates, localizedPath } from "@/lib/seo";
 import {
   Shield,
   Clock,
@@ -36,6 +38,11 @@ type ChannelItem = {
   lines: string[];
 };
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -43,10 +50,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "compliancePage" });
+  const localeKey = (routing.locales.includes(locale as Locale)
+    ? locale
+    : routing.defaultLocale) as Locale;
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: {
+      canonical: absoluteUrl(localizedPath(localeKey, "compliance")),
+      ...localizedAlternates("compliance"),
+    },
+    openGraph: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      url: absoluteUrl(localizedPath(localeKey, "compliance")),
+      type: "article",
+      locale: localeKey === "pt" ? "pt_BR" : localeKey,
+      images: [
+        {
+          url: absoluteUrl("/images/siderurgia.webp"),
+          width: 1200,
+          height: 630,
+          alt: "Compliance e Integridade Dutex",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: [absoluteUrl("/images/siderurgia.webp")],
+    },
   };
 }
 
@@ -67,10 +102,89 @@ export default async function CompliancePage({
   const laws = t.raw("compliancePage.legal.laws") as string[];
   const channels = t.raw("compliancePage.legal.channels") as ChannelItem[];
   const principles = t.raw("compliancePage.principles.items") as string[];
+  const faqItems = t.raw("compliancePage.faq.items") as FaqItem[];
+  const localeKey = (routing.locales.includes(locale as Locale)
+    ? locale
+    : routing.defaultLocale) as Locale;
+  const languageTag = localeKey === "pt" ? "pt-BR" : localeKey;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl(localizedPath(localeKey)),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t("compliancePage.hero.titleHighlight"),
+        item: absoluteUrl(localizedPath(localeKey, "compliance")),
+      },
+    ],
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: t("compliancePage.meta.title"),
+    description: t("compliancePage.meta.description"),
+    url: absoluteUrl(localizedPath(localeKey, "compliance")),
+    inLanguage: languageTag,
+    about:
+      localeKey === "en"
+        ? [
+            "Compliance",
+            "Corporate integrity",
+            "Whistleblowing channel",
+            "Ethical governance",
+          ]
+        : localeKey === "es"
+          ? [
+              "Compliance",
+              "Integridad corporativa",
+              "Canal de denuncias",
+              "Gobernanza ética",
+            ]
+          : [
+              "Compliance",
+              "Integridade corporativa",
+              "Canal de denúncias",
+              "Governança ética",
+            ],
+  };
 
   return (
     <>
       <Header />
+      <Script
+        id="compliance-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="compliance-faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <Script
+        id="compliance-webpage-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <main>
         {/* Hero */}
         <section className="bg-dark pt-40 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden">

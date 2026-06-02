@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -8,41 +7,12 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { footerLinkConfig } from "@/lib/data";
 
-type NewsletterStatus = "idle" | "sending" | "success" | "error";
-
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<NewsletterStatus>("idle");
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
   const tCommon = useTranslations("common");
-
-  async function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    if (!email || !email.includes("@")) return;
-    setStatus("sending");
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "",
-          subject: t("newsletterSubject"),
-          email,
-        }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  }
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
+  const hasAccessKey = Boolean(accessKey);
 
   function getLinkLabel(link: (typeof footerLinkConfig)[number]["links"][number]) {
     if ("label" in link && link.label) return link.label;
@@ -73,39 +43,31 @@ export default function Footer() {
               </p>
             </div>
 
-            {status === "success" ? (
-              <p className="text-sm text-green-accent font-medium">
-                {t("subscribeSuccess")}
-              </p>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col gap-2 w-full max-w-md sm:flex-row sm:gap-3"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder={t("emailPlaceholder")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
-                />
-                <Button
-                  variant="primary"
-                  size="md"
-                  type="submit"
-                  disabled={status === "sending"}
-                >
-                  {status === "sending" ? t("sending") : t("subscribe")}
-                </Button>
-                {status === "error" && (
-                  <p className="text-xs text-red-400 sm:absolute sm:-bottom-5">
-                    {t("subscribeError")}
-                  </p>
-                )}
-              </form>
-            )}
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              className="flex flex-col gap-2 w-full max-w-md sm:flex-row sm:gap-3"
+            >
+              <input type="hidden" name="access_key" value={accessKey} />
+              <input type="hidden" name="subject" value={t("newsletterSubject")} />
+              <input type="hidden" name="from_name" value="Website Dutex" />
+              <input type="checkbox" name="botcheck" className="hidden" />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder={t("emailPlaceholder")}
+                className="flex-1 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+              />
+              <Button variant="primary" size="md" type="submit" disabled={!hasAccessKey}>
+                {t("subscribe")}
+              </Button>
+              {!hasAccessKey && (
+                <p className="text-xs text-red-400 sm:absolute sm:-bottom-5">
+                  {t("subscribeConfigError")}
+                </p>
+              )}
+            </form>
           </div>
         </Container>
       </div>

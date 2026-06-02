@@ -1,0 +1,122 @@
+{
+  "conectaPage": {
+    "hero": {
+      "badge": "Canal de Innovación Abierta",
+      "titleBefore": "Tú tienes la idea.",
+      "titleHighlight": "Nosotros tenemos la fábrica.",
+      "description": "Dutex Conecta vincula ideas, tecnologías y soluciones con capacidad real de manufactura en acero, PP, calderería e ingeniería aplicada.",
+      "primaryCta": "Enviar mi idea",
+      "secondaryCta": "Hablar por WhatsApp",
+      "panelTitle": "Innovación abierta con industria real",
+      "panelItems": [
+        "Capacidad fabril para escalar soluciones industriales.",
+        "Ingeniería aplicada para convertir ideas en realidad.",
+        "Proceso estructurado de evaluación técnica y ajuste."
+      ]
+    },
+    "authority": {
+      "title": "Innovación abierta con fábrica real",
+      "description": "Dutex tiene capacidad real para transformar una idea en producto industrial con proceso propio, ingeniería aplicada, escala de producción y calidad certificada. No somos solo un hub: somos industria."
+    },
+    "fit": {
+      "badge": "Perfil de ideas",
+      "title": "¿Qué tipo de idea encaja?",
+      "items": [
+        "Una idea de producto industrial",
+        "Mejoras para procesos o embalajes",
+        "Tecnología aplicable a la industria",
+        "Un prototipo que busca socio fabril",
+        "Una solución para acero, plástico o manufactura",
+        "Un producto para logística o transporte",
+        "Una aplicación para agroindustria o construcción",
+        "Un problema real del mercado con propuesta de solución"
+      ]
+    },
+    "flow": {
+      "badge": "Cómo funciona",
+      "title": "Tú envías. Dutex evalúa.",
+      "description": "Si hay ajuste y potencial de aplicación industrial, avanzamos a una conversación técnica.",
+      "steps": [
+        {
+          "title": "Paso 01",
+          "text": "Envías tu propuesta con el problema, la solución y la etapa actual."
+        },
+        {
+          "title": "Paso 02",
+          "text": "El equipo de Dutex evalúa el ajuste con nuestro perfil industrial."
+        },
+        {
+          "title": "Paso 03",
+          "text": "Si tiene sentido, te contactamos para profundizar técnicamente."
+        }
+      ]
+    },
+    "form": {
+      "badge": "Formulario de idea",
+      "title": "Comparte tu idea",
+      "description": "Sé directo: qué problema resuelve, dónde aplica y en qué etapa se encuentra la solución.",
+      "name": "Nombre *",
+      "company": "Empresa",
+      "email": "Correo electrónico *",
+      "whatsapp": "WhatsApp",
+      "ideaTypePlaceholder": "Tipo de idea",
+      "areaPlaceholder": "Área relacionada",
+      "ideaTypes": [
+        "Nuevo producto industrial",
+        "Mejora de proceso o embalaje",
+        "Tecnología aplicable a la industria",
+        "Prototipo buscando socio fabril",
+        "Alianza comercial o de suministro",
+        "Otro"
+      ],
+      "areas": [
+        "Protección industrial",
+        "Acero y metalurgia",
+        "Plásticos y PP",
+        "Calderería y estructuras",
+        "Logística y transporte",
+        "Automatización industrial",
+        "Agroindustria",
+        "Construcción",
+        "Embalaje industrial",
+        "Otro"
+      ],
+      "ideaTitle": "Título de la idea *",
+      "problem": "¿Qué problema resuelve? *",
+      "solution": "Describe la solución *",
+      "termsPrefix": "Acepto los términos de envío de ideas y autorizo a Dutex a analizar internamente esta propuesta. Para más detalles, consulta nuestra página de",
+      "termsLink": "compliance",
+      "subject": "Nuevo envío - Dutex Conecta",
+      "configError": "Formulario no disponible por ahora. Configure la clave de Web3Forms.",
+      "submit": "Enviar propuesta",
+      "disclaimer": "El envío no genera una obligación automática de alianza o remuneración."
+    },
+    "contact": {
+      "title": "Dutex Conecta",
+      "description": "¿Dudas sobre el envío de propuestas? Habla con nuestro equipo."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿Quién puede enviar una idea a Dutex Conecta?",
+          "answer": "Profesionales, empresas, inventores y equipos con ideas de aplicación industrial pueden enviar propuestas para evaluación."
+        },
+        {
+          "question": "¿El envío garantiza una alianza con Dutex?",
+          "answer": "No. El envío inicia una evaluación técnica. El avance depende del ajuste industrial, viabilidad e interés mutuo."
+        },
+        {
+          "question": "¿Qué tipo de ideas suelen tener mayor ajuste?",
+          "answer": "Ideas con aplicación práctica en manufactura, logística, protección industrial, acero, polímeros y mejora de procesos suelen tener mayor potencial."
+        }
+      ]
+    }
+  },
+  "conectaHome": {
+    "badge": "Dutex Conecta",
+    "title": "Innovación abierta con manufactura real",
+    "description": "Un canal para recibir ideas con aplicación industrial y conectar propuestas con la ingeniería, la fábrica y la capacidad de escala de Dutex.",
+    "cta": "Conocer Dutex Conecta",
+    "footnote": "Dutex + innovación + industria = mayor impacto"
+  }
+}

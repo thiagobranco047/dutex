@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   getTranslations,
   setRequestLocale,
@@ -11,6 +12,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import { contactInfo, WHATSAPP_NUMBER } from "@/lib/data";
 import { routing, type Locale } from "@/i18n/routing";
+import { absoluteUrl, localizedAlternates, localizedPath } from "@/lib/seo";
 import {
   ShieldCheck,
   Eye,
@@ -63,6 +65,11 @@ type CaseItem = {
   result: string;
 };
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -70,10 +77,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "sobrePage" });
+  const localeKey = (routing.locales.includes(locale as Locale)
+    ? locale
+    : routing.defaultLocale) as Locale;
 
   return {
     title: t("meta.title"),
     description: t("meta.description"),
+    alternates: {
+      canonical: absoluteUrl(localizedPath(localeKey, "sobre")),
+      ...localizedAlternates("sobre"),
+    },
+    openGraph: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      url: absoluteUrl(localizedPath(localeKey, "sobre")),
+      type: "article",
+      locale: localeKey === "pt" ? "pt_BR" : localeKey,
+      images: [
+        {
+          url: absoluteUrl("/images/transformacao-de-aco.webp"),
+          width: 1200,
+          height: 630,
+          alt: "Sobre a Dutex Industrial",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("meta.title"),
+      description: t("meta.description"),
+      images: [absoluteUrl("/images/transformacao-de-aco.webp")],
+    },
   };
 }
 
@@ -98,12 +133,91 @@ export default async function SobrePage({
   const cases = t.raw("sobrePage.cases.items") as CaseItem[];
   const pillars = t.raw("sobrePage.hero.pillars") as string[];
   const historyParagraphs = t.raw("sobrePage.history.paragraphs") as string[];
+  const faqItems = t.raw("sobrePage.faq.items") as FaqItem[];
+  const localeKey = (routing.locales.includes(locale as Locale)
+    ? locale
+    : routing.defaultLocale) as Locale;
+  const languageTag = localeKey === "pt" ? "pt-BR" : localeKey;
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(tWhatsapp("diagnosisMessage"))}`;
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl(localizedPath(localeKey)),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t("sobrePage.hero.badge"),
+        item: absoluteUrl(localizedPath(localeKey, "sobre")),
+      },
+    ],
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: t("sobrePage.meta.title"),
+    description: t("sobrePage.meta.description"),
+    url: absoluteUrl(localizedPath(localeKey, "sobre")),
+    inLanguage: languageTag,
+    about:
+      localeKey === "en"
+        ? [
+            "Dutex Industrial",
+            "Industrial solutions",
+            "Applied engineering",
+            "ISO 9001:2015",
+          ]
+        : localeKey === "es"
+          ? [
+              "Dutex Industrial",
+              "Soluciones industriales",
+              "Ingeniería aplicada",
+              "ISO 9001:2015",
+            ]
+          : [
+              "Dutex Industrial",
+              "Soluções industriais",
+              "Engenharia aplicada",
+              "ISO 9001:2015",
+            ],
+  };
 
   return (
     <>
       <Header />
+      <Script
+        id="sobre-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="sobre-faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <Script
+        id="sobre-webpage-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <main>
         {/* Hero */}
         <section className="bg-dark pt-40 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden">

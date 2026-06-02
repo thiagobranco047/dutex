@@ -45,7 +45,7 @@
       "channels": [
         {
           "title": "Compliance Channel",
-          "lines": ["compliance@dutex.com.br", "+55 47 9168-9143"]
+          "lines": ["compliance@dutex.com.br", "+55 47 99168-9143"]
         },
         {
           "title": "Reporting Channel",
@@ -73,6 +73,22 @@
       "title": "Want to qualify Dutex as a supplier?",
       "description": "Request our credentials package — ISO 9001 + Compliance Program",
       "button": "Request credentials"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Who can use Dutex's compliance channel?",
+          "answer": "Employees, suppliers, partners, representatives and related stakeholders may use the official ethics channels."
+        },
+        {
+          "question": "Can reports be submitted anonymously?",
+          "answer": "Yes. The reporting channel supports anonymous submissions and confidential handling, with anti-retaliation safeguards."
+        },
+        {
+          "question": "How long does an investigation take?",
+          "answer": "Investigations follow a structured process with an independent committee and a maximum 30-day resolution timeline under internal policy."
+        }
+      ]
     }
   }
 }
