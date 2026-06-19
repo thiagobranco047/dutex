@@ -1,11 +1,11 @@
 {
   "version": 4,
   "routes": {
-    "/icon.svg": {
+    "/robots.txt": {
       "initialHeaders": {
-        "cache-control": "public, immutable, no-transform, max-age=31536000",
-        "content-type": "image/svg+xml",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/icon.svg/layout,_N_T_/icon.svg/route,_N_T_/icon.svg"
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
       },
       "experimentalBypassFor": [
         {
@@ -19,7 +19,7 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/icon.svg",
+      "srcRoute": "/robots.txt",
       "dataRoute": null,
       "allowHeader": [
         "host",
@@ -59,11 +59,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/robots.txt": {
+    "/icon.svg": {
       "initialHeaders": {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "text/plain",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
+        "cache-control": "public, immutable, no-transform, max-age=31536000",
+        "content-type": "image/svg+xml",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/icon.svg/layout,_N_T_/icon.svg/route,_N_T_/icon.svg"
       },
       "experimentalBypassFor": [
         {
@@ -77,7 +77,7 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/robots.txt",
+      "srcRoute": "/icon.svg",
       "dataRoute": null,
       "allowHeader": [
         "host",
@@ -113,7 +113,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/dutex-conecta": {
+    "/en/compliance": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -126,8 +126,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/dutex-conecta",
-      "dataRoute": "/en/dutex-conecta.rsc",
+      "srcRoute": "/[locale]/compliance",
+      "dataRoute": "/en/compliance.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -137,7 +137,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/es/dutex-conecta": {
+    "/es/compliance": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -150,8 +150,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/dutex-conecta",
-      "dataRoute": "/es/dutex-conecta.rsc",
+      "srcRoute": "/[locale]/compliance",
+      "dataRoute": "/es/compliance.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -161,7 +161,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/pt/dutex-conecta": {
+    "/pt/compliance": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -174,8 +174,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/dutex-conecta",
-      "dataRoute": "/pt/dutex-conecta.rsc",
+      "srcRoute": "/[locale]/compliance",
+      "dataRoute": "/pt/compliance.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -257,6 +257,78 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/en/dutex-conecta": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/dutex-conecta",
+      "dataRoute": "/en/dutex-conecta.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/es/dutex-conecta": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/dutex-conecta",
+      "dataRoute": "/es/dutex-conecta.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/pt/dutex-conecta": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/dutex-conecta",
+      "dataRoute": "/pt/dutex-conecta.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/en": {
       "experimentalBypassFor": [
         {
@@ -328,82 +400,10 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/en/compliance": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/compliance",
-      "dataRoute": "/en/compliance.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/es/compliance": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/compliance",
-      "dataRoute": "/es/compliance.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/pt/compliance": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/compliance",
-      "dataRoute": "/pt/compliance.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {
-    "/[locale]/dutex-conecta": {
+    "/[locale]/compliance": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -415,10 +415,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/dutex\\-conecta(?:/)?$",
-      "dataRoute": "/[locale]/dutex-conecta.rsc",
+      "routeRegex": "^/([^/]+?)/compliance(?:/)?$",
+      "dataRoute": "/[locale]/compliance.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/dutex\\-conecta\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/compliance\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -453,6 +453,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/[locale]/dutex-conecta": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/dutex\\-conecta(?:/)?$",
+      "dataRoute": "/[locale]/dutex-conecta.rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/dutex\\-conecta\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/[locale]": {
       "experimentalBypassFor": [
         {
@@ -477,37 +502,12 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/[locale]/compliance": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/compliance(?:/)?$",
-      "dataRoute": "/[locale]/compliance.rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/compliance\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "e5282daf5e57dfd6a5e59bca04fba0d8",
-    "previewModeSigningKey": "d967c45e07fffdc3466588a56a4e5fb2b14c7f32e0ded6f6f1a9585110b14189",
-    "previewModeEncryptionKey": "f10b58a253f447183af36ac9d49885783062dadadd5a1a2f1d6badd8e3c9a81c"
+    "previewModeId": "aae9bc55c1f6c3c9d2d8bfba407ec86f",
+    "previewModeSigningKey": "3190435530a8ee81c2faf49fd7b03b5c6a017f60d9b5a9edc1dc3999f3ad1bee",
+    "previewModeEncryptionKey": "d4935e09c987e42341769f7e9c5e2caae7705fba8c7fd63b2568e5f43a3c1f20"
   }
 }

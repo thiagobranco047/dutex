@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import Container from "@/components/ui/Container";
+import DutexConectaLogo from "@/components/ui/DutexConectaLogo";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import { Link } from "@/i18n/navigation";
@@ -73,6 +74,7 @@ export default async function DutexConectaPage({
   }
 
   const t = await getTranslations("conectaPage");
+  const tLogo = await getTranslations("conectaLogo");
   const fitExamples = t.raw("fit.items") as string[];
   const flowSteps = t.raw("flow.steps") as FlowStep[];
   const ideaTypes = t.raw("form.ideaTypes") as string[];
@@ -171,8 +173,13 @@ export default async function DutexConectaPage({
       <main>
         <section className="bg-dark pt-40 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden">
           <Container>
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
               <div>
+                <DutexConectaLogo
+                  alt={tLogo("alt")}
+                  width={320}
+                  className="mb-10"
+                />
                 <Badge variant="white" className="mb-5">
                   {t("hero.badge")}
                 </Badge>
@@ -184,7 +191,29 @@ export default async function DutexConectaPage({
                 <p className="mt-6 text-base leading-relaxed text-white/55 sm:text-lg max-w-xl">
                   {t("hero.description")}
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
+              </div>
+              <div>
+                <div className="bg-white/[0.04] border border-white/[0.12] p-8 rounded-xl">
+                  <p className="text-xs font-extrabold tracking-[3px] uppercase text-green-accent mb-4">
+                    {t("hero.panelTitle")}
+                  </p>
+                  <div className="grid gap-3">
+                    {panelItems.map((item, index) => {
+                      const Icon =
+                        index === 0 ? Factory : index === 1 ? Lightbulb : CheckCircle2;
+                      return (
+                        <div key={item} className="flex items-start gap-3">
+                          <Icon
+                            size={18}
+                            className="text-green-accent mt-0.5 shrink-0"
+                          />
+                          <p className="text-sm text-white/75">{item}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3">
                   <Button href="#form" size="lg">
                     {t("hero.primaryCta")}
                     <ArrowRight size={16} />
@@ -197,26 +226,6 @@ export default async function DutexConectaPage({
                   >
                     {t("hero.secondaryCta")}
                   </Button>
-                </div>
-              </div>
-              <div className="bg-white/[0.04] border border-white/[0.12] p-8 rounded-xl">
-                <p className="text-xs font-extrabold tracking-[3px] uppercase text-green-accent mb-4">
-                  {t("hero.panelTitle")}
-                </p>
-                <div className="grid gap-3">
-                  {panelItems.map((item, index) => {
-                    const Icon =
-                      index === 0 ? Factory : index === 1 ? Lightbulb : CheckCircle2;
-                    return (
-                      <div key={item} className="flex items-start gap-3">
-                        <Icon
-                          size={18}
-                          className="text-green-accent mt-0.5 shrink-0"
-                        />
-                        <p className="text-sm text-white/75">{item}</p>
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
             </div>
