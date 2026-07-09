@@ -8,11 +8,11 @@ import Container from "@/components/ui/Container";
 import DutexConectaLogo from "@/components/ui/DutexConectaLogo";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
-import { Link } from "@/i18n/navigation";
+import ConectaExperience from "@/components/sections/ConectaExperience";
 import { contactInfo, WHATSAPP_NUMBER } from "@/lib/data";
 import { routing, type Locale } from "@/i18n/routing";
 import { absoluteUrl, localizedAlternates, localizedPath } from "@/lib/seo";
-import { ArrowRight, CheckCircle2, Factory, Lightbulb, Send } from "lucide-react";
+import { ArrowRight, CheckCircle2, Factory, Lightbulb } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -81,8 +81,6 @@ export default async function DutexConectaPage({
   const industrialAreas = t.raw("form.areas") as string[];
   const panelItems = t.raw("hero.panelItems") as string[];
   const faqItems = t.raw("faq.items") as FaqItem[];
-  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
-  const hasAccessKey = Boolean(accessKey);
   const localeKey = (routing.locales.includes(locale as Locale)
     ? locale
     : routing.defaultLocale) as Locale;
@@ -214,7 +212,7 @@ export default async function DutexConectaPage({
                   </div>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <Button href="#form" size="lg">
+                  <Button href="#conecta-experience" size="lg">
                     {t("hero.primaryCta")}
                     <ArrowRight size={16} />
                   </Button>
@@ -297,146 +295,21 @@ export default async function DutexConectaPage({
           <Container>
             <div className="mx-auto max-w-4xl">
               <Badge variant="green" className="mb-5">
-                {t("form.badge")}
+                Dutex Conecta
               </Badge>
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-3">
-                {t("form.title")}
+                Escolha como comecar
               </h2>
               <p className="text-sm text-gray-text mb-10">
-                {t("form.description")}
+                Antes de abrir qualquer ferramenta, capturamos um cadastro
+                rapido com aceite LGPD para que a equipe Dutex consiga retornar
+                mesmo se voce interromper o processo.
               </p>
 
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                className="grid gap-4"
-              >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value={accessKey}
-                />
-                <input
-                  type="hidden"
-                  name="subject"
-                  value={t("form.subject")}
-                />
-                <input
-                  type="hidden"
-                  name="from_name"
-                  value="Website Dutex"
-                />
-                <input type="checkbox" name="botcheck" className="hidden" />
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <input
-                    required
-                    name="nome"
-                    placeholder={t("form.name")}
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                  />
-                  <input
-                    name="empresa"
-                    placeholder={t("form.company")}
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                  />
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    placeholder={t("form.email")}
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                  />
-                  <input
-                    name="whatsapp"
-                    placeholder={t("form.whatsapp")}
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                  />
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <select
-                    name="tipo_ideia"
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      {t("form.ideaTypePlaceholder")}
-                    </option>
-                    {ideaTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                  <select
-                    name="area_relacionada"
-                    className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      {t("form.areaPlaceholder")}
-                    </option>
-                    {industrialAreas.map((area) => (
-                      <option key={area} value={area}>
-                        {area}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <input
-                  required
-                  name="titulo_ideia"
-                  placeholder={t("form.ideaTitle")}
-                  className="rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                />
-
-                <textarea
-                  required
-                  name="problema"
-                  placeholder={t("form.problem")}
-                  className="min-h-24 rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                />
-                <textarea
-                  required
-                  name="solucao"
-                  placeholder={t("form.solution")}
-                  className="min-h-28 rounded-lg border border-gray-border bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none"
-                />
-
-                <label className="flex items-start gap-2 rounded-lg border border-gray-border bg-white p-4 text-xs text-gray-text">
-                  <input required type="checkbox" name="termos_aceitos" className="mt-0.5" />
-                  <span>
-                    {t("form.termsPrefix")}{" "}
-                    <Link href="/compliance" className="text-primary underline">
-                      {t("form.termsLink")}
-                    </Link>
-                    .
-                  </span>
-                </label>
-
-                <Button
-                  type="submit"
-                  className="justify-center"
-                  size="lg"
-                  disabled={!hasAccessKey}
-                >
-                  {t("form.submit")}
-                  <Send size={16} />
-                </Button>
-                {!hasAccessKey && (
-                  <p className="text-xs text-red-600 text-center">
-                    {t("form.configError")}
-                  </p>
-                )}
-                <p className="text-xs text-gray-text text-center">
-                  {t("form.disclaimer")}
-                </p>
-              </form>
+              <ConectaExperience
+                ideaTypes={ideaTypes}
+                industrialAreas={industrialAreas}
+              />
             </div>
           </Container>
         </section>
