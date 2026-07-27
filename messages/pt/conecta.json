@@ -121,5 +121,84 @@
     "description": "Um canal para receber ideias com aplicação industrial e conectar propostas à engenharia, fábrica e capacidade de escala da Dutex.",
     "cta": "Conhecer o Dutex Conecta",
     "footnote": "Dutex + inovação + indústria = mais impacto"
+  },
+  "conectaExperience": {
+    "section": {
+      "badge": "Dutex Conecta",
+      "title": "Escolha como começar",
+      "description": "Antes de abrir qualquer ferramenta, capturamos um cadastro rápido com aceite LGPD para que a equipe Dutex consiga retornar mesmo se você interromper o processo."
+    },
+    "doors": {
+      "problemEyebrow": "Triagem técnica",
+      "problemTitle": "Tenho um problema",
+      "problemDescription": "Conte uma dor operacional, avaria, gargalo ou risco. A IA guia a conversa e organiza um briefing para a engenharia.",
+      "problemButton": "Começar triagem",
+      "ideaEyebrow": "Inovação aberta",
+      "ideaTitle": "Tenho uma ideia",
+      "ideaDescription": "Envie uma proposta de produto, processo ou parceria com aplicação industrial para análise do time Dutex.",
+      "ideaButton": "Enviar ideia"
+    },
+    "gate": {
+      "badge": "Seu contato fica só com a Dutex",
+      "titleIdea": "Antes de enviar sua ideia",
+      "titleTriage": "Antes de começar a triagem",
+      "description": "Um cadastro rápido libera a ferramenta e garante que a equipe Dutex consiga retornar sobre o que você trouxe.",
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "E-mail",
+      "phone": "Telefone / WhatsApp",
+      "role": "Cargo",
+      "segment": "Segmento",
+      "consent": "Autorizo a Dutex a tratar estes dados para avaliar e responder meu contato, conforme a LGPD. Posso solicitar exclusão a qualquer momento.",
+      "continueIdea": "Continuar para a ideia",
+      "continueTriage": "Continuar para a triagem",
+      "error": "Não conseguimos registrar seu contato agora. Tente novamente em instantes."
+    },
+    "triage": {
+      "title": "Triagem guiada",
+      "description": "Converse com a IA para organizar o desafio antes de enviar ao time técnico.",
+      "assistantGreeting": "Olá! Eu ajudo o time técnico da Dutex a entender o seu desafio. Pode contar o que está acontecendo na operação?",
+      "thinking": "Analisando...",
+      "placeholder": "Descreva a dor, o produto, a etapa ou o risco...",
+      "closingTitle": "Encerramento",
+      "closingDescription": "Quando a conversa tiver contexto suficiente, gere a devolutiva e envie o briefing para a Dutex.",
+      "generate": "Gerar devolutiva",
+      "replyError": "Tive um problema para responder agora. Tente enviar novamente; sua mensagem anterior ficou registrada na conversa.",
+      "fallbackReadback": "Recebemos seu desafio. A equipe Dutex vai analisar o contexto técnico e retornar.",
+      "fallbackResult": "Recebemos sua descrição. O time técnico da Dutex vai analisar o contexto e retornar com próximos passos.",
+      "submitWarning": "A conclusão apareceu na tela, mas o enriquecimento final não foi confirmado pelo servidor."
+    },
+    "idea": {
+      "title": "Envio de ideia",
+      "description": "Estruture a proposta para que o time de inovação e engenharia consiga avaliar o fit.",
+      "typeLabel": "Tipo de ideia",
+      "areaLabel": "Área relacionada",
+      "problemLabel": "Qual problema resolve?",
+      "problemPlaceholder": "Descreva a dor, risco, gargalo ou oportunidade.",
+      "solutionLabel": "Como funciona a solução?",
+      "solutionPlaceholder": "Explique a proposta, material, processo ou aplicação.",
+      "stageLabel": "Estágio atual",
+      "stagePlaceholder": "Ideia, desenho, protótipo, fornecedor atual, uso real...",
+      "submit": "Enviar ao time Dutex",
+      "fallbackReadback": "Recebemos sua ideia. A equipe Dutex vai avaliar aderência industrial e retornar.",
+      "submitWarning": "A conclusão apareceu na tela, mas o enriquecimento final não foi confirmado pelo servidor."
+    },
+    "done": {
+      "protocol": "Protocolo {id}",
+      "titleTriage": "Enviado ao time técnico",
+      "titleIdea": "Enviado ao time de inovação",
+      "description": "Chegou à Dutex. Em breve a equipe retorna pelo contato informado.",
+      "summaryTitle": "O que entendemos",
+      "backHome": "Voltar ao início"
+    },
+    "common": {
+      "back": "Voltar",
+      "attachmentsTitle": "Anexos opcionais",
+      "attachmentsDescription": "Adicione fotos ou arquivos para ajudar a equipe técnica.",
+      "addFile": "Adicionar arquivo",
+      "removeAttachment": "Remover anexo",
+      "trustPrefix": "Suas informações são confidenciais e analisadas apenas pela equipe técnica Dutex. Consulte nossa página de",
+      "trustLink": "compliance"
+    }
   }
 }

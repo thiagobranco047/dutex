@@ -75,6 +75,7 @@ export default async function DutexConectaPage({
 
   const t = await getTranslations("conectaPage");
   const tLogo = await getTranslations("conectaLogo");
+  const tExperience = await getTranslations("conectaExperience");
   const fitExamples = t.raw("fit.items") as string[];
   const flowSteps = t.raw("flow.steps") as FlowStep[];
   const ideaTypes = t.raw("form.ideaTypes") as string[];
@@ -295,15 +296,13 @@ export default async function DutexConectaPage({
           <Container>
             <div className="mx-auto max-w-4xl">
               <Badge variant="green" className="mb-5">
-                Dutex Conecta
+                {tExperience("section.badge")}
               </Badge>
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-3">
-                Escolha como comecar
+                {tExperience("section.title")}
               </h2>
               <p className="text-sm text-gray-text mb-10">
-                Antes de abrir qualquer ferramenta, capturamos um cadastro
-                rapido com aceite LGPD para que a equipe Dutex consiga retornar
-                mesmo se voce interromper o processo.
+                {tExperience("section.description")}
               </p>
 
               <ConectaExperience

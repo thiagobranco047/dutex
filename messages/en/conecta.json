@@ -121,5 +121,84 @@
     "description": "A channel to receive ideas with industrial application and connect proposals to Dutex engineering, factory capability and production scale.",
     "cta": "Explore Dutex Conecta",
     "footnote": "Dutex + innovation + industry = greater impact"
+  },
+  "conectaExperience": {
+    "section": {
+      "badge": "Dutex Conecta",
+      "title": "Choose how to start",
+      "description": "Before opening any tool, we capture a quick registration with LGPD consent so the Dutex team can follow up even if you interrupt the process."
+    },
+    "doors": {
+      "problemEyebrow": "Technical screening",
+      "problemTitle": "I have a problem",
+      "problemDescription": "Share an operational pain point, damage, bottleneck or risk. AI guides the conversation and organizes a briefing for engineering.",
+      "problemButton": "Start screening",
+      "ideaEyebrow": "Open innovation",
+      "ideaTitle": "I have an idea",
+      "ideaDescription": "Submit a product, process or partnership proposal with industrial application for review by the Dutex team.",
+      "ideaButton": "Submit idea"
+    },
+    "gate": {
+      "badge": "Your contact stays only with Dutex",
+      "titleIdea": "Before submitting your idea",
+      "titleTriage": "Before starting the screening",
+      "description": "A quick registration unlocks the tool and ensures the Dutex team can follow up on what you shared.",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "role": "Role",
+      "segment": "Segment",
+      "consent": "I authorize Dutex to process this data to evaluate and respond to my contact, in accordance with LGPD. I may request deletion at any time.",
+      "continueIdea": "Continue to the idea",
+      "continueTriage": "Continue to screening",
+      "error": "We could not register your contact right now. Please try again in a moment."
+    },
+    "triage": {
+      "title": "Guided screening",
+      "description": "Talk with the AI to organize the challenge before sending it to the technical team.",
+      "assistantGreeting": "Hello! I help Dutex's technical team understand your challenge. Can you tell us what is happening in the operation?",
+      "thinking": "Analyzing...",
+      "placeholder": "Describe the pain point, product, stage or risk...",
+      "closingTitle": "Closing",
+      "closingDescription": "When the conversation has enough context, generate the readout and send the briefing to Dutex.",
+      "generate": "Generate readout",
+      "replyError": "I had trouble responding right now. Please try sending again; your previous message remains in the conversation.",
+      "fallbackReadback": "We received your challenge. The Dutex team will review the technical context and follow up.",
+      "fallbackResult": "We received your description. Dutex's technical team will review the context and return with next steps.",
+      "submitWarning": "The conclusion appeared on screen, but the final enrichment was not confirmed by the server."
+    },
+    "idea": {
+      "title": "Idea submission",
+      "description": "Structure the proposal so the innovation and engineering team can assess the fit.",
+      "typeLabel": "Idea type",
+      "areaLabel": "Related area",
+      "problemLabel": "What problem does it solve?",
+      "problemPlaceholder": "Describe the pain point, risk, bottleneck or opportunity.",
+      "solutionLabel": "How does the solution work?",
+      "solutionPlaceholder": "Explain the proposal, material, process or application.",
+      "stageLabel": "Current stage",
+      "stagePlaceholder": "Idea, drawing, prototype, current supplier, real use...",
+      "submit": "Send to Dutex team",
+      "fallbackReadback": "We received your idea. The Dutex team will assess industrial fit and follow up.",
+      "submitWarning": "The conclusion appeared on screen, but the final enrichment was not confirmed by the server."
+    },
+    "done": {
+      "protocol": "Protocol {id}",
+      "titleTriage": "Sent to the technical team",
+      "titleIdea": "Sent to the innovation team",
+      "description": "It reached Dutex. The team will follow up soon using the contact you provided.",
+      "summaryTitle": "What we understood",
+      "backHome": "Back to start"
+    },
+    "common": {
+      "back": "Back",
+      "attachmentsTitle": "Optional attachments",
+      "attachmentsDescription": "Add photos or files to help the technical team.",
+      "addFile": "Add file",
+      "removeAttachment": "Remove attachment",
+      "trustPrefix": "Your information is confidential and reviewed only by Dutex's technical team. See our",
+      "trustLink": "compliance page"
+    }
   }
 }

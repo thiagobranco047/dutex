@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   ArrowLeft,
   ArrowRight,
@@ -54,9 +55,6 @@ const initialForm = {
   segmento: "",
 };
 
-const defaultAssistantMessage =
-  "Ola! Eu ajudo o time tecnico da Dutex a entender o seu desafio. Pode contar o que esta acontecendo na operacao?";
-
 async function callIA({
   modo,
   messages,
@@ -109,11 +107,13 @@ function getReadbackText(result: Record<string, unknown> | null, fallback: strin
     "aplicacao_industrial",
     "proximo_passo",
   ];
-  return keys
-    .map((key) => result[key])
-    .filter((value): value is string => typeof value === "string" && value.trim().length > 0)
-    .slice(0, 3)
-    .join("\n\n") || fallback;
+  return (
+    keys
+      .map((key) => result[key])
+      .filter((value): value is string => typeof value === "string" && value.trim().length > 0)
+      .slice(0, 3)
+      .join("\n\n") || fallback
+  );
 }
 
 export default function ConectaExperience({
@@ -202,24 +202,26 @@ export default function ConectaExperience({
 }
 
 function DoorPicker({ onPick }: { onPick: (door: Door) => void }) {
+  const t = useTranslations("conectaExperience.doors");
+
   return (
     <div className="grid gap-5 lg:grid-cols-2">
       <DoorCard
         tone="blue"
         icon={<MessageCircleQuestion size={28} />}
-        eyebrow="Triagem tecnica"
-        title="Tenho um problema"
-        description="Conte uma dor operacional, avaria, gargalo ou risco. A IA guia a conversa e organiza um briefing para a engenharia."
-        button="Comecar triagem"
+        eyebrow={t("problemEyebrow")}
+        title={t("problemTitle")}
+        description={t("problemDescription")}
+        button={t("problemButton")}
         onClick={() => onPick("triagem_dor")}
       />
       <DoorCard
         tone="green"
         icon={<Lightbulb size={28} />}
-        eyebrow="Inovacao aberta"
-        title="Tenho uma ideia"
-        description="Envie uma proposta de produto, processo ou parceria com aplicacao industrial para analise do time Dutex."
-        button="Enviar ideia"
+        eyebrow={t("ideaEyebrow")}
+        title={t("ideaTitle")}
+        description={t("ideaDescription")}
+        button={t("ideaButton")}
         onClick={() => onPick("ideia_conecta")}
       />
     </div>
@@ -297,6 +299,7 @@ function GateForm({
   onBack: () => void;
   onSubmit: (cadastro: ConectaCadastro) => Promise<void>;
 }) {
+  const t = useTranslations("conectaExperience.gate");
   const [form, setForm] = useState(initialForm);
   const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -318,9 +321,7 @@ function GateForm({
     try {
       await onSubmit(cadastro);
     } catch {
-      setError(
-        "Nao conseguimos registrar seu contato agora. Tente novamente em instantes."
-      );
+      setError(t("error"));
     } finally {
       setSubmitting(false);
     }
@@ -332,25 +333,22 @@ function GateForm({
       <div className="rounded-lg border border-gray-border bg-white p-6 shadow-sm sm:p-8">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[2px] text-primary">
           <Lock size={13} />
-          Seu contato fica so com a Dutex
+          {t("badge")}
         </div>
         <h3 className="text-2xl font-bold text-gray-900">
-          {intent === "ideia_conecta"
-            ? "Antes de enviar sua ideia"
-            : "Antes de comecar a triagem"}
+          {intent === "ideia_conecta" ? t("titleIdea") : t("titleTriage")}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-gray-text">
-          Um cadastro rapido libera a ferramenta e garante que a equipe Dutex
-          consiga retornar sobre o que voce trouxe.
+          {t("description")}
         </p>
 
         <div className="mt-7 grid gap-4 sm:grid-cols-2">
-          <Field label="Nome" value={form.nome} onChange={(nome) => setForm((f) => ({ ...f, nome }))} />
-          <Field label="Empresa" value={form.empresa} onChange={(empresa) => setForm((f) => ({ ...f, empresa }))} />
-          <Field label="E-mail" type="email" value={form.email} onChange={(email) => setForm((f) => ({ ...f, email }))} />
-          <Field label="Telefone / WhatsApp" value={form.telefone} onChange={(telefone) => setForm((f) => ({ ...f, telefone }))} />
-          <Field label="Cargo" value={form.cargo} onChange={(cargo) => setForm((f) => ({ ...f, cargo }))} />
-          <Field label="Segmento" value={form.segmento} onChange={(segmento) => setForm((f) => ({ ...f, segmento }))} />
+          <Field label={t("name")} value={form.nome} onChange={(nome) => setForm((f) => ({ ...f, nome }))} />
+          <Field label={t("company")} value={form.empresa} onChange={(empresa) => setForm((f) => ({ ...f, empresa }))} />
+          <Field label={t("email")} type="email" value={form.email} onChange={(email) => setForm((f) => ({ ...f, email }))} />
+          <Field label={t("phone")} value={form.telefone} onChange={(telefone) => setForm((f) => ({ ...f, telefone }))} />
+          <Field label={t("role")} value={form.cargo} onChange={(cargo) => setForm((f) => ({ ...f, cargo }))} />
+          <Field label={t("segment")} value={form.segmento} onChange={(segmento) => setForm((f) => ({ ...f, segmento }))} />
         </div>
 
         <label className="mt-5 flex cursor-pointer items-start gap-3 rounded-lg border border-gray-border bg-gray-light p-4 text-xs leading-relaxed text-gray-text">
@@ -360,11 +358,7 @@ function GateForm({
             onChange={(event) => setConsent(event.target.checked)}
             className="mt-0.5 h-4 w-4 accent-primary"
           />
-          <span>
-            Autorizo a Dutex a tratar estes dados para avaliar e responder meu
-            contato, conforme a LGPD. Posso solicitar exclusao a qualquer
-            momento.
-          </span>
+          <span>{t("consent")}</span>
         </label>
 
         <TrustLine />
@@ -379,7 +373,7 @@ function GateForm({
           onClick={submit}
         >
           {submitting ? <Loader2 size={18} className="animate-spin" /> : null}
-          {intent === "ideia_conecta" ? "Continuar para a ideia" : "Continuar para a triagem"}
+          {intent === "ideia_conecta" ? t("continueIdea") : t("continueTriage")}
           <ArrowRight size={16} />
         </Button>
       </div>
@@ -398,8 +392,9 @@ function TriageFlow({
   onBack: () => void;
   onDone: (lead: ConectaLead, readback: string, warning?: string) => void;
 }) {
+  const t = useTranslations("conectaExperience.triage");
   const [messages, setMessages] = useState<ConectaMessage[]>([
-    { role: "assistant", content: defaultAssistantMessage },
+    { role: "assistant", content: t("assistantGreeting") },
   ]);
   const [input, setInput] = useState("");
   const [thinking, setThinking] = useState(false);
@@ -424,8 +419,7 @@ function TriageFlow({
         ...current,
         {
           role: "assistant",
-          content:
-            "Tive um problema para responder agora. Tente enviar novamente; sua mensagem anterior ficou registrada na conversa.",
+          content: t("replyError"),
         },
       ]);
     } finally {
@@ -449,11 +443,13 @@ function TriageFlow({
           },
         ],
       });
-      result = typeof response === "object" && response !== null ? response as Record<string, unknown> : { leitura_para_cliente: response };
+      result =
+        typeof response === "object" && response !== null
+          ? (response as Record<string, unknown>)
+          : { leitura_para_cliente: response };
     } catch {
       result = {
-        leitura_para_cliente:
-          "Recebemos sua descricao. O time tecnico da Dutex vai analisar o contexto e retornar com proximos passos.",
+        leitura_para_cliente: t("fallbackResult"),
         resumo_dor: "Revisar a transcricao manualmente.",
       };
     }
@@ -469,27 +465,16 @@ function TriageFlow({
     try {
       await submitLead(lead);
     } catch {
-      warning = "A conclusao apareceu na tela, mas o enriquecimento final nao foi confirmado pelo servidor.";
+      warning = t("submitWarning");
     }
     setBuilding(false);
-    onDone(
-      lead,
-      getReadbackText(
-        result,
-        "Recebemos seu desafio. A equipe Dutex vai analisar o contexto tecnico e retornar."
-      ),
-      warning
-    );
+    onDone(lead, getReadbackText(result, t("fallbackReadback")), warning);
   }
 
   const userTurns = messages.filter((message) => message.role === "user").length;
 
   return (
-    <ToolShell
-      title="Triagem guiada"
-      description="Converse com a IA para organizar o desafio antes de enviar ao time tecnico."
-      onBack={onBack}
-    >
+    <ToolShell title={t("title")} description={t("description")} onBack={onBack}>
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]">
         <div className="rounded-lg border border-gray-border bg-white p-4">
           <div className="flex h-[420px] flex-col gap-3 overflow-y-auto rounded-lg bg-gray-light p-4">
@@ -499,7 +484,7 @@ function TriageFlow({
             {thinking && (
               <div className="inline-flex items-center gap-2 text-sm text-gray-text">
                 <Loader2 size={15} className="animate-spin" />
-                Analisando...
+                {t("thinking")}
               </div>
             )}
           </div>
@@ -513,7 +498,7 @@ function TriageFlow({
                   sendMessage();
                 }
               }}
-              placeholder="Descreva a dor, o produto, a etapa ou o risco..."
+              placeholder={t("placeholder")}
               className="min-w-0 flex-1 rounded-lg border border-gray-border px-4 py-3 text-sm focus:border-primary focus:outline-none"
             />
             <Button type="button" onClick={sendMessage} disabled={!input.trim() || thinking}>
@@ -525,11 +510,10 @@ function TriageFlow({
           <Attachments files={files} setFiles={setFiles} />
           <div className="rounded-lg border border-primary/15 bg-primary/5 p-4">
             <p className="text-xs font-bold uppercase tracking-[2px] text-primary">
-              Encerramento
+              {t("closingTitle")}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-gray-text">
-              Quando a conversa tiver contexto suficiente, gere a devolutiva e
-              envie o briefing para a Dutex.
+              {t("closingDescription")}
             </p>
             <Button
               type="button"
@@ -539,7 +523,7 @@ function TriageFlow({
               onClick={finalize}
             >
               {building ? <Loader2 size={18} className="animate-spin" /> : null}
-              Gerar devolutiva
+              {t("generate")}
             </Button>
           </div>
         </div>
@@ -563,8 +547,9 @@ function IdeaFlow({
   onBack: () => void;
   onDone: (lead: ConectaLead, readback: string, warning?: string) => void;
 }) {
-  const [tipo, setTipo] = useState(ideaTypes[0] || "Novo produto industrial");
-  const [area, setArea] = useState(industrialAreas[0] || "Protecao industrial");
+  const t = useTranslations("conectaExperience.idea");
+  const [tipo, setTipo] = useState(ideaTypes[0] || "");
+  const [area, setArea] = useState(industrialAreas[0] || "");
   const [problema, setProblema] = useState("");
   const [solucao, setSolucao] = useState("");
   const [estagio, setEstagio] = useState("");
@@ -593,7 +578,10 @@ function IdeaFlow({
           },
         ],
       });
-      result = typeof response === "object" && response !== null ? response as Record<string, unknown> : { resumo_ideia: response };
+      result =
+        typeof response === "object" && response !== null
+          ? (response as Record<string, unknown>)
+          : { resumo_ideia: response };
     } catch {
       result = {
         resumo_ideia: problema,
@@ -614,49 +602,38 @@ function IdeaFlow({
     try {
       await submitLead(lead);
     } catch {
-      warning = "A conclusao apareceu na tela, mas o enriquecimento final nao foi confirmado pelo servidor.";
+      warning = t("submitWarning");
     }
     setSubmitting(false);
-    onDone(
-      lead,
-      getReadbackText(
-        result,
-        "Recebemos sua ideia. A equipe Dutex vai avaliar aderencia industrial e retornar."
-      ),
-      warning
-    );
+    onDone(lead, getReadbackText(result, t("fallbackReadback")), warning);
   }
 
   return (
-    <ToolShell
-      title="Envio de ideia"
-      description="Estruture a proposta para que o time de inovacao e engenharia consiga avaliar o fit."
-      onBack={onBack}
-    >
+    <ToolShell title={t("title")} description={t("description")} onBack={onBack}>
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="grid gap-4 rounded-lg border border-gray-border bg-white p-5">
           <div className="grid gap-4 sm:grid-cols-2">
-            <Select label="Tipo de ideia" value={tipo} onChange={setTipo} options={ideaTypes} />
-            <Select label="Area relacionada" value={area} onChange={setArea} options={industrialAreas} />
+            <Select label={t("typeLabel")} value={tipo} onChange={setTipo} options={ideaTypes} />
+            <Select label={t("areaLabel")} value={area} onChange={setArea} options={industrialAreas} />
           </div>
           <TextArea
-            label="Qual problema resolve?"
+            label={t("problemLabel")}
             value={problema}
             onChange={setProblema}
-            placeholder="Descreva a dor, risco, gargalo ou oportunidade."
+            placeholder={t("problemPlaceholder")}
           />
           <TextArea
-            label="Como funciona a solucao?"
+            label={t("solutionLabel")}
             value={solucao}
             onChange={setSolucao}
-            placeholder="Explique a proposta, material, processo ou aplicacao."
+            placeholder={t("solutionPlaceholder")}
             rows={5}
           />
           <TextArea
-            label="Estagio atual"
+            label={t("stageLabel")}
             value={estagio}
             onChange={setEstagio}
-            placeholder="Ideia, desenho, prototipo, fornecedor atual, uso real..."
+            placeholder={t("stagePlaceholder")}
           />
           <TrustLine />
           <Button
@@ -667,7 +644,7 @@ function IdeaFlow({
             onClick={submit}
           >
             {submitting ? <Loader2 size={18} className="animate-spin" /> : null}
-            Enviar ao time Dutex
+            {t("submit")}
             <ArrowRight size={16} />
           </Button>
         </div>
@@ -688,6 +665,8 @@ function DoneScreen({
   warning: string;
   onHome: () => void;
 }) {
+  const t = useTranslations("conectaExperience.done");
+
   return (
     <div className="rounded-lg border border-green-accent/30 bg-white p-6 shadow-sm sm:p-8">
       <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
@@ -696,17 +675,17 @@ function DoneScreen({
         </div>
         <div className="min-w-0 flex-1">
           <p className="text-xs font-extrabold uppercase tracking-[3px] text-green-accent-dark">
-            Protocolo {lead.lead_id}
+            {t("protocol", { id: lead.lead_id })}
           </p>
           <h3 className="mt-2 text-2xl font-bold text-gray-900">
-            Enviado ao time {lead.intent === "triagem_dor" ? "tecnico" : "de inovacao"}
+            {lead.intent === "triagem_dor" ? t("titleTriage") : t("titleIdea")}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-gray-text">
-            Chegou a Dutex. Em breve a equipe retorna pelo contato informado.
+            {t("description")}
           </p>
           <div className="mt-6 rounded-lg border border-gray-border bg-gray-light p-5">
             <p className="text-xs font-bold uppercase tracking-[2px] text-primary">
-              O que entendemos
+              {t("summaryTitle")}
             </p>
             <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-gray-800">
               {readback}
@@ -714,7 +693,7 @@ function DoneScreen({
           </div>
           {warning && <p className="mt-4 text-sm text-yellow-700">{warning}</p>}
           <Button type="button" className="mt-6" onClick={onHome}>
-            Voltar ao inicio
+            {t("backHome")}
           </Button>
         </div>
       </div>
@@ -746,6 +725,8 @@ function ToolShell({
 }
 
 function BackButton({ onClick }: { onClick: () => void }) {
+  const t = useTranslations("conectaExperience.common");
+
   return (
     <button
       type="button"
@@ -753,7 +734,7 @@ function BackButton({ onClick }: { onClick: () => void }) {
       className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-gray-text transition-colors hover:text-primary"
     >
       <ArrowLeft size={16} />
-      Voltar
+      {t("back")}
     </button>
   );
 }
@@ -867,6 +848,7 @@ function Attachments({
   files: Attachment[];
   setFiles: React.Dispatch<React.SetStateAction<Attachment[]>>;
 }) {
+  const t = useTranslations("conectaExperience.common");
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   function pickFiles(event: React.ChangeEvent<HTMLInputElement>) {
@@ -882,10 +864,10 @@ function Attachments({
   return (
     <div className="rounded-lg border border-gray-border bg-white p-4">
       <p className="text-xs font-bold uppercase tracking-[2px] text-gray-text">
-        Anexos opcionais
+        {t("attachmentsTitle")}
       </p>
       <p className="mt-1 text-xs leading-relaxed text-gray-text">
-        Adicione fotos ou arquivos para ajudar a equipe tecnica.
+        {t("attachmentsDescription")}
       </p>
       <button
         type="button"
@@ -893,7 +875,7 @@ function Attachments({
         className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-gray-border bg-gray-light px-4 py-4 text-sm font-semibold text-gray-700 transition-colors hover:border-primary hover:text-primary"
       >
         <Paperclip size={16} />
-        Adicionar arquivo
+        {t("addFile")}
       </button>
       <input
         ref={inputRef}
@@ -919,7 +901,7 @@ function Attachments({
                 type="button"
                 onClick={() => setFiles((current) => current.filter((_, i) => i !== index))}
                 className="rounded p-1 text-gray-text hover:bg-gray-light hover:text-primary"
-                aria-label="Remover anexo"
+                aria-label={t("removeAttachment")}
               >
                 <X size={15} />
               </button>
@@ -932,14 +914,15 @@ function Attachments({
 }
 
 function TrustLine() {
+  const t = useTranslations("conectaExperience.common");
+
   return (
     <p className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-gray-text">
       <ShieldCheck size={15} className="mt-0.5 shrink-0 text-green-accent-dark" />
       <span>
-        Suas informacoes sao confidenciais e analisadas apenas pela equipe
-        tecnica Dutex. Consulte nossa pagina de{" "}
+        {t("trustPrefix")}{" "}
         <Link href="/compliance" className="font-semibold text-primary underline">
-          compliance
+          {t("trustLink")}
         </Link>
         .
       </span>
