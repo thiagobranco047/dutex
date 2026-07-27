@@ -62,6 +62,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <div className="px-3 pb-2 flex flex-col gap-1">
                     <Link
                       href="/sobre"
+                      prefetch
                       onClick={onClose}
                       className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
                     >
@@ -69,6 +70,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     </Link>
                     <Link
                       href="/compliance"
+                      prefetch
                       onClick={onClose}
                       className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
                     >
@@ -76,6 +78,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     </Link>
                     <Link
                       href="/dutex-conecta"
+                      prefetch
                       onClick={onClose}
                       className="rounded-md px-2 py-2 text-xs text-white/65 hover:bg-white/10 hover:text-white transition-colors"
                     >

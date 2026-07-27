@@ -8,7 +8,7 @@ import Container from "@/components/ui/Container";
 import DutexConectaLogo from "@/components/ui/DutexConectaLogo";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
-import ConectaExperience from "@/components/sections/ConectaExperience";
+import ConectaExperienceLazy from "@/components/sections/ConectaExperienceLazy";
 import { contactInfo, WHATSAPP_NUMBER } from "@/lib/data";
 import { routing, type Locale } from "@/i18n/routing";
 import { absoluteUrl, localizedAlternates, localizedPath } from "@/lib/seo";
@@ -305,7 +305,7 @@ export default async function DutexConectaPage({
                 {tExperience("section.description")}
               </p>
 
-              <ConectaExperience
+              <ConectaExperienceLazy
                 ideaTypes={ideaTypes}
                 industrialAreas={industrialAreas}
               />

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { navHrefs } from "@/lib/data";
 import Container from "@/components/ui/Container";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
@@ -15,6 +15,7 @@ export default function Header() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
   const tA11y = useTranslations("a11y");
+  const router = useRouter();
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -22,6 +23,12 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+
+  useEffect(() => {
+    router.prefetch("/dutex-conecta");
+    router.prefetch("/sobre");
+    router.prefetch("/compliance");
+  }, [router]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/100 to-transparent">
@@ -58,18 +65,21 @@ export default function Header() {
                       <div className="w-52 rounded-lg border border-white/15 bg-dark/95 p-1.5 backdrop-blur-md shadow-xl">
                         <Link
                           href="/sobre"
+                          prefetch
                           className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
                         >
                           {tCommon("aboutCompany")}
                         </Link>
                         <Link
                           href="/compliance"
+                          prefetch
                           className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
                         >
                           {tCommon("compliance")}
                         </Link>
                         <Link
                           href="/dutex-conecta"
+                          prefetch
                           className="block rounded-md px-3 py-2 text-[13px] text-white/75 hover:bg-white/10 hover:text-white transition-colors"
                         >
                           {tCommon("dutexConecta")}
