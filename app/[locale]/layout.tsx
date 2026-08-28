@@ -10,7 +10,12 @@ import {
 import { notFound } from "next/navigation";
 import SmoothScroll from "@/components/SmoothScroll";
 import { routing, type Locale } from "@/i18n/routing";
-import { SITE_URL, absoluteUrl } from "@/lib/seo";
+import {
+  SITE_URL,
+  absoluteUrl,
+  GOOGLE_SITE_VERIFICATION,
+  GA_MEASUREMENT_ID,
+} from "@/lib/seo";
 import { contactInfo, WHATSAPP_NUMBER } from "@/lib/data";
 import { toTelHref } from "@/lib/utils";
 import "../globals.css";
@@ -60,6 +65,9 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       images: [absoluteUrl("/images/industria.webp")],
+    },
+    verification: {
+      google: GOOGLE_SITE_VERIFICATION,
     },
   };
 }
@@ -172,6 +180,18 @@ export default async function LocaleLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
           />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
           <SmoothScroll />
           {children}
         </NextIntlClientProvider>
