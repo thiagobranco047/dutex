@@ -1,0 +1,36 @@
+{
+  "duchabrHome": {
+    "badge": "DuchaBR",
+    "videoBadge": "Automatic truck wash",
+    "title": "Fleet washing on another level.",
+    "description": "An exclusive Dutex solution: DuchaBR is the automated truck wash system developed in Brazil by our engineering team - configured for the fleet, the space and the routine of each operation.",
+    "pillars": [
+      {
+        "title": "Touchless",
+        "text": "Water jets, no brushes or rollers, preserving the paintwork."
+      },
+      {
+        "title": "Automation",
+        "text": "Sensor detection, product dosing and controlled pressure."
+      },
+      {
+        "title": "Water efficiency",
+        "text": "A controlled process that reduces water and supply waste."
+      },
+      {
+        "title": "Tailor-made",
+        "text": "Sized for your fleet, your space and your pace."
+      }
+    ],
+    "stepsLabel": "How the DuchaBR cycle works",
+    "steps": ["Entry", "Positioning", "Washing", "Rinsing", "Exit"],
+    "primaryCta": "Discover DuchaBR",
+    "secondaryCta": "Schedule a technical visit",
+    "whatsappMessage": "Hello! I saw DuchaBR on the Dutex website and would like to schedule a technical visit.",
+    "footnote": "Made in Brazil, custom-designed and supported directly by the manufacturer.",
+    "videoLabel": "Video of the DuchaBR system in operation",
+    "play": "Play video",
+    "pause": "Pause video",
+    "externalLink": "opens in a new tab"
+  }
+}

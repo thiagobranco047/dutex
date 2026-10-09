@@ -11,6 +11,7 @@ import RealApplications from "@/components/sections/RealApplications";
 import Process from "@/components/sections/Process";
 import FinalCta from "@/components/sections/FinalCta";
 import DutexConecta from "@/components/sections/DutexConecta";
+import DuchaBR from "@/components/sections/DuchaBR";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
@@ -82,6 +83,7 @@ export default async function Home({
         <RealApplications />
         <Process />
         <DutexConecta />
+        <DuchaBR />
         <FinalCta />
       </main>
       <Footer />

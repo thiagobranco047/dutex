@@ -1,0 +1,36 @@
+{
+  "duchabrHome": {
+    "badge": "DuchaBR",
+    "videoBadge": "Lavatruck automática",
+    "title": "Lavagem de frotas em outro nível.",
+    "description": "Uma solução exclusiva Dutex: o DuchaBR é o sistema automatizado de lavagem de caminhões desenvolvido no Brasil pela nossa engenharia - configurado para a frota, o espaço e a rotina de cada operação.",
+    "pillars": [
+      {
+        "title": "Touchless",
+        "text": "Jatos de água, sem escovas nem rolos, preservando a pintura."
+      },
+      {
+        "title": "Automação",
+        "text": "Detecção por sensores, dosagem de produtos e pressão controlada."
+      },
+      {
+        "title": "Eficiência hídrica",
+        "text": "Processo controlado para reduzir desperdício de água e insumos."
+      },
+      {
+        "title": "Sob medida",
+        "text": "Dimensionado para a sua frota, o seu espaço e o seu ritmo."
+      }
+    ],
+    "stepsLabel": "Como funciona o ciclo DuchaBR",
+    "steps": ["Entrada", "Posicionamento", "Lavagem", "Enxágue", "Saída"],
+    "primaryCta": "Conheça o DuchaBR",
+    "secondaryCta": "Agende uma visita técnica",
+    "whatsappMessage": "Olá! Vi o DuchaBR no site da Dutex e gostaria de agendar uma visita técnica.",
+    "footnote": "Fabricação nacional, projeto sob medida e suporte direto do fabricante.",
+    "videoLabel": "Vídeo do sistema DuchaBR em operação",
+    "play": "Reproduzir vídeo",
+    "pause": "Pausar vídeo",
+    "externalLink": "abre em nova aba"
+  }
+}

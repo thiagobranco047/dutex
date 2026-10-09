@@ -44,6 +44,7 @@ export const footerLinkConfig = [
       { labelKey: "about", href: "/#sobre" },
       { labelKey: "solutions", href: "/#solucoes" },
       { labelKey: "applications", href: "/#aplicacoes" },
+      { label: "DuchaBR", href: duchabrUrl("footer") },
       { labelKey: "contact", href: "/#contato" },
     ],
   },
@@ -70,8 +71,14 @@ export const contactInfo = {
   email: "comercial@dutex.ind.br",
   phone: "+55 (47) 3439-4911",
   whatsapp: "+55 (47) 99121-4911",
-  address: "Garuva – SC",
+  address: "Garuva - SC",
 };
 
-/** Digits only for wa.me — already includes country code 55. Do not prepend +55 again. */
+/** Digits only for wa.me - already includes country code 55. Do not prepend +55 again. */
 export const WHATSAPP_NUMBER = "5547991214911";
+
+export const DUCHABR_WHATSAPP_NUMBER = "5547988792110";
+
+export function duchabrUrl(campaign: string) {
+  return `https://www.duchabr.com.br/?utm_source=dutex&utm_medium=site&utm_campaign=${campaign}`;
+}

@@ -1,0 +1,36 @@
+{
+  "duchabrHome": {
+    "badge": "DuchaBR",
+    "videoBadge": "Lavadero automático de camiones",
+    "title": "Lavado de flotas en otro nivel.",
+    "description": "Una solución exclusiva Dutex: DuchaBR es el sistema automatizado de lavado de camiones desarrollado en Brasil por nuestra ingeniería - configurado para la flota, el espacio y la rutina de cada operación.",
+    "pillars": [
+      {
+        "title": "Touchless",
+        "text": "Chorros de agua, sin cepillos ni rodillos, preservando la pintura."
+      },
+      {
+        "title": "Automatización",
+        "text": "Detección por sensores, dosificación de productos y presión controlada."
+      },
+      {
+        "title": "Eficiencia hídrica",
+        "text": "Proceso controlado para reducir el desperdicio de agua e insumos."
+      },
+      {
+        "title": "A medida",
+        "text": "Dimensionado para su flota, su espacio y su ritmo."
+      }
+    ],
+    "stepsLabel": "Cómo funciona el ciclo DuchaBR",
+    "steps": ["Entrada", "Posicionamiento", "Lavado", "Enjuague", "Salida"],
+    "primaryCta": "Conozca DuchaBR",
+    "secondaryCta": "Agende una visita técnica",
+    "whatsappMessage": "¡Hola! Vi DuchaBR en el sitio de Dutex y me gustaría agendar una visita técnica.",
+    "footnote": "Fabricación nacional, proyecto a medida y soporte directo del fabricante.",
+    "videoLabel": "Video del sistema DuchaBR en operación",
+    "play": "Reproducir video",
+    "pause": "Pausar video",
+    "externalLink": "se abre en una nueva pestaña"
+  }
+}
