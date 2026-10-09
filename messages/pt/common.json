@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Dutex — Soluções que movem a indústria",
+    "title": "Dutex - Soluções que movem a indústria",
     "description": "Soluções técnicas em aço e polímeros para proteção de cargas, eficiência logística e redução de riscos operacionais.",
     "keywords": "Dutex,soluções industriais,proteção de cargas,logística,B2B,aço,polímeros"
   },
@@ -23,8 +23,8 @@
     "subscribeSuccess": "Inscrição realizada com sucesso!",
     "subscribeError": "Erro ao inscrever. Tente novamente.",
     "subscribeConfigError": "Formulário indisponível no momento. Configure a chave Web3Forms.",
-    "newsletterSubject": "Nova inscrição newsletter — Site Dutex",
-    "description": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística — da linha de produção até o destino final.",
+    "newsletterSubject": "Nova inscrição newsletter - Site Dutex",
+    "description": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística - da linha de produção até o destino final.",
     "company": "Empresa",
     "followUs": "Siga-nos",
     "allSocial": "Todas as redes sociais",
@@ -59,7 +59,7 @@
     "closeMenu": "Fechar menu",
     "facade": "Fachada da Dutex",
     "viewCase": "Ver caso {id}: {title}",
-    "videoPlayPause": "Pausar ou reproduzir vídeo — clique na área do vídeo",
+    "videoPlayPause": "Pausar ou reproduzir vídeo - clique na área do vídeo",
     "closeChapter": "Fechar informações do capítulo",
     "videoChapters": "Capítulos do vídeo",
     "chapterLabel": "Capítulo {id}",

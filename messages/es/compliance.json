@@ -1,7 +1,7 @@
 {
   "compliancePage": {
     "meta": {
-      "title": "Compliance e Integridad — Dutex",
+      "title": "Compliance e Integridad - Dutex",
       "description": "Dutex opera con tolerancia cero a conductas antiéticas, acoso y discriminación. Conozca nuestro programa de integridad."
     },
     "hero": {
@@ -18,7 +18,7 @@
       "items": [
         {
           "title": "Tolerancia Cero",
-          "description": "Ninguna conducta de acoso moral, acoso sexual o discriminación es tolerada — independientemente del cargo, jerarquía o antigüedad."
+          "description": "Ninguna conducta de acoso moral, acoso sexual o discriminación es tolerada - independientemente del cargo, jerarquía o antigüedad."
         },
         {
           "title": "Proceso Estructurado",
@@ -39,8 +39,8 @@
       "titleBefore": "Conformidad con la",
       "titleHighlight": "legislación vigente",
       "paragraph1": "El Programa de Integridad de Dutex es elaborado por asesoría jurídica especializada y actualizado anualmente para reflejar la evolución normativa brasileña.",
-      "paragraph2": "Proveedores y socios que operan con nosotros adhieren formalmente a nuestras directrices éticas como condición contractual — sin excepción.",
-      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "OIT — Conv. 190", "CLT", "CF / 1988", "RGPD"],
+      "paragraph2": "Proveedores y socios que operan con nosotros adhieren formalmente a nuestras directrices éticas como condición contractual - sin excepción.",
+      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "OIT - Conv. 190", "CLT", "CF / 1988", "RGPD"],
       "channelsBadge": "Canales Oficiales",
       "channels": [
         {
@@ -71,7 +71,7 @@
     },
     "cta": {
       "title": "¿Desea calificar a Dutex como proveedor?",
-      "description": "Solicite nuestro paquete de credenciales — ISO 9001 + Programa de Compliance",
+      "description": "Solicite nuestro paquete de credenciales - ISO 9001 + Programa de Compliance",
       "button": "Solicitar credenciales"
     },
     "faq": {

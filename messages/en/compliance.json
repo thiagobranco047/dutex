@@ -1,7 +1,7 @@
 {
   "compliancePage": {
     "meta": {
-      "title": "Compliance & Integrity — Dutex",
+      "title": "Compliance & Integrity - Dutex",
       "description": "Dutex operates with zero tolerance for unethical conduct, harassment and discrimination. Learn about our integrity program."
     },
     "hero": {
@@ -18,7 +18,7 @@
       "items": [
         {
           "title": "Zero Tolerance",
-          "description": "No conduct involving moral harassment, sexual harassment or discrimination is tolerated — regardless of position, hierarchy or tenure."
+          "description": "No conduct involving moral harassment, sexual harassment or discrimination is tolerated - regardless of position, hierarchy or tenure."
         },
         {
           "title": "Structured Process",
@@ -39,8 +39,8 @@
       "titleBefore": "Compliance with",
       "titleHighlight": "applicable legislation",
       "paragraph1": "Dutex's Integrity Program is developed by specialized legal counsel and updated annually to reflect the evolution of Brazilian regulations.",
-      "paragraph2": "Suppliers and partners who work with us formally adhere to our ethical guidelines as a contractual condition — without exception.",
-      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "ILO — Conv. 190", "CLT", "CF / 1988", "GDPR"],
+      "paragraph2": "Suppliers and partners who work with us formally adhere to our ethical guidelines as a contractual condition - without exception.",
+      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "ILO - Conv. 190", "CLT", "CF / 1988", "GDPR"],
       "channelsBadge": "Official Channels",
       "channels": [
         {
@@ -71,7 +71,7 @@
     },
     "cta": {
       "title": "Want to qualify Dutex as a supplier?",
-      "description": "Request our credentials package — ISO 9001 + Compliance Program",
+      "description": "Request our credentials package - ISO 9001 + Compliance Program",
       "button": "Request credentials"
     },
     "faq": {

@@ -1,7 +1,7 @@
 {
   "compliancePage": {
     "meta": {
-      "title": "Compliance & Integridade — Dutex",
+      "title": "Compliance & Integridade - Dutex",
       "description": "A Dutex opera com tolerância zero a condutas antiéticas, assédio e discriminação. Conheça nosso programa de integridade."
     },
     "hero": {
@@ -18,7 +18,7 @@
       "items": [
         {
           "title": "Tolerância Zero",
-          "description": "Nenhuma conduta de assédio moral, assédio sexual ou discriminação é tolerada — independentemente de cargo, hierarquia ou tempo de empresa."
+          "description": "Nenhuma conduta de assédio moral, assédio sexual ou discriminação é tolerada - independentemente de cargo, hierarquia ou tempo de empresa."
         },
         {
           "title": "Processo Estruturado",
@@ -39,8 +39,8 @@
       "titleBefore": "Conformidade com a",
       "titleHighlight": "legislação vigente",
       "paragraph1": "O Programa de Integridade da Dutex é elaborado por assessoria jurídica especializada e atualizado anualmente para refletir a evolução normativa brasileira.",
-      "paragraph2": "Fornecedores e parceiros que operam conosco aderem formalmente às nossas diretrizes éticas como condição contratual — sem exceção.",
-      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "OIT — Conv. 190", "CLT", "CF / 1988", "LGPD"],
+      "paragraph2": "Fornecedores e parceiros que operam conosco aderem formalmente às nossas diretrizes éticas como condição contratual - sem exceção.",
+      "laws": ["Lei 14.457/2022", "Lei 14.540/2023", "OIT - Conv. 190", "CLT", "CF / 1988", "LGPD"],
       "channelsBadge": "Canais Oficiais",
       "channels": [
         {
@@ -71,7 +71,7 @@
     },
     "cta": {
       "title": "Quer qualificar a Dutex como fornecedor?",
-      "description": "Solicite nosso pacote de credenciais — ISO 9001 + Programa de Compliance",
+      "description": "Solicite nosso pacote de credenciais - ISO 9001 + Programa de Compliance",
       "button": "Solicitar credenciais"
     },
     "faq": {

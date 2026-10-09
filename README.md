@@ -1,4 +1,4 @@
-# Dutex — Landing Page Institucional
+# Dutex - Landing Page Institucional
 
 Landing page institucional da Dutex desenvolvida com Next.js 15, TypeScript e Tailwind CSS v4.
 

@@ -3,7 +3,7 @@
     "badge": "Dutex Industrial",
     "titleLine1": "Solutions Powering",
     "titleLine2": "Industry",
-    "subtitle": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency — from the production line to the final destination."
+    "subtitle": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency - from the production line to the final destination."
   },
   "about": {
     "badge": "About Dutex",
@@ -27,7 +27,7 @@
       {
         "number": "01",
         "title": "Steel Processing",
-        "description": "Steel processed with industrial precision — coils, custom sheets, slitter and blanks in ZC, FF and FQ with thicknesses up to 40mm. Raw material ready for your production."
+        "description": "Steel processed with industrial precision - coils, custom sheets, slitter and blanks in ZC, FF and FQ with thicknesses up to 40mm. Raw material ready for your production."
       },
       {
         "number": "02",
@@ -44,7 +44,7 @@
   "whyDutex": {
     "badge": "Differentiators",
     "title": "Why Dutex?",
-    "intro": "Dutex manufactures internally with a complete structure — full control over quality, lead time and customization, without relying on third parties. Customized solutions for each client and load type.",
+    "intro": "Dutex manufactures internally with a complete structure - full control over quality, lead time and customization, without relying on third parties. Customized solutions for each client and load type.",
     "items": [
       {
         "title": "Engineering applied to operations",
@@ -60,7 +60,7 @@
       },
       {
         "title": "100% in-house manufacturing",
-        "subtitle": "Plastic injection, PP extrusion and metal fabrication — without relying on third parties."
+        "subtitle": "Plastic injection, PP extrusion and metal fabrication - without relying on third parties."
       }
     ]
   },
@@ -125,7 +125,7 @@
       {
         "number": "02",
         "title": "Engineering and design",
-        "description": "Reverse engineering or development from scratch — definition of materials, geometries and production tools according to operational needs."
+        "description": "Reverse engineering or development from scratch - definition of materials, geometries and production tools according to operational needs."
       },
       {
         "number": "03",
@@ -145,7 +145,7 @@
     "subtitle": "We serve industries with high technical requirements, where logistics failures are not an option.",
     "items": [
       {
-        "quote": "Dutex's cradles significantly reduced damage during coil transport. Applied engineering for our operation made all the difference — it's not an off-the-shelf product.",
+        "quote": "Dutex's cradles significantly reduced damage during coil transport. Applied engineering for our operation made all the difference - it's not an off-the-shelf product.",
         "author": "Carlos Mendes",
         "role": "Logistics Manager",
         "company": "Steel Service Center"
@@ -157,7 +157,7 @@
         "company": "Metalmecânica Industry"
       },
       {
-        "quote": "Steel and plastic integration in a single supplier simplified our entire chain. Traceability, dimensional control and on-time delivery — Dutex delivers on its promise.",
+        "quote": "Steel and plastic integration in a single supplier simplified our entire chain. Traceability, dimensional control and on-time delivery - Dutex delivers on its promise.",
         "author": "Rafael Costa",
         "role": "Supply Coordinator",
         "company": "Road Equipment"

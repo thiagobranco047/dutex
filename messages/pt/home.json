@@ -3,7 +3,7 @@
     "badge": "Dutex Industrial",
     "titleLine1": "Soluções que movem",
     "titleLine2": "a indústria",
-    "subtitle": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística — da linha de produção até o destino final."
+    "subtitle": "Soluções industriais em aço e plásticos de engenharia para transformação de materiais, proteção de cargas e eficiência logística - da linha de produção até o destino final."
   },
   "about": {
     "badge": "Sobre a Dutex",
@@ -27,7 +27,7 @@
       {
         "number": "01",
         "title": "Transformação de Aço",
-        "description": "Aço transformado com precisão industrial — bobinas, chapas sob medida, slitter e blanks em ZC, FF e FQ com espessuras até 40mm. Matéria-prima pronta para sua produção."
+        "description": "Aço transformado com precisão industrial - bobinas, chapas sob medida, slitter e blanks em ZC, FF e FQ com espessuras até 40mm. Matéria-prima pronta para sua produção."
       },
       {
         "number": "02",
@@ -44,7 +44,7 @@
   "whyDutex": {
     "badge": "Diferenciais",
     "title": "Por que a Dutex?",
-    "intro": "A Dutex fabrica internamente com estrutura completa — controle total sobre qualidade, prazo e customização, sem depender de terceiros. Soluções customizadas para cada cliente e tipo de carga.",
+    "intro": "A Dutex fabrica internamente com estrutura completa - controle total sobre qualidade, prazo e customização, sem depender de terceiros. Soluções customizadas para cada cliente e tipo de carga.",
     "items": [
       {
         "title": "Engenharia aplicada à operação",
@@ -60,7 +60,7 @@
       },
       {
         "title": "Fabricação 100% própria",
-        "subtitle": "Injeção plástica, extrusão em PP e caldeiraria metálica — sem depender de terceiros."
+        "subtitle": "Injeção plástica, extrusão em PP e caldeiraria metálica - sem depender de terceiros."
       }
     ]
   },
@@ -125,7 +125,7 @@
       {
         "number": "02",
         "title": "Engenharia e projeto",
-        "description": "Engenharia reversa ou desenvolvimento do zero — definição de materiais, geometrias e ferramentas de produção conforme a necessidade da operação."
+        "description": "Engenharia reversa ou desenvolvimento do zero - definição de materiais, geometrias e ferramentas de produção conforme a necessidade da operação."
       },
       {
         "number": "03",
@@ -145,7 +145,7 @@
     "subtitle": "Atendemos indústrias com alta exigência técnica, onde falhas logísticas não são uma opção.",
     "items": [
       {
-        "quote": "Os berços da Dutex reduziram significativamente as avarias no transporte de bobinas. A engenharia aplicada à nossa operação fez toda a diferença — não é produto de prateleira.",
+        "quote": "Os berços da Dutex reduziram significativamente as avarias no transporte de bobinas. A engenharia aplicada à nossa operação fez toda a diferença - não é produto de prateleira.",
         "author": "Carlos Mendes",
         "role": "Gerente de Logística",
         "company": "Centro de Serviço de Aço"
@@ -157,7 +157,7 @@
         "company": "Indústria Metalmecânica"
       },
       {
-        "quote": "A integração aço e plástico em um único fornecedor simplificou toda a nossa cadeia. Rastreabilidade, controle dimensional e entrega no prazo — a Dutex entrega o que promete.",
+        "quote": "A integração aço e plástico em um único fornecedor simplificou toda a nossa cadeia. Rastreabilidade, controle dimensional e entrega no prazo - a Dutex entrega o que promete.",
         "author": "Rafael Costa",
         "role": "Coordenador de Suprimentos",
         "company": "Implementos Rodoviários"

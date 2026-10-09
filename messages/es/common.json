@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Dutex — Soluciones que Impulsan la Industria",
+    "title": "Dutex - Soluciones que Impulsan la Industria",
     "description": "Soluciones técnicas en acero y plásticos de ingeniería para protección de cargas, eficiencia logística y reducción de riesgos operacionales.",
     "keywords": "Dutex,soluciones industriales,protección de cargas,logística,B2B,acero,polímeros"
   },
@@ -23,8 +23,8 @@
     "subscribeSuccess": "¡Suscripción realizada con éxito!",
     "subscribeError": "Error al suscribirse. Inténtelo de nuevo.",
     "subscribeConfigError": "Formulario no disponible por ahora. Configure la clave de Web3Forms.",
-    "newsletterSubject": "Nueva suscripción al boletín — Sitio web Dutex",
-    "description": "Soluciones industriales en acero y plásticos de ingeniería para transformación de materiales, protección de cargas y eficiencia logística — desde la línea de producción hasta el destino final.",
+    "newsletterSubject": "Nueva suscripción al boletín - Sitio web Dutex",
+    "description": "Soluciones industriales en acero y plásticos de ingeniería para transformación de materiales, protección de cargas y eficiencia logística - desde la línea de producción hasta el destino final.",
     "company": "Empresa",
     "followUs": "Síganos",
     "allSocial": "Todas las redes sociales",
@@ -59,7 +59,7 @@
     "closeMenu": "Cerrar menú",
     "facade": "Fachada de Dutex",
     "viewCase": "Ver caso {id}: {title}",
-    "videoPlayPause": "Pausar o reproducir video — haga clic en el área del video",
+    "videoPlayPause": "Pausar o reproducir video - haga clic en el área del video",
     "closeChapter": "Cerrar información del capítulo",
     "videoChapters": "Capítulos del video",
     "chapterLabel": "Capítulo {id}",

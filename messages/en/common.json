@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Dutex — Solutions Powering Industry",
+    "title": "Dutex - Solutions Powering Industry",
     "description": "Technical solutions in steel and engineering plastics for load protection, logistics efficiency and reduction of operational risks.",
     "keywords": "Dutex,industrial solutions,load protection,logistics,B2B,steel,polymers"
   },
@@ -23,8 +23,8 @@
     "subscribeSuccess": "Subscription successful!",
     "subscribeError": "Error subscribing. Please try again.",
     "subscribeConfigError": "Form unavailable right now. Configure the Web3Forms key.",
-    "newsletterSubject": "New newsletter subscription — Dutex Website",
-    "description": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency — from the production line to the final destination.",
+    "newsletterSubject": "New newsletter subscription - Dutex Website",
+    "description": "Industrial solutions in steel and engineering plastics for material processing, load protection and logistics efficiency - from the production line to the final destination.",
     "company": "Company",
     "followUs": "Follow us",
     "allSocial": "All social media",
@@ -59,7 +59,7 @@
     "closeMenu": "Close menu",
     "facade": "Dutex building facade",
     "viewCase": "View case {id}: {title}",
-    "videoPlayPause": "Pause or play video — click on the video area",
+    "videoPlayPause": "Pause or play video - click on the video area",
     "closeChapter": "Close chapter information",
     "videoChapters": "Video chapters",
     "chapterLabel": "Chapter {id}",
