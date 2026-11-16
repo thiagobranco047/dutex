@@ -8,6 +8,7 @@
     "home": "Início",
     "about": "Sobre",
     "solutions": "Soluções",
+    "products": "Produtos",
     "whyDutex": "Por que Dutex?",
     "applications": "Aplicações",
     "process": "Processo",
@@ -34,7 +35,8 @@
     "privacy": "LGPD / Privacidade",
     "copyright": "© 2026 Dutex. Todos os direitos reservados.",
     "nationalProduction": "Produção industrial nacional | ISO 9001:2015",
-    "credits": "Lab. 334 Marketing"
+    "credits": "Lab. 334 Marketing",
+    "products": "Produtos"
   },
   "common": {
     "brand": "Dutex",

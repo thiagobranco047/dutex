@@ -89,6 +89,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               );
             }
 
+            if (!link.href.startsWith("/#")) {
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  prefetch
+                  onClick={onClose}
+                  className="rounded-lg px-3 py-3 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+                >
+                  {t(link.key)}
+                </Link>
+              );
+            }
+
             return (
               <a
                 key={link.href}

@@ -1,0 +1,133 @@
+{
+  "catalog": {
+    "meta": {
+      "title": "Productos | Dutex - Soluciones en acero y plásticos de ingeniería",
+      "description": "Catálogo Dutex: protección de bobinas, cantoneras, colmenas, ductos de PEAD y chapas a medida. Filtre por aplicación, material y proceso y solicite la ficha técnica.",
+      "categoryTitle": "{category} | Productos Dutex",
+      "productTitle": "{product} | Dutex"
+    },
+    "hero": {
+      "badge": "Productos",
+      "title": "Catálogo de productos Dutex",
+      "description": "Soluciones en acero y plásticos de ingeniería para protección de cargas, embalaje e infraestructura. Las medidas son referencias de piezas ya fabricadas: Dutex desarrolla soluciones a medida para su operación."
+    },
+    "categoriesTitle": "Navegue por aplicación",
+    "allProductsTitle": "Todos los productos",
+    "filters": {
+      "title": "Filtros",
+      "searchLabel": "Buscar producto",
+      "searchPlaceholder": "Ej.: camisa, cantonera, PEAD, 610",
+      "application": "Aplicación",
+      "material": "Material",
+      "process": "Proceso",
+      "all": "Todos",
+      "clear": "Limpiar filtros",
+      "results": "{count, plural, =0 {Ningún producto} one {# producto} other {# productos}}",
+      "noResults": "Ningún producto coincide con estos filtros.",
+      "noResultsHint": "¿No encontró lo que necesita? Dutex desarrolla soluciones a medida.",
+      "showFilters": "Mostrar filtros",
+      "hideFilters": "Ocultar filtros"
+    },
+    "materials": {
+      "aco-carbono": "Acero al carbono",
+      "aco-zincado": "Acero cincado (ZC)",
+      "aco-galvanizado": "Acero galvanizado",
+      "pp": "Polipropileno (PP)",
+      "pead": "PEAD",
+      "polionda": "Plancha alveolar de PP",
+      "plastico-de-engenharia": "Plástico de ingeniería",
+      "borracha": "Caucho",
+      "poliuretano": "Poliuretano (PU)",
+      "manta-magnetica": "Lámina magnética"
+    },
+    "processes": {
+      "caldeiraria": "Calderería y soldadura",
+      "conformacao": "Conformado",
+      "corte": "Corte",
+      "extrusao": "Extrusión",
+      "injecao": "Inyección",
+      "rotomoldagem": "Rotomoldeo",
+      "estampagem": "Estampado",
+      "usinagem-cnc": "Mecanizado CNC"
+    },
+    "card": {
+      "view": "Ver producto",
+      "configurations": "{count, plural, =0 {Bajo consulta} one {# medida de referencia} other {# medidas de referencia}}",
+      "customizable": "A medida",
+      "draft": "Borrador"
+    },
+    "category": {
+      "badge": "Aplicación",
+      "products": "{count, plural, =0 {Ningún producto} one {# producto} other {# productos}}",
+      "otherCategories": "Otras aplicaciones",
+      "backToCatalog": "Ver todo el catálogo"
+    },
+    "product": {
+      "home": "Inicio",
+      "products": "Productos",
+      "requestQuote": "Solicitar cotización",
+      "whatsappMessage": "¡Hola, Dutex! Me gustaría una cotización de {product}.",
+      "whatsappMessageConfig": "¡Hola, Dutex! Me gustaría una cotización de {product} ({configuration}).",
+      "configurationsTitle": "Medidas de referencia",
+      "configurationsNote": "Piezas ya fabricadas por Dutex. Otras medidas y especificaciones se desarrollan bajo consulta.",
+      "noConfigurations": "Medidas y especificaciones bajo consulta, según el proyecto.",
+      "columns": {
+        "configuration": "Configuración",
+        "dimensions": "Dimensiones",
+        "thickness": "Espesor",
+        "length": "Longitud",
+        "material": "Material",
+        "weight": "Peso",
+        "quote": "Cotizar"
+      },
+      "weightBasis": {
+        "peca": "por pieza",
+        "metro": "por metro",
+        "bobina": "por bobina"
+      },
+      "specs": {
+        "diametroNominal": "Diámetro nominal",
+        "resistenciaCompressao": "Resistencia a la compresión",
+        "pesoBobina": "Peso de la bobina",
+        "comprimentoBobina": "Longitud de la bobina",
+        "acabamento": "Acabado",
+        "opcoes": "Opciones"
+      },
+      "about": "Sobre el producto",
+      "features": "Características",
+      "uses": "Aplicaciones",
+      "materials": "Materiales",
+      "processes": "Procesos de fabricación",
+      "customTitle": "¿Necesita otra medida?",
+      "customText": "Dutex analiza su operación, desarrolla la ingeniería y fabrica internamente, con control dimensional en cada lote.",
+      "related": "Otros productos de {category}",
+      "draftNotice": "Vista previa: contenido en validación con Dutex. Esta página no está indexada.",
+      "translationNotice": "El contenido de este producto está disponible en portugués.",
+      "imagePlaceholder": "Foto próximamente",
+      "imageOf": "Imagen {index} de {total}",
+      "previousImage": "Imagen anterior",
+      "nextImage": "Imagen siguiente"
+    },
+    "datasheet": {
+      "button": "Descargar ficha técnica",
+      "title": "Ficha técnica: {product}",
+      "description": "Ingrese sus datos para descargar la ficha técnica. Usamos esta información solo para la atención comercial de Dutex.",
+      "name": "Nombre",
+      "email": "Correo corporativo",
+      "company": "Empresa",
+      "phone": "Teléfono o WhatsApp",
+      "optional": "opcional",
+      "consent": "Autorizo a Dutex a contactarme sobre esta solicitud.",
+      "submit": "Descargar ficha técnica",
+      "sending": "Enviando...",
+      "successReady": "¡Listo! La descarga comenzó. Si no inicia, use el enlace abajo.",
+      "successPending": "¡Solicitud recibida! La ficha técnica de este producto está en actualización y nuestro equipo la enviará a su correo.",
+      "download": "Descargar PDF",
+      "error": "No fue posible enviar ahora. Intente de nuevo o contáctenos por WhatsApp.",
+      "configError": "Formulario no disponible en este momento.",
+      "close": "Cerrar",
+      "subject": "Solicitud de ficha técnica: {product} - Sitio Dutex",
+      "privacy": "Sus datos se tratan conforme a la LGPD de Brasil."
+    }
+  }
+}

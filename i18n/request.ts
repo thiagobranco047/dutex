@@ -2,7 +2,7 @@ import { getRequestConfig } from "next-intl/server";
 import { routing, type Locale } from "./routing";
 
 async function loadMessages(locale: Locale) {
-  const [common, home, protection, sobre, compliance, conecta, duchabr] = await Promise.all([
+  const [common, home, protection, sobre, compliance, conecta, duchabr, catalog] = await Promise.all([
     import(`../messages/${locale}/common.json`),
     import(`../messages/${locale}/home.json`),
     import(`../messages/${locale}/protection.json`),
@@ -10,6 +10,7 @@ async function loadMessages(locale: Locale) {
     import(`../messages/${locale}/compliance.json`),
     import(`../messages/${locale}/conecta.json`),
     import(`../messages/${locale}/duchabr.json`),
+    import(`../messages/${locale}/catalog.json`),
   ]);
 
   return {
@@ -20,6 +21,7 @@ async function loadMessages(locale: Locale) {
     ...compliance.default,
     ...conecta.default,
     ...duchabr.default,
+    ...catalog.default,
   };
 }
 

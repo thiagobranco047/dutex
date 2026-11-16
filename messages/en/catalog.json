@@ -1,0 +1,133 @@
+{
+  "catalog": {
+    "meta": {
+      "title": "Products | Dutex - Steel and engineering plastics solutions",
+      "description": "Dutex catalog: coil protection, edge protectors, honeycomb dividers, HDPE ducts and custom-cut sheets. Filter by application, material and process and request the datasheet.",
+      "categoryTitle": "{category} | Dutex Products",
+      "productTitle": "{product} | Dutex"
+    },
+    "hero": {
+      "badge": "Products",
+      "title": "Dutex product catalog",
+      "description": "Steel and engineering plastics solutions for load protection, packaging and infrastructure. Sizes are references from parts already manufactured: Dutex develops custom solutions for your operation."
+    },
+    "categoriesTitle": "Browse by application",
+    "allProductsTitle": "All products",
+    "filters": {
+      "title": "Filters",
+      "searchLabel": "Search products",
+      "searchPlaceholder": "E.g.: sleeve, edge protector, HDPE, 610",
+      "application": "Application",
+      "material": "Material",
+      "process": "Process",
+      "all": "All",
+      "clear": "Clear filters",
+      "results": "{count, plural, =0 {No products} one {# product} other {# products}}",
+      "noResults": "No products match these filters.",
+      "noResultsHint": "Can't find what you need? Dutex develops custom solutions.",
+      "showFilters": "Show filters",
+      "hideFilters": "Hide filters"
+    },
+    "materials": {
+      "aco-carbono": "Carbon steel",
+      "aco-zincado": "Zinc-coated steel (ZC)",
+      "aco-galvanizado": "Galvanized steel",
+      "pp": "Polypropylene (PP)",
+      "pead": "HDPE",
+      "polionda": "Corrugated PP sheet",
+      "plastico-de-engenharia": "Engineering plastic",
+      "borracha": "Rubber",
+      "poliuretano": "Polyurethane (PU)",
+      "manta-magnetica": "Magnetic sheet"
+    },
+    "processes": {
+      "caldeiraria": "Metal fabrication and welding",
+      "conformacao": "Forming",
+      "corte": "Cutting",
+      "extrusao": "Extrusion",
+      "injecao": "Injection molding",
+      "rotomoldagem": "Rotational molding",
+      "estampagem": "Stamping",
+      "usinagem-cnc": "CNC machining"
+    },
+    "card": {
+      "view": "View product",
+      "configurations": "{count, plural, =0 {On request} one {# reference size} other {# reference sizes}}",
+      "customizable": "Custom made",
+      "draft": "Draft"
+    },
+    "category": {
+      "badge": "Application",
+      "products": "{count, plural, =0 {No products} one {# product} other {# products}}",
+      "otherCategories": "Other applications",
+      "backToCatalog": "View full catalog"
+    },
+    "product": {
+      "home": "Home",
+      "products": "Products",
+      "requestQuote": "Request a quote",
+      "whatsappMessage": "Hello, Dutex! I would like a quote for {product}.",
+      "whatsappMessageConfig": "Hello, Dutex! I would like a quote for {product} ({configuration}).",
+      "configurationsTitle": "Reference sizes",
+      "configurationsNote": "Parts already manufactured by Dutex. Other sizes and specifications are developed on request.",
+      "noConfigurations": "Sizes and specifications on request, according to the project.",
+      "columns": {
+        "configuration": "Configuration",
+        "dimensions": "Dimensions",
+        "thickness": "Thickness",
+        "length": "Length",
+        "material": "Material",
+        "weight": "Weight",
+        "quote": "Quote"
+      },
+      "weightBasis": {
+        "peca": "per piece",
+        "metro": "per meter",
+        "bobina": "per coil"
+      },
+      "specs": {
+        "diametroNominal": "Nominal diameter",
+        "resistenciaCompressao": "Compression strength",
+        "pesoBobina": "Coil weight",
+        "comprimentoBobina": "Coil length",
+        "acabamento": "Finish",
+        "opcoes": "Options"
+      },
+      "about": "About the product",
+      "features": "Features",
+      "uses": "Applications",
+      "materials": "Materials",
+      "processes": "Manufacturing processes",
+      "customTitle": "Need a different size?",
+      "customText": "Dutex analyzes your operation, develops the engineering and manufactures in-house, with dimensional control in every batch.",
+      "related": "Other {category} products",
+      "draftNotice": "Preview: content under review with Dutex. This page is not indexed.",
+      "translationNotice": "This product's content is available in Portuguese.",
+      "imagePlaceholder": "Photo coming soon",
+      "imageOf": "Image {index} of {total}",
+      "previousImage": "Previous image",
+      "nextImage": "Next image"
+    },
+    "datasheet": {
+      "button": "Download datasheet",
+      "title": "Datasheet: {product}",
+      "description": "Enter your details to download the datasheet. We only use this information for Dutex sales support.",
+      "name": "Name",
+      "email": "Business e-mail",
+      "company": "Company",
+      "phone": "Phone or WhatsApp",
+      "optional": "optional",
+      "consent": "I authorize Dutex to contact me about this request.",
+      "submit": "Download datasheet",
+      "sending": "Sending...",
+      "successReady": "Done! Your download has started. If it doesn't, use the link below.",
+      "successPending": "Request received! This product's datasheet is being updated and our team will send it to your e-mail.",
+      "download": "Download PDF",
+      "error": "We couldn't send your request. Please try again or contact us on WhatsApp.",
+      "configError": "Form unavailable at the moment.",
+      "close": "Close",
+      "subject": "Datasheet request: {product} - Dutex website",
+      "privacy": "Your data is handled under Brazil's LGPD."
+    }
+  }
+}
