@@ -13,6 +13,7 @@ const SRC = {
   colmeiaFolder: "02_Produtos/Colmeia - Separador/Tabuleiro - Colmeia Dutex.pdf",
   quadroLuvas: "fichas tecnicas/Fichas técnicas/AÇO/LUVAS EM AÇO.jpg (quadro da fábrica)",
   siteHome: "messages/pt/home.json (texto atual do site)",
+  briefingAco: "Briefing_Dutex_acos_e_perfis.docx (v2.4, 13/11/2026)",
   ft: (file: string) => `fichas tecnicas/Fichas técnicas/${file}`,
 };
 
@@ -477,23 +478,173 @@ export const productInputs: readonly ProductInput[] = [
     auditIds: ["linha-construcao-civil", "fita-medidas", "imagens-ausentes"],
   }),
 
-  // 5. Transformação de aço
+  // 5. Aços e perfis (submarca "Dutex aços e perfis"; briefing v2.4 de 13/11/2026)
+  ...perfis(),
   product({
     slug: "chapas-e-blanks",
-    categoryId: "transformacao-de-aco",
+    categoryId: "acos-e-perfis",
     materials: ["aco-zincado", "aco-carbono"],
     processes: ["corte"],
     name: pt("Chapas e blanks"),
     summary: pt("Chapas e blanks cortados sob medida em ZC, FF e FQ, prontos para a produção."),
     description: pt(
-      "Aço transformado com precisão industrial: bobinas, chapas sob medida, slitter e blanks em ZC, FF e FQ com espessuras até 40 mm. Matéria-prima pronta para a sua produção.",
+      "Aço transformado com precisão industrial: chapas cortadas no comprimento e na largura do cliente, a partir de bobina, e blanks em formato e quantidade definidos, em ZC, FF e FQ com espessuras até 40 mm. Matéria-prima pronta para a sua produção.",
     ),
+    uses: [pt("Assoalho, painéis laterais e quadro traseiro de carrocerias e baús"), pt("Peças de reforço, portas e componentes estampados")],
     configurations: [
       config({ id: "blank-zc-1-25", label: "Blank ZC 1,25 mm", dimensions: "150 mm de largura", thickness: "1,25 mm", length: "2015 a 3285 mm", material: "Chapa ZC", internalCode: "03-GAL02-0071", sourceFile: SRC.ft("AÇO/03-GAL02-0071 - BLANK ZC.pdf") }),
       config({ id: "blank-zc-1-55", label: "Blank ZC 1,55 mm", dimensions: "150 mm de largura", thickness: "1,55 mm", length: "2510 a 3285 mm", material: "Chapa ZC", internalCode: "03-GAL02-0071", sourceFile: SRC.ft("AÇO/03-GAL02-0071 - BLANK ZC.pdf") }),
       config({ id: "blank-zc-1-95", label: "Blank ZC 1,95 mm", dimensions: "200, 224 e 240 mm de largura", thickness: "1,95 mm", length: "2340 a 3100 mm", material: "Chapa ZC", internalCode: "03-GAL02-0071", sourceFile: SRC.ft("AÇO/03-GAL02-0071 - BLANK ZC.pdf") }),
     ],
-    sources: [SRC.siteHome, SRC.ft("AÇO/03-GAL02-0071 - BLANK ZC.pdf")],
-    auditIds: ["blanks-tabela", "imagens-licenca"],
+    quoteFields: ["espessura", "material", "quantidade"],
+    sources: [SRC.siteHome, SRC.briefingAco, SRC.ft("AÇO/03-GAL02-0071 - BLANK ZC.pdf")],
+    auditIds: ["blanks-tabela", "imagens-licenca", "acos-especificacao"],
+  }),
+  product({
+    slug: "tiras-slitadas",
+    categoryId: "acos-e-perfis",
+    materials: ["aco-zincado", "aco-carbono"],
+    processes: ["corte"],
+    name: pt("Tiras slitadas (slitter)"),
+    summary: pt("Bobina de aço cortada no sentido do comprimento, em tiras na largura do cliente."),
+    description: pt(
+      "Bobina de aço cortada longitudinalmente em tiras na largura definida pelo cliente. Matéria-prima para quem perfila ou dobra internamente.",
+    ),
+    uses: [pt("Matéria-prima para perfilação e dobra")],
+    quoteFields: ["espessura", "material", "quantidade"],
+    sources: [SRC.briefingAco, SRC.siteHome],
+    auditIds: ["acos-especificacao", "imagens-ausentes"],
   }),
 ];
+
+/** Perfis formados a frio: desenhos 03-GAL02-0092 a 0095 (27/10/2026) e pesos da engenharia (09/11/2026). */
+function perfis(): ProductInput[] {
+  const draw = (file: string) => SRC.ft(`perfis/${file}`);
+  const thicknesses = ["2,00 mm", "2,25 mm", "2,65 mm", "3,00 mm"];
+  const kg = (values: readonly number[] | null) =>
+    values ? values.map((kgPerMeter, i) => ({ thickness: thicknesses[i], kgPerMeter })) : null;
+  const common = {
+    categoryId: "acos-e-perfis" as const,
+    materials: ["aco-galvanizado", "aco-carbono"] as ProductInput["materials"],
+    processes: ["perfilacao", "corte"] as ProductInput["processes"],
+    quoteFields: ["espessura", "comprimento", "quantidade", "material"] as ProductInput["quoteFields"],
+    sizesKind: "linha" as const,
+    tableNote: pt("Pesos nominais por metro, com variação de ±5% (tolerância de espessura da tira e raio de dobra). Material definido por pedido."),
+    sources: [SRC.briefingAco],
+  };
+  const features = (thickness: string) => [
+    pt("Comprimento sob medida de 2 a 12 m: chega pronto para montar, sem corte e sem sobra"),
+    pt(`Espessuras de ${thickness}`),
+    pt("Aço galvanizado ou carbono, conforme o pedido, com limite de escoamento até 300 MPa"),
+    pt("Raio interno igual à espessura (r = e) e tolerância dimensional declarada em desenho"),
+    pt("Fabricado em perfiladeira própria em Garuva (SC)"),
+  ];
+  const row = (id: string, dims: string, file: string, code: string, values: readonly number[] | null, extra: Partial<Parameters<typeof config>[0]> = {}) =>
+    config({
+      id,
+      label: id.replace(/x/g, " x ") + " mm",
+      dimensions: dims,
+      thickness: extra.thickness ?? "1,25 a 3,00 mm",
+      length: "2 a 12 m",
+      material: "Aço galvanizado ou carbono",
+      weightByThickness: kg(values),
+      internalCode: code,
+      sourceFile: draw(file),
+      ...extra,
+    });
+
+  const U = "03-GAL02-0093 - PERFIL U SIMPLES.pdf";
+  const UE = "03-GAL02-0092 - PERFIL U ENRIJECIDO.pdf";
+  const L = "03-GAL02-0094 - PERFIL L.pdf";
+  const CT = "03-GAL02-0095 - PERFIL CARTOLA.pdf";
+
+  return [
+    product({
+      ...common,
+      slug: "perfil-u-simples",
+      name: pt("Perfil U simples"),
+      summary: pt("Perfil U formado a frio, cortado de 2 a 12 m, para longarinas, travessas e quadros de carrocerias e baús."),
+      description: pt(
+        "Perfil U de aço formado a frio, com alma (A) e duas abas iguais (B), raio interno igual à espessura. Cortado no comprimento do cliente, de 2 a 12 m, para chegar à linha de montagem pronto para usar.",
+      ),
+      features: features("1,25 a 3,00 mm"),
+      uses: [pt("Longarinas e travessas da estrutura inferior"), pt("Quadros de carrocerias e baús")],
+      configurations: [
+        row("50x25", "A 50 · B 25 mm", U, "03-GAL02-0093", [1.47, 1.64, 1.9, 2.12], { hidden: true }),
+        row("75x40", "A 75 · B 40 mm", U, "03-GAL02-0093", [2.33, 2.61, 3.04, 3.42]),
+        row("100x40", "A 100 · B 40 mm", U, "03-GAL02-0093", [2.72, 3.05, 3.56, 4.01]),
+        row("127x50", "A 127 · B 50 mm", U, "03-GAL02-0093", [3.46, 3.88, 4.54, 5.11]),
+        row("150x50", "A 150 · B 50 mm", U, "03-GAL02-0093", [3.82, 4.28, 5.02, 5.66]),
+        row("200x50", "A 200 · B 50 mm", U, "03-GAL02-0093", [4.7, 5.28, 6.22, 7.04]),
+        row("200x60", "A 200 · B 60 mm", U, "03-GAL02-0093", [5.01, 5.53, 6.64, 7.52]),
+      ],
+      sources: [SRC.briefingAco, draw(U)],
+      auditIds: ["perfis-largura-tira", "perfis-espessura-minima", "perfis-aplicacoes", "perfis-desenhos-publicos", "imagens-ausentes", "perfis-lancamento"],
+    }),
+    product({
+      ...common,
+      slug: "perfil-u-enrijecido",
+      name: pt("Perfil U enrijecido (Ue)"),
+      summary: pt("Perfil U com enrijecedor nas abas, cortado de 2 a 12 m, para travessas de assoalho, reforços da base e colunas."),
+      description: pt(
+        "Perfil U de aço formado a frio com enrijecedor (C) na ponta das abas, o que aumenta a rigidez da seção em relação ao U simples. Alma (A), abas (B) e enrijecedores (C) com raio interno igual à espessura, cortado no comprimento do cliente, de 2 a 12 m.",
+      ),
+      features: features("1,25 a 3,00 mm"),
+      uses: [pt("Travessas de assoalho"), pt("Reforços da base e colunas"), pt("Estruturas fotovoltaicas (medida 150 x 90 x 30)")],
+      configurations: [
+        row("75x40x15", "A 75 · B 40 · C 15 mm", UE, "03-GAL02-0092", [2.7, 3.01, 3.49, 3.89]),
+        row("100x40x15", "A 100 · B 40 · C 15 mm", UE, "03-GAL02-0092", [3.15, 3.52, 4.09, 4.58]),
+        row("100x50x15", "A 100 · B 50 · C 15 mm", UE, "03-GAL02-0092", [3.47, 3.87, 4.51, 5.05]),
+        row("127x50x17", "A 127 · B 50 · C 17 mm", UE, "03-GAL02-0092", [3.89, 4.35, 5.07, 5.68]),
+        row("150x50x17", "A 150 · B 50 · C 17 mm", UE, "03-GAL02-0092", null),
+        row("150x60x17", "A 150 · B 60 · C 17 mm", UE, "03-GAL02-0092", [4.73, 5.32, 6.26, 7.09]),
+        row("200x60x20", "A 200 · B 60 · C 20 mm", UE, "03-GAL02-0092", [5.55, 6.24, 7.35, 8.32]),
+        row("200x75x20", "A 200 · B 75 · C 20 mm", UE, "03-GAL02-0092", [5.99, 6.74, 7.94, 8.98]),
+        row("150x90x30", "A 150 · B 90 · C 30 mm", UE, "03-GAL02-0092", [5.83, 6.56, 7.73, 8.75]),
+      ],
+      sources: [SRC.briefingAco, draw(UE)],
+      auditIds: ["perfis-peso-150x50x17", "perfis-cota-100x40", "perfis-espessura-minima", "perfis-aplicacoes", "perfis-desenhos-publicos", "imagens-ausentes", "perfis-lancamento"],
+    }),
+    product({
+      ...common,
+      slug: "perfil-l",
+      name: pt("Perfil L (cantoneira)"),
+      summary: pt("Cantoneira de aço formada a frio, de abas iguais, cortada de 2 a 12 m, para cantos, acabamentos e fixação de painéis."),
+      description: pt(
+        "Perfil L de aço formado a frio, com abas iguais (A e B) e raio interno igual à espessura. Cortado no comprimento do cliente, de 2 a 12 m.",
+      ),
+      features: features("1,25 a 3,00 mm"),
+      uses: [pt("Cantos e acabamento de laterais"), pt("Fixação de painéis e assoalho")],
+      configurations: [
+        row("25x25", "A 25 · B 25 mm", L, "03-GAL02-0094", null, { hidden: true }),
+        row("30x30", "A 30 · B 30 mm", L, "03-GAL02-0094", null, { hidden: true }),
+        row("38x38", "A 38 · B 38 mm", L, "03-GAL02-0094", null, { hidden: true }),
+        row("50x50", "A 50 · B 50 mm", L, "03-GAL02-0094", null),
+        row("60x60", "A 60 · B 60 mm", L, "03-GAL02-0094", null),
+        row("75x75", "A 75 · B 75 mm", L, "03-GAL02-0094", null),
+        row("100x100", "A 100 · B 100 mm", L, "03-GAL02-0094", null),
+      ],
+      tableNote: pt("Pesos por metro em definição pela engenharia da Dutex. Material definido por pedido."),
+      sources: [SRC.briefingAco, draw(L)],
+      auditIds: ["perfis-largura-tira", "perfis-pesos-l-cartola", "perfis-espessura-minima", "perfis-aplicacoes", "perfis-desenhos-publicos", "imagens-ausentes", "perfis-lancamento"],
+    }),
+    product({
+      ...common,
+      slug: "perfil-cartola",
+      name: pt("Perfil cartola"),
+      summary: pt("Perfil cartola (ômega) formado a frio, cortado de 2 a 12 m, para colunas e travessas das laterais do baú e reforço de painel."),
+      description: pt(
+        "Perfil de aço formado a frio em formato de cartola: crista (D), duas almas inclinadas com altura (B) e abas de fixação (C), com largura total (A) e raio interno igual à espessura. Cortado no comprimento do cliente, de 2 a 12 m.",
+      ),
+      features: features("1,25 a 1,55 mm"),
+      uses: [pt("Colunas e travessas das laterais do baú"), pt("Reforço de painel")],
+      configurations: [
+        row("90x35x12", "A 90 · B 35 · C 12 · D 38 mm", CT, "03-GAL02-0095", null, { thickness: "1,25 a 1,55 mm", label: "90 x 35 x 12 mm (crista 38)" }),
+        row("71x35x10", "A 71 · B 35 · C 10 · D 31 mm", CT, "03-GAL02-0095", null, { thickness: "1,25 a 1,55 mm", label: "71 x 35 x 10 mm (crista 31)" }),
+      ],
+      tableNote: pt("Pesos por metro em definição pela engenharia da Dutex. Material definido por pedido."),
+      sources: [SRC.briefingAco, draw(CT)],
+      auditIds: ["perfis-pesos-l-cartola", "perfis-espessura-minima", "perfis-aplicacoes", "perfis-desenhos-publicos", "imagens-ausentes", "perfis-lancamento"],
+    }),
+  ];
+}

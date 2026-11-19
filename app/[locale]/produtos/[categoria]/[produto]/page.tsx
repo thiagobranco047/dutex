@@ -13,6 +13,7 @@ import ConfigurationTable from "@/components/catalog/ConfigurationTable";
 import DatasheetRequest from "@/components/catalog/DatasheetRequest";
 import ProductCard from "@/components/catalog/ProductCard";
 import ProductGallery from "@/components/catalog/ProductGallery";
+import { withQuoteFields } from "@/components/catalog/quote";
 import { Link } from "@/i18n/navigation";
 import {
   categoryPath,
@@ -73,7 +74,10 @@ export default async function ProdutoPage({ params }: { params: Params }) {
   const categoryName = localize(category.name, locale);
   const translated = isTranslated(product, locale);
   const datasheetUrl = hasDatasheet(product.slug) ? product.datasheetPath : null;
-  const quoteUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("product.whatsappMessage", { product: name }))}`;
+  const quoteMessage = withQuoteFields(t("product.whatsappMessage", { product: name }), product.quoteFields, (field) =>
+    t(`product.quoteFields.${field}`),
+  );
+  const quoteUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteMessage)}`;
   const related = buildEntries(
     productsInCategory(product.categoryId).filter((item) => item.slug !== product.slug).slice(0, 3),
     locale,
@@ -238,10 +242,20 @@ export default async function ProdutoPage({ params }: { params: Params }) {
               </div>
               {product.configurations.length > 0 ? (
                 <>
-                  <p className="mt-2 text-sm text-gray-text">{t("product.configurationsNote")}</p>
+                  <p className="mt-2 text-sm text-gray-text">{t(product.sizesKind === "linha" ? "product.configurationsNoteLine" : "product.configurationsNote")}</p>
                   <div className="mt-6">
-                    <ConfigurationTable configurations={product.configurations} productName={name} locale={locale} />
+                    <ConfigurationTable
+                      configurations={product.configurations}
+                      productName={name}
+                      locale={locale}
+                      quoteFields={product.quoteFields}
+                    />
                   </div>
+                  {product.tableNote && (
+                    <p className="mt-3 text-sm text-gray-text" lang={contentLang}>
+                      {localize(product.tableNote, locale)}
+                    </p>
+                  )}
                 </>
               ) : (
                 <p className="mt-3 text-sm text-gray-text">{t("product.noConfigurations")}</p>

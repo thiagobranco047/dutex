@@ -26,7 +26,7 @@ Referência de arquitetura: catálogo da Joinsul (`C:\Users\Usuário\work\projet
 | 2 | protecao-de-bordas | Proteção de bordas e cantos |
 | 3 | embalagem-e-paletizacao | Embalagem e paletização |
 | 4 | infraestrutura-de-cabos | Infraestrutura de cabos |
-| 5 | transformacao-de-aco | Transformação de aço |
+| 5 | acos-e-perfis | Aços e perfis (antes "Transformação de aço") |
 
 ## Inventário (arquivo → produto)
 
@@ -86,7 +86,7 @@ Referência de arquitetura: catálogo da Joinsul (`C:\Users\Usuário\work\projet
 ## Decisões de implementação
 
 ### Arquivos
-- `lib/catalog/`: `types.ts` (modelo), `categories.ts`, `products.ts` (23 produtos), `audit.ts` (pendências), `search.ts` (busca e filtros, roda no navegador), `server.ts` (entradas traduzidas e checagem da ficha no disco), `seo.ts`, `product-images.ts` (gerado).
+- `lib/catalog/`: `types.ts` (modelo), `categories.ts`, `products.ts` (28 produtos), `audit.ts` (pendências), `search.ts` (busca e filtros, roda no navegador), `server.ts` (entradas traduzidas e checagem da ficha no disco), `seo.ts`, `product-images.ts` (gerado).
 - `app/[locale]/produtos/`: listagem (`/produtos`), aplicação (`/produtos/[categoria]`) e produto (`/produtos/[categoria]/[produto]`), todas estáticas (`generateStaticParams` + `dynamicParams = false`).
 - `components/catalog/`: `CatalogBrowser`, `ProductCard`, `ProductGallery`, `ConfigurationTable`, `DatasheetRequest`, `Breadcrumbs`.
 - `messages/{pt,en,es}/catalog.json`: textos de interface, registrados em `i18n/request.ts`.
@@ -120,3 +120,18 @@ Referência de arquitetura: catálogo da Joinsul (`C:\Users\Usuário\work\projet
 - Placas "Saeko" foram incorporadas às placas de proteção mecânica de cabos (mesmo perfil), sem o nome.
 - Perfil 120 m e slitter de borracha não viraram produto (ver pendências).
 - Dutos Condutex têm duas linhas, Standard (320 N) e NBR (680 N), confirmadas pelos desenhos e pelo catálogo 2022.
+
+## Aços e perfis (briefing v2.4, 13/11/2026)
+
+Fonte: `E:\work\dutex\materiais\02_Produtos\Aços e perfis\Briefing_Dutex_acos_e_perfis.docx` e desenhos `03-GAL02-0092` a `0095` em `fichas tecnicas\Fichas técnicas\perfis\`.
+
+- A categoria "Transformação de aço" virou "Aços e perfis" (`acos-e-perfis`), nome da submarca. Como nada estava publicado, a troca de slug não precisa de redirecionamento.
+- Produtos: Perfil U simples, Perfil U enrijecido (Ue), Perfil L, Perfil cartola, Chapas e blanks e Tiras slitadas (slitter). Os perfis vêm primeiro.
+- URLs: `/produtos/acos-e-perfis/perfil-u-simples` etc. O briefing propõe `/acos-e-perfis/...`; a página da categoria pode virar a página de linha sem mudar a estrutura (ver pendência `site-arquitetura-briefing`).
+- Tabela dos perfis: uma linha por medida, com uma coluna de peso (kg/m) por espessura (`weightByThickness`) e nota "pesos nominais, ±5%" (`tableNote`).
+- Medidas que o briefing manda não listar (L 25, 30 e 38 e U 50 x 25, abaixo da largura mínima de tira) ficam no dado com `hidden: true`. Para liberar, remova o `hidden`.
+- O 150 x 50 x 17 aparece sem pesos (valor da engenharia incoerente). L e cartola aparecem sem pesos (não informados).
+- Para os perfis, a frase da tabela é "medidas da linha, conforme desenho" (`sizesKind: "linha"`), porque a perfiladeira ainda não produziu.
+- WhatsApp: os perfis abrem a mensagem com os campos Espessura, Comprimento, Quantidade e Material para o cliente completar (`quoteFields`). Chapas e slitter pedem espessura, material e quantidade.
+- Imagens provisórias: seções transversais esquemáticas desenhadas a partir das cotas (`scripts/catalog-sections.py`), até chegarem as fotos da perfiladeira e do produto cortado. `npm run catalog:images` gera as seções e converte tudo.
+- Os quatro perfis estão bloqueados para publicação até o lançamento (regra do briefing: nada vai ao ar antes do primeiro pedido da Fase 0). Pendências em `audit.ts`.

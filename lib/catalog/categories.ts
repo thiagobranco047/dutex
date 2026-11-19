@@ -58,17 +58,17 @@ export const categories: readonly Category[] = [
     },
   },
   {
-    id: "transformacao-de-aco",
+    id: "acos-e-perfis",
     order: 5,
     name: {
-      pt: "Transformação de aço",
-      en: "Steel processing",
-      es: "Transformación de acero",
+      pt: "Aços e perfis",
+      en: "Steel and profiles",
+      es: "Aceros y perfiles",
     },
     description: {
-      pt: "Chapas e blanks cortados sob medida, prontos para a sua produção.",
-      en: "Sheets and blanks cut to size, ready for your production.",
-      es: "Chapas y blanks cortados a medida, listos para su producción.",
+      pt: "Perfis de aço formados a frio (U, U enrijecido, L e cartola) cortados de 2 a 12 m, e chapas, tiras slitadas e blanks sob medida.",
+      en: "Cold-formed steel profiles (U, lipped U, L and top-hat) cut from 2 to 12 m, plus custom sheets, slit strips and blanks.",
+      es: "Perfiles de acero conformados en frío (U, U rigidizado, L y omega) cortados de 2 a 12 m, y chapas, flejes y blanks a medida.",
     },
   },
 ];

@@ -2,9 +2,9 @@
 
 Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edite à mão.
 
-- Produtos: 23 (0 publicados, 23 em rascunho)
-- Pendências abertas: 35 (8 bloqueiam publicação)
-- Produtos sem imagem: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência
+- Produtos: 28 (0 publicados, 28 em rascunho)
+- Pendências abertas: 45 (11 bloqueiam publicação)
+- Produtos sem imagem: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter)
 
 ## Perguntas para a Dutex
 
@@ -34,14 +34,23 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 24. Quais medidas são vendidas hoje? _(fita-medidas)_
 25. Quais materiais e faixas de medida podem ser divulgados? _(blanks-tabela)_
 26. O render é da cantoneira 70 x 40? _(render-cantoneira-70x70)_
-27. Saeko é cliente? As placas são variações da placa de proteção de cabos? _(placas-saeko)_
-28. A Dutex fabrica para a Mantex? Existe ensaio em nome da Dutex? _(placas-ensaio-terceiro)_
-29. **[bloqueia]** A Dutex fabrica colarinhos por rotomoldagem? Quais medidas? _(colarinho-rotomoldado)_
-30. O que é a peça 03-EXT02-0019? _(slitter-borracha)_
-31. **[bloqueia]** Para que serve a manta e quais as medidas? _(manta-magnetica)_
-32. O perfil é vendido separado? _(perfil-120m)_
-33. **[bloqueia]** São produtos de linha ou projetos especiais? Quais medidas e capacidades? _(estrados-e-paletes-retornaveis)_
-34. Qual o ano de fundação, o domínio principal e o e-mail de compliance corretos? _(dados-institucionais)_
+27. **[bloqueia]** Qual a data de start da perfiladeira e quando o lançamento público libera as páginas dos perfis? _(perfis-lancamento)_
+28. Essas quatro medidas saem do catálogo ou serão produzidas em outro processo? _(perfis-largura-tira)_
+29. Qual o peso correto do 150 x 50 x 17 em cada espessura? _(perfis-peso-150x50x17)_
+30. **[bloqueia]** Qual cota vale e os pesos publicados correspondem a ela? _(perfis-cota-100x40)_
+31. Quais os pesos por metro de cada medida e espessura do L e do cartola? _(perfis-pesos-l-cartola)_
+32. Quais espessuras são vendidas por família? Há pesos para 1,25 a 1,95 mm? _(perfis-espessura-minima)_
+33. **[bloqueia]** A engenharia confirma as aplicações de cada família? _(perfis-aplicacoes)_
+34. No lançamento, a Dutex libera versões públicas dos desenhos (sem o carimbo) ou a agência monta fichas técnicas próprias? _(perfis-desenhos-publicos)_
+35. Quais faixas de espessura, largura e acabamento podem ser publicadas para chapas, slitter e blanks? _(acos-especificacao)_
+36. Saeko é cliente? As placas são variações da placa de proteção de cabos? _(placas-saeko)_
+37. A Dutex fabrica para a Mantex? Existe ensaio em nome da Dutex? _(placas-ensaio-terceiro)_
+38. **[bloqueia]** A Dutex fabrica colarinhos por rotomoldagem? Quais medidas? _(colarinho-rotomoldado)_
+39. O que é a peça 03-EXT02-0019? _(slitter-borracha)_
+40. **[bloqueia]** Para que serve a manta e quais as medidas? _(manta-magnetica)_
+41. O perfil é vendido separado? _(perfil-120m)_
+42. **[bloqueia]** São produtos de linha ou projetos especiais? Quais medidas e capacidades? _(estrados-e-paletes-retornaveis)_
+43. Qual o e-mail de compliance correto (compliance@dutex.ind.br ou .com.br)? _(dados-institucionais)_
 
 ## Decisões comerciais
 
@@ -60,6 +69,20 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Encontrado: O catálogo 2022 traz uma linha para construção civil: Condutex PEAD (Standard e Premium NBR 15715), luvas e tampões para PEAD, dreno, eletrodutos corrugados em PVC (amarelo, laranja, verde, azul e fracionados), luvas de pressão, caixas de passagem 4x2, canaletas, mangueira de nível e fita de advertência. O site atual é só industrial. Entraram no catálogo apenas os dutos PEAD (que têm desenho técnico atual) e a fita de advertência.
 - Pergunta: A linha de construção civil ainda é vendida? Se sim, entra neste catálogo ou em outro lugar?
 - Fontes: `04_Mídias e Redes Sociais/CATÁLOGO/versão digital/Dutex Catálogo.pdf`
+
+### Medidas abaixo da largura mínima de tira
+
+- Status: aberto
+- Produtos: Perfil L (cantoneira), Perfil U simples
+- Encontrado: Com tira mínima de 90 mm, os Perfis L 25 x 25, 30 x 30 e 38 x 38 ficam abaixo do mínimo e o U 50 x 25 fica no limite nas espessuras maiores (seção 13 do briefing). Pela regra de não listar SKUs não confirmados, as quatro medidas estão no dado, mas escondidas da página (hidden).
+- Pergunta: Essas quatro medidas saem do catálogo ou serão produzidas em outro processo?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`; `fichas tecnicas/Fichas técnicas/perfis/03-GAL02-0093`; `fichas tecnicas/Fichas técnicas/perfis/03-GAL02-0094`
+
+### Arquitetura do briefing x catálogo atual
+
+- Status: aberto
+- Encontrado: O briefing propõe /acos-e-perfis como página de linha (com /perfil-u-simples etc.), menu Produtos e Segmentos, /orcamento, /calculadora, /contato com setores e inversão de domínio para dutex.com.br. O catálogo usa /produtos/acos-e-perfis/perfil-u-simples. A categoria pode virar a página de linha sem mudar a estrutura.
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
 
 ### Placas "Saeko"
 
@@ -89,6 +112,22 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 
 - Status: aberto
 - Encontrado: Interface e categorias estão em pt, en e es. Textos de produto estão só em português; em /en e /es a página cai no português e recebe noindex.
+
+### Perfis só vão ao ar depois do lançamento
+
+- Status: aberto (bloqueia publicação)
+- Produtos: Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: O briefing define que nenhuma peça de mídia vai ao ar antes de a perfiladeira estar produzindo e de a Fase 0 ter um pedido entregue, e que desenhos e capacidade da máquina são confidenciais até o lançamento. As páginas dos perfis existem no catálogo, mas só aparecem na prévia (rascunho).
+- Pergunta: Qual a data de start da perfiladeira e quando o lançamento público libera as páginas dos perfis?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
+
+### Desenho em PDF na página de cada família
+
+- Status: aberto
+- Produtos: Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: O briefing pede o desenho em PDF em cada página de família, mas os arquivos recebidos têm o carimbo "proibido reproduzir" e são confidenciais até o lançamento. O botão de ficha técnica já existe e pede cadastro; sem o PDF em public/fichas-tecnicas, o pedido vai para o comercial.
+- Pergunta: No lançamento, a Dutex libera versões públicas dos desenhos (sem o carimbo) ou a agência monta fichas técnicas próprias?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`; `fichas tecnicas/Fichas técnicas/perfis/`
 
 ## Códigos duplicados ou inconsistentes
 
@@ -238,11 +277,36 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Pergunta: Quais materiais e faixas de medida podem ser divulgados?
 - Fontes: `fichas tecnicas/Fichas técnicas/AÇO/03-GAL02-0071 - BLANK ZC.pdf`
 
+### Peso do U enrijecido 150 x 50 x 17 incoerente
+
+- Status: aberto
+- Produtos: Perfil U enrijecido (Ue)
+- Encontrado: A tabela da engenharia traz 3,00 kg/m em 2,00 mm, abaixo do 127 x 50 x 17 (3,89); pela geometria o esperado é cerca de 4,2 kg/m. A linha aparece no site sem pesos.
+- Pergunta: Qual o peso correto do 150 x 50 x 17 em cada espessura?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
+
+### U enrijecido 100 x 40: enrijecedor de 15 ou 17 mm?
+
+- Status: aberto (bloqueia publicação)
+- Produtos: Perfil U enrijecido (Ue)
+- Encontrado: A tabela de pesos da engenharia chama o perfil de 100 x 40 x 17; o desenho 03-GAL02-0092 traz 100 x 40 x 15. O site usa a cota do desenho (15) com os pesos da tabela.
+- Pergunta: Qual cota vale e os pesos publicados correspondem a ela?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`; `fichas tecnicas/Fichas técnicas/perfis/03-GAL02-0092`
+
+### Espessura: 0,95 ou 1,25 mm?
+
+- Status: aberto
+- Produtos: Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: O briefing cita capacidade da perfiladeira de 0,95 a 3,00 mm; os desenhos trazem 1,25 a 3,00 mm (cartola: 1,25 a 1,55 mm) e a tabela de pesos só tem 2,00 a 3,00 mm. O site usa a faixa dos desenhos e mostra peso só onde há dado.
+- Pergunta: Quais espessuras são vendidas por família? Há pesos para 1,25 a 1,95 mm?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`; `fichas tecnicas/Fichas técnicas/perfis/`
+
 ### Dados institucionais divergentes nos materiais
 
 - Status: aberto
 - Encontrado: Ano de início: "desde 2010" (catálogo 2022), "desde 2013" (apresentação comercial) e "12+ anos" (site). Domínio: o pedido cita dutex.com.br; o site usa dutex.ind.br (NEXT_PUBLIC_SITE_URL). E-mail de compliance: compliance@dutex.ind.br no rodapé e compliance@dutex.com.br no JSON-LD.
-- Pergunta: Qual o ano de fundação, o domínio principal e o e-mail de compliance corretos?
+- Pergunta: Qual o e-mail de compliance correto (compliance@dutex.ind.br ou .com.br)?
+- Resolução: Parcial (briefing v2.4): fundação em 2013 e dutex.com.br como domínio principal, com 301 de dutex.ind.br. E-mails continuam @dutex.ind.br. A inversão de domínio no código ainda não foi feita.
 - Fontes: `produtos/DUTEX INDUSTRIA.pdf`; `04_Mídias e Redes Sociais/CATÁLOGO/`; `app/[locale]/layout.tsx`; `lib/data.ts`
 
 ## Dados ausentes
@@ -253,6 +317,30 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Produtos: Colarinhos de proteção, Colarinhos rotomoldados, Anel de proteção em plástico de engenharia, Cantoneiras plissadas plásticas, Estrados metálicos, Paletes retornáveis, Manta de proteção com ímã, Placas de proteção mecânica de cabos
 - Encontrado: Sem descrição nem aplicação em nenhum material: colarinhos de proteção, colarinhos rotomoldados, anel Ø750, cantoneiras plissadas plásticas, estrados metálicos, paletes retornáveis, manta com ímã e placas de proteção de cabos.
 - Pergunta: Para cada um: qual problema resolve, em que setor é usado e qual o diferencial?
+
+### Pesos do Perfil L e do Perfil cartola
+
+- Status: aberto
+- Produtos: Perfil L (cantoneira), Perfil cartola
+- Encontrado: A engenharia ainda não informou os pesos por metro do L e do cartola. As tabelas mostram medidas e espessuras, com a nota de que os pesos estão em definição.
+- Pergunta: Quais os pesos por metro de cada medida e espessura do L e do cartola?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
+
+### Aplicações dos perfis a validar pela engenharia
+
+- Status: aberto (bloqueia publicação)
+- Produtos: Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: As aplicações vêm da tabela de portfólio do briefing. O próprio briefing diz que a lista validada pela engenharia ainda será entregue e que nenhum dado técnico entra sem essa validação.
+- Pergunta: A engenharia confirma as aplicações de cada família?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
+
+### Especificação de chapas, slitter e blanks
+
+- Status: aberto
+- Produtos: Chapas e blanks, Tiras slitadas (slitter)
+- Encontrado: O briefing marca como pendente a especificação dos aços: faixas de espessura e largura, acabamentos, peso de bobina e lote mínimo. Hoje só há "ZC, FF e FQ, espessuras até 40 mm" (site atual) e a tabela de blanks ZC do desenho 03-GAL02-0071.
+- Pergunta: Quais faixas de espessura, largura e acabamento podem ser publicadas para chapas, slitter e blanks?
+- Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
 
 ### Colarinho rotomoldado
 
@@ -306,8 +394,8 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 ### Produtos sem foto
 
 - Status: aberto
-- Produtos: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência
-- Encontrado: Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, manta protetora multicamadas, paletes plásticos, placas de proteção de cabos e fita de advertência.
+- Produtos: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter), Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, manta protetora multicamadas, paletes plásticos, placas de proteção de cabos, fita de advertência e tiras slitadas. Os quatro perfis usam por enquanto a seção transversal esquemática (scripts/catalog-sections.py) até as fotos reais da perfiladeira e do produto cortado.
 - Pergunta: Há fotos ou renders desses produtos?
 
 ### Fotos de produto não identificadas

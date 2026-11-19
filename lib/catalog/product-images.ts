@@ -347,6 +347,38 @@ export const productImages: Record<string, { src: string; width: number; height:
       "source": "Chapas blanks/Chapas_01.jpg"
     }
   ],
+  "perfil-u-simples": [
+    {
+      "src": "/images/produtos/perfil-u-simples/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/secoes/perfil-u-simples.png"
+    }
+  ],
+  "perfil-u-enrijecido": [
+    {
+      "src": "/images/produtos/perfil-u-enrijecido/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/secoes/perfil-u-enrijecido.png"
+    }
+  ],
+  "perfil-l": [
+    {
+      "src": "/images/produtos/perfil-l/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/secoes/perfil-l.png"
+    }
+  ],
+  "perfil-cartola": [
+    {
+      "src": "/images/produtos/perfil-cartola/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/secoes/perfil-cartola.png"
+    }
+  ],
   "manta-magnetica": [
     {
       "src": "/images/produtos/manta-magnetica/01.webp",

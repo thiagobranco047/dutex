@@ -2,7 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/data";
 import { localizeTerm } from "@/lib/catalog/terms";
-import type { Configuration, Locale, SpecKey } from "@/lib/catalog/types";
+import type { Configuration, Locale, QuoteField, SpecKey } from "@/lib/catalog/types";
+import { withQuoteFields } from "./quote";
 
 type Column = {
   key: string;
@@ -16,10 +17,12 @@ export default async function ConfigurationTable({
   configurations,
   productName,
   locale,
+  quoteFields = [],
 }: {
   configurations: readonly Configuration[];
   productName: string;
   locale: Locale;
+  quoteFields?: readonly QuoteField[];
 }) {
   const t = await getTranslations("catalog.product");
 
@@ -43,9 +46,31 @@ export default async function ConfigurationTable({
     { key: "weight", label: t("columns.weight"), value: weightText },
     { key: "opcoes", label: t("specs.opcoes"), value: (item) => term(item.specs.opcoes ?? null) },
   ];
+  // Peso por metro em cada espessura (perfis): uma coluna por espessura, na ordem em que aparece.
+  const number = new Intl.NumberFormat(locale === "pt" ? "pt-BR" : locale, { minimumFractionDigits: 2, maximumFractionDigits: 3 });
+  const thicknesses = [...new Set(configurations.flatMap((item) => item.weightByThickness?.map((w) => w.thickness) ?? []))];
+  candidates.splice(
+    candidates.findIndex((column) => column.key === "weight") + 1,
+    0,
+    ...thicknesses.map((thickness) => ({
+      key: `weight-${thickness}`,
+      label: t("columns.weightAt", { thickness: term(thickness) ?? thickness }),
+      value: (item: Configuration) => {
+        const found = item.weightByThickness?.find((w) => w.thickness === thickness);
+        return found ? number.format(found.kgPerMeter) : null;
+      },
+    })),
+  );
+  const quoteText = (item: Configuration) =>
+    withQuoteFields(
+      t("whatsappMessageConfig", { product: productName, configuration: term(item.label) ?? item.label }),
+      quoteFields,
+      (field) => t(`quoteFields.${field}`),
+    );
   // Só mostra colunas com algum valor; esconde as que repetem o mesmo valor em todas as linhas (vão para o rodapé).
   const filled = candidates.filter((column) => configurations.some((item) => column.value(item)));
   const constant = filled.filter((column) => {
+    if (column.key.startsWith("weight-")) return false;
     const values = new Set(configurations.map((item) => column.value(item)));
     return configurations.length > 1 && values.size === 1;
   });
@@ -83,9 +108,7 @@ export default async function ConfigurationTable({
                 ))}
                 <td className="px-4 py-3 text-right">
                   <a
-                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                      t("whatsappMessageConfig", { product: productName, configuration: term(item.label) ?? item.label }),
-                    )}`}
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteText(item))}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-track="quote-configuration"

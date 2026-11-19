@@ -48,7 +48,8 @@
       "injecao": "Injection molding",
       "rotomoldagem": "Rotational molding",
       "estampagem": "Stamping",
-      "usinagem-cnc": "CNC machining"
+      "usinagem-cnc": "CNC machining",
+      "perfilacao": "Cold roll forming"
     },
     "card": {
       "view": "View product",
@@ -70,6 +71,7 @@
       "whatsappMessageConfig": "Hello, Dutex! I would like a quote for {product} ({configuration}).",
       "configurationsTitle": "Reference sizes",
       "configurationsNote": "Parts already manufactured by Dutex. Other sizes and specifications are developed on request.",
+      "configurationsNoteLine": "Standard line sizes, per Dutex technical drawing. Special sizes on request.",
       "noConfigurations": "Sizes and specifications on request, according to the project.",
       "columns": {
         "configuration": "Configuration",
@@ -78,7 +80,8 @@
         "length": "Length",
         "material": "Material",
         "weight": "Weight",
-        "quote": "Quote"
+        "quote": "Quote",
+        "weightAt": "kg/m · {thickness}"
       },
       "weightBasis": {
         "peca": "per piece",
@@ -106,7 +109,13 @@
       "imagePlaceholder": "Photo coming soon",
       "imageOf": "Image {index} of {total}",
       "previousImage": "Previous image",
-      "nextImage": "Next image"
+      "nextImage": "Next image",
+      "quoteFields": {
+        "espessura": "Thickness",
+        "comprimento": "Length",
+        "quantidade": "Quantity",
+        "material": "Material"
+      }
     },
     "datasheet": {
       "button": "Download datasheet",

@@ -48,7 +48,8 @@
       "injecao": "Inyección",
       "rotomoldagem": "Rotomoldeo",
       "estampagem": "Estampado",
-      "usinagem-cnc": "Mecanizado CNC"
+      "usinagem-cnc": "Mecanizado CNC",
+      "perfilacao": "Perfilado en frío"
     },
     "card": {
       "view": "Ver producto",
@@ -70,6 +71,7 @@
       "whatsappMessageConfig": "¡Hola, Dutex! Me gustaría una cotización de {product} ({configuration}).",
       "configurationsTitle": "Medidas de referencia",
       "configurationsNote": "Piezas ya fabricadas por Dutex. Otras medidas y especificaciones se desarrollan bajo consulta.",
+      "configurationsNoteLine": "Medidas de la línea, según el plano técnico de Dutex. Medidas especiales bajo consulta.",
       "noConfigurations": "Medidas y especificaciones bajo consulta, según el proyecto.",
       "columns": {
         "configuration": "Configuración",
@@ -78,7 +80,8 @@
         "length": "Longitud",
         "material": "Material",
         "weight": "Peso",
-        "quote": "Cotizar"
+        "quote": "Cotizar",
+        "weightAt": "kg/m · {thickness}"
       },
       "weightBasis": {
         "peca": "por pieza",
@@ -106,7 +109,13 @@
       "imagePlaceholder": "Foto próximamente",
       "imageOf": "Imagen {index} de {total}",
       "previousImage": "Imagen anterior",
-      "nextImage": "Imagen siguiente"
+      "nextImage": "Imagen siguiente",
+      "quoteFields": {
+        "espessura": "Espesor",
+        "comprimento": "Longitud",
+        "quantidade": "Cantidad",
+        "material": "Material"
+      }
     },
     "datasheet": {
       "button": "Descargar ficha técnica",

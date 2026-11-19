@@ -11,6 +11,8 @@ const terms: Term[] = [
   ["Com TNT azul 95 mm ou sem TNT", "With 95 mm blue nonwoven or without nonwoven", "Con TNT azul de 95 mm o sin TNT"],
   ["200, 224 e 240 mm de largura", "200, 224 and 240 mm wide", "200, 224 y 240 mm de ancho"],
   ["esquerda/direita", "left/right", "izquierda/derecha"],
+  ["Aço galvanizado ou carbono", "Galvanized or carbon steel", "Acero galvanizado o al carbono"],
+  ["crista", "crown", "cresta"],
   ["Plástico de engenharia", "Engineering plastic", "Plástico de ingeniería"],
   ["Modelo adesivo", "Adhesive model", "Modelo adhesivo"],
   ["modelo adesivo", "adhesive model", "modelo adhesivo"],

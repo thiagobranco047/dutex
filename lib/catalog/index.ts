@@ -33,6 +33,8 @@ function buildProducts(): Product[] {
       description: input.description ? merge(input.description, tr?.description) : null,
       features: input.features.map((item, i) => merge(item, tr?.features?.[i])),
       uses: input.uses.map((item, i) => merge(item, tr?.uses?.[i])),
+      tableNote: input.tableNote ? merge(input.tableNote, tr?.tableNote) : null,
+      configurations: input.configurations.filter((item) => !item.hidden),
       order,
       images,
       datasheetPath: datasheetPathFor(input.slug),
@@ -85,7 +87,7 @@ export function localize(text: LocalizedText, locale: Locale) {
 /** true quando nome, resumo, descrição, características e aplicações existem no idioma. */
 export function isTranslated(product: Product, locale: Locale) {
   if (locale === "pt") return true;
-  const texts = [product.name, product.summary, product.description, ...product.features, ...product.uses];
+  const texts = [product.name, product.summary, product.description, product.tableNote, ...product.features, ...product.uses];
   return texts.every((text) => !text || Boolean(text[locale]));
 }
 
@@ -122,4 +124,5 @@ export const processIds: readonly ProcessId[] = [
   "rotomoldagem",
   "estampagem",
   "usinagem-cnc",
+  "perfilacao",
 ];

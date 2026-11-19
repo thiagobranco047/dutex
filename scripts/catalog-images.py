@@ -36,6 +36,11 @@ MAP = {
     "tabuleiros-separadores": [C + "TABULEIRO 310.png", C + "COLMEIA 50 03.png", W + "15.18.08 (12).jpeg"],
     "dutos-corrugados-pead": [I + "Imagem do WhatsApp de 2023-08-24 à(s) 16.24.17.jpg", I + "Imagem do WhatsApp de 2023-08-24 à(s) 16.24.182.jpg", I + "Imagem do WhatsApp de 2023-07-28 à(s) 13.58.21.jpg", I + "Imagem do WhatsApp de 2023-07-28 à(s) 13.56.37.jpg"],
     "chapas-e-blanks": ["Chapas blanks/Chapas_01.jpg"],
+    # Seções esquemáticas geradas por scripts/catalog-sections.py (provisórias até as fotos reais)
+    "perfil-u-simples": ["_site-catalogo/secoes/perfil-u-simples.png"],
+    "perfil-u-enrijecido": ["_site-catalogo/secoes/perfil-u-enrijecido.png"],
+    "perfil-l": ["_site-catalogo/secoes/perfil-l.png"],
+    "perfil-cartola": ["_site-catalogo/secoes/perfil-cartola.png"],
     "manta-magnetica": [C + "MANTA COM PROTEÇÃO COM IMÃ.png"],
     "estrados-metalicos": [C + "ESTRADOS METALICOS .png", C + "ESTRADOS METALICOS 01.png"],
     "paletes-retornaveis": [C + "PALETE RETORNAVEIS .png"],

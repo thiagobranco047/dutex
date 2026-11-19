@@ -15,7 +15,7 @@ export type CategoryId =
   | "protecao-de-bordas"
   | "embalagem-e-paletizacao"
   | "infraestrutura-de-cabos"
-  | "transformacao-de-aco";
+  | "acos-e-perfis";
 
 export type MaterialId =
   | "aco-carbono"
@@ -37,7 +37,8 @@ export type ProcessId =
   | "injecao"
   | "rotomoldagem"
   | "estampagem"
-  | "usinagem-cnc";
+  | "usinagem-cnc"
+  | "perfilacao";
 
 export type Category = {
   id: CategoryId;
@@ -86,11 +87,18 @@ export type Configuration = {
   material: string | null;
   weight: Weight | null;
   specs: Partial<Record<SpecKey, string>>;
+  /** Peso por metro em cada espessura (ex.: perfis). Valores nominais; a nota da tabela vem do produto. */
+  weightByThickness: readonly { thickness: string; kgPerMeter: number }[] | null;
+  /** Medida do desenho ainda não liberada para o site (fica no dado, fora da página). */
+  hidden: boolean;
   /** Código do desenho técnico. Uso interno, não vai para o HTML. */
   internalCode: string | null;
   /** Arquivo de origem do dado. */
   sourceFile: string | null;
 };
+
+/** Campos que entram em branco na mensagem de orçamento do WhatsApp, para o cliente completar. */
+export type QuoteField = "espessura" | "comprimento" | "quantidade" | "material";
 
 export type ProductStatus = "publicado" | "rascunho";
 
@@ -110,6 +118,11 @@ export type ProductInput = {
   /** Fabricado conforme projeto do cliente. */
   customizable: boolean;
   configurations: readonly Configuration[];
+  /** Observação mostrada abaixo da tabela de medidas (ex.: "pesos nominais, ±5%"). */
+  tableNote: LocalizedText | null;
+  quoteFields: readonly QuoteField[];
+  /** "fabricadas": medidas já produzidas (padrão). "linha": medidas da linha conforme desenho, ainda sem produção. */
+  sizesKind: "fabricadas" | "linha";
   status: ProductStatus;
   /** Documentos de onde vieram os dados do produto. */
   sources: readonly string[];

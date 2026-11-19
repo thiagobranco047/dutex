@@ -13,6 +13,7 @@ export type ProductTranslation = {
   description?: Pair;
   features?: Pair[];
   uses?: Pair[];
+  tableNote?: Pair;
 };
 
 const pending = { en: false, es: false };
@@ -318,6 +319,116 @@ export const productTranslations: Record<string, ProductTranslation> = {
       es: "La cinta de advertencia Dutex se instala enterrada para alertar a los trabajadores sobre la existencia de cableado eléctrico en el lugar de la excavación. Señaliza la instalación y ayuda a protegerla contra excavaciones indebidas.",
     },
   },
+  "perfil-u-simples": {
+    reviewed: pending,
+    name: { en: "U channel", es: "Perfil U simple" },
+    summary: {
+      en: "Cold-formed U channel, cut from 2 to 12 m, for side rails, cross members and frames of truck bodies and box vans.",
+      es: "Perfil U conformado en frío, cortado de 2 a 12 m, para largueros, travesaños y bastidores de carrocerías y furgones.",
+    },
+    description: {
+      en: "Cold-formed steel U channel with a web (A) and two equal flanges (B), inner radius equal to thickness. Cut to the customer's length, from 2 to 12 m, so it reaches the assembly line ready to use.",
+      es: "Perfil U de acero conformado en frío, con alma (A) y dos alas iguales (B), radio interno igual al espesor. Cortado a la longitud del cliente, de 2 a 12 m, para llegar a la línea de montaje listo para usar.",
+    },
+    features: [
+      { en: "Custom length from 2 to 12 m: arrives ready to assemble, with no cutting and no scrap", es: "Longitud a medida de 2 a 12 m: llega lista para montar, sin corte y sin sobrante" },
+      { en: "Thicknesses from 1.25 to 3.00 mm", es: "Espesores de 1,25 a 3,00 mm" },
+      { en: "Galvanized or carbon steel, per order, with yield strength up to 300 MPa", es: "Acero galvanizado o al carbono, según el pedido, con límite de fluencia de hasta 300 MPa" },
+      { en: "Inner radius equal to thickness (r = e) and dimensional tolerance stated in the drawing", es: "Radio interno igual al espesor (r = e) y tolerancia dimensional declarada en el plano" },
+      { en: "Made on Dutex's own roll forming line in Garuva (SC), Brazil", es: "Fabricado en perfiladora propia en Garuva (SC), Brasil" },
+    ],
+    uses: [
+      { en: "Side rails and cross members of the underframe", es: "Largueros y travesaños de la estructura inferior" },
+      { en: "Truck body and box van frames", es: "Bastidores de carrocerías y furgones" },
+    ],
+    tableNote: { en: "Nominal weights per meter, with ±5% variation (strip thickness tolerance and bend radius). Material defined per order.", es: "Pesos nominales por metro, con variación de ±5% (tolerancia de espesor del fleje y radio de doblado). Material definido por pedido." },
+  },
+  "perfil-u-enrijecido": {
+    reviewed: pending,
+    name: { en: "Lipped U channel (C channel)", es: "Perfil U rigidizado (Ue)" },
+    summary: {
+      en: "U channel with lipped flanges, cut from 2 to 12 m, for floor cross members, base reinforcements and posts.",
+      es: "Perfil U con rigidizador en las alas, cortado de 2 a 12 m, para travesaños de piso, refuerzos de base y columnas.",
+    },
+    description: {
+      en: "Cold-formed steel U channel with a lip (C) at the end of each flange, which makes the section stiffer than a plain U channel. Web (A), flanges (B) and lips (C) with inner radius equal to thickness, cut to the customer's length, from 2 to 12 m.",
+      es: "Perfil U de acero conformado en frío con rigidizador (C) en la punta de las alas, lo que aumenta la rigidez de la sección en comparación con el U simple. Alma (A), alas (B) y rigidizadores (C) con radio interno igual al espesor, cortado a la longitud del cliente, de 2 a 12 m.",
+    },
+    features: [
+      { en: "Custom length from 2 to 12 m: arrives ready to assemble, with no cutting and no scrap", es: "Longitud a medida de 2 a 12 m: llega lista para montar, sin corte y sin sobrante" },
+      { en: "Thicknesses from 1.25 to 3.00 mm", es: "Espesores de 1,25 a 3,00 mm" },
+      { en: "Galvanized or carbon steel, per order, with yield strength up to 300 MPa", es: "Acero galvanizado o al carbono, según el pedido, con límite de fluencia de hasta 300 MPa" },
+      { en: "Inner radius equal to thickness (r = e) and dimensional tolerance stated in the drawing", es: "Radio interno igual al espesor (r = e) y tolerancia dimensional declarada en el plano" },
+      { en: "Made on Dutex's own roll forming line in Garuva (SC), Brazil", es: "Fabricado en perfiladora propia en Garuva (SC), Brasil" },
+    ],
+    uses: [
+      { en: "Floor cross members", es: "Travesaños de piso" },
+      { en: "Base reinforcements and posts", es: "Refuerzos de base y columnas" },
+      { en: "Photovoltaic structures (150 x 90 x 30 size)", es: "Estructuras fotovoltaicas (medida 150 x 90 x 30)" },
+    ],
+    tableNote: { en: "Nominal weights per meter, with ±5% variation (strip thickness tolerance and bend radius). Material defined per order.", es: "Pesos nominales por metro, con variación de ±5% (tolerancia de espesor del fleje y radio de doblado). Material definido por pedido." },
+  },
+  "perfil-l": {
+    reviewed: pending,
+    name: { en: "L angle", es: "Perfil L (ángulo)" },
+    summary: {
+      en: "Cold-formed equal-leg steel angle, cut from 2 to 12 m, for corners, trims and panel fastening.",
+      es: "Ángulo de acero conformado en frío, de alas iguales, cortado de 2 a 12 m, para esquinas, terminaciones y fijación de paneles.",
+    },
+    description: {
+      en: "Cold-formed steel L angle with equal legs (A and B) and inner radius equal to thickness. Cut to the customer's length, from 2 to 12 m.",
+      es: "Perfil L de acero conformado en frío, con alas iguales (A y B) y radio interno igual al espesor. Cortado a la longitud del cliente, de 2 a 12 m.",
+    },
+    features: [
+      { en: "Custom length from 2 to 12 m: arrives ready to assemble, with no cutting and no scrap", es: "Longitud a medida de 2 a 12 m: llega lista para montar, sin corte y sin sobrante" },
+      { en: "Thicknesses from 1.25 to 3.00 mm", es: "Espesores de 1,25 a 3,00 mm" },
+      { en: "Galvanized or carbon steel, per order, with yield strength up to 300 MPa", es: "Acero galvanizado o al carbono, según el pedido, con límite de fluencia de hasta 300 MPa" },
+      { en: "Inner radius equal to thickness (r = e) and dimensional tolerance stated in the drawing", es: "Radio interno igual al espesor (r = e) y tolerancia dimensional declarada en el plano" },
+      { en: "Made on Dutex's own roll forming line in Garuva (SC), Brazil", es: "Fabricado en perfiladora propia en Garuva (SC), Brasil" },
+    ],
+    uses: [
+      { en: "Corners and side trims", es: "Esquinas y terminación de laterales" },
+      { en: "Panel and floor fastening", es: "Fijación de paneles y piso" },
+    ],
+    tableNote: { en: "Weights per meter being defined by Dutex engineering. Material defined per order.", es: "Pesos por metro en definición por la ingeniería de Dutex. Material definido por pedido." },
+  },
+  "perfil-cartola": {
+    reviewed: pending,
+    name: { en: "Top-hat profile", es: "Perfil omega" },
+    summary: {
+      en: "Cold-formed top-hat (omega) profile, cut from 2 to 12 m, for box van side posts and rails and panel reinforcement.",
+      es: "Perfil omega conformado en frío, cortado de 2 a 12 m, para columnas y travesaños laterales del furgón y refuerzo de panel.",
+    },
+    description: {
+      en: "Cold-formed steel top-hat profile: crown (D), two inclined webs of height (B) and fastening flanges (C), with overall width (A) and inner radius equal to thickness. Cut to the customer's length, from 2 to 12 m.",
+      es: "Perfil de acero conformado en frío en forma de omega: cresta (D), dos almas inclinadas de altura (B) y alas de fijación (C), con ancho total (A) y radio interno igual al espesor. Cortado a la longitud del cliente, de 2 a 12 m.",
+    },
+    features: [
+      { en: "Custom length from 2 to 12 m: arrives ready to assemble, with no cutting and no scrap", es: "Longitud a medida de 2 a 12 m: llega lista para montar, sin corte y sin sobrante" },
+      { en: "Thicknesses from 1.25 to 1.55 mm", es: "Espesores de 1,25 a 1,55 mm" },
+      { en: "Galvanized or carbon steel, per order, with yield strength up to 300 MPa", es: "Acero galvanizado o al carbono, según el pedido, con límite de fluencia de hasta 300 MPa" },
+      { en: "Inner radius equal to thickness (r = e) and dimensional tolerance stated in the drawing", es: "Radio interno igual al espesor (r = e) y tolerancia dimensional declarada en el plano" },
+      { en: "Made on Dutex's own roll forming line in Garuva (SC), Brazil", es: "Fabricado en perfiladora propia en Garuva (SC), Brasil" },
+    ],
+    uses: [
+      { en: "Box van side posts and rails", es: "Columnas y travesaños laterales del furgón" },
+      { en: "Panel reinforcement", es: "Refuerzo de panel" },
+    ],
+    tableNote: { en: "Weights per meter being defined by Dutex engineering. Material defined per order.", es: "Pesos por metro en definición por la ingeniería de Dutex. Material definido por pedido." },
+  },
+  "tiras-slitadas": {
+    reviewed: pending,
+    name: { en: "Slit strips", es: "Flejes (slitter)" },
+    summary: {
+      en: "Steel coil cut lengthwise into strips at the customer's width.",
+      es: "Bobina de acero cortada a lo largo en flejes con el ancho del cliente.",
+    },
+    description: {
+      en: "Steel coil slit lengthwise into strips at the width defined by the customer. Raw material for those who roll form or bend in-house.",
+      es: "Bobina de acero cortada longitudinalmente en flejes con el ancho definido por el cliente. Materia prima para quien perfila o dobla internamente.",
+    },
+    uses: [{ en: "Raw material for roll forming and bending", es: "Materia prima para perfilado y doblado" }],
+  },
   "chapas-e-blanks": {
     reviewed: pending,
     name: { en: "Sheets and blanks", es: "Chapas y blanks" },
@@ -326,8 +437,12 @@ export const productTranslations: Record<string, ProductTranslation> = {
       es: "Chapas y blanks cortados a medida en ZC, FF y FQ, listos para la producción.",
     },
     description: {
-      en: "Steel processed with industrial precision: coils, custom-cut sheets, slit coils and blanks in ZC, FF and FQ, up to 40 mm thick. Raw material ready for your production.",
-      es: "Acero transformado con precisión industrial: bobinas, chapas a medida, flejes (slitter) y blanks en ZC, FF y FQ con espesores de hasta 40 mm. Materia prima lista para su producción.",
+      en: "Steel processed with industrial precision: sheets cut to the customer's length and width from coil, and blanks in defined shapes and quantities, in ZC, FF and FQ, up to 40 mm thick. Raw material ready for your production.",
+      es: "Acero transformado con precisión industrial: chapas cortadas a la longitud y el ancho del cliente, a partir de bobina, y blanks en formato y cantidad definidos, en ZC, FF y FQ con espesores de hasta 40 mm. Materia prima lista para su producción.",
     },
+    uses: [
+      { en: "Floors, side panels and rear frames of truck bodies and box vans", es: "Piso, paneles laterales y marco trasero de carrocerías y furgones" },
+      { en: "Reinforcement parts, doors and stamped components", es: "Piezas de refuerzo, puertas y componentes estampados" },
+    ],
   },
 };
