@@ -3,8 +3,8 @@
 Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edite à mão.
 
 - Produtos: 28 (0 publicados, 28 em rascunho)
-- Pendências abertas: 45 (11 bloqueiam publicação)
-- Produtos sem imagem: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter)
+- Pendências abertas: 47 (11 bloqueiam publicação)
+- Produtos sem imagem: Anel de proteção em plástico de engenharia, Separador de bobinas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter)
 
 ## Perguntas para a Dutex
 
@@ -25,7 +25,7 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 15. **[bloqueia]** Qual peso vale para cada peça? Ou o site deve omitir o peso? _(luvas-pesos)_
 16. Qual o nome correto da peça 100 x 70 x 575? _(nomenclatura-1247104)_
 17. Qual desenho vale e quais as diferenças entre as versões? _(luva-580-versoes)_
-18. Existe anel cartola em plástico além do de aço? _(anel-cartola-material)_
+18. O anel cartola plástico (render no Figma, linha "Anéis cartola plásticos") entra como produto separado? Com quais medidas? _(anel-cartola-material)_
 19. As duas medidas são produzidas? _(tubular-medidas)_
 20. **[bloqueia]** Qual faixa de carga vale? _(bercos-capacidade)_
 21. Qual o peso correto? _(colmeia-peso)_
@@ -43,14 +43,16 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 33. **[bloqueia]** A engenharia confirma as aplicações de cada família? _(perfis-aplicacoes)_
 34. No lançamento, a Dutex libera versões públicas dos desenhos (sem o carimbo) ou a agência monta fichas técnicas próprias? _(perfis-desenhos-publicos)_
 35. Quais faixas de espessura, largura e acabamento podem ser publicadas para chapas, slitter e blanks? _(acos-especificacao)_
-36. Saeko é cliente? As placas são variações da placa de proteção de cabos? _(placas-saeko)_
-37. A Dutex fabrica para a Mantex? Existe ensaio em nome da Dutex? _(placas-ensaio-terceiro)_
-38. **[bloqueia]** A Dutex fabrica colarinhos por rotomoldagem? Quais medidas? _(colarinho-rotomoldado)_
-39. O que é a peça 03-EXT02-0019? _(slitter-borracha)_
-40. **[bloqueia]** Para que serve a manta e quais as medidas? _(manta-magnetica)_
-41. O perfil é vendido separado? _(perfil-120m)_
-42. **[bloqueia]** São produtos de linha ou projetos especiais? Quais medidas e capacidades? _(estrados-e-paletes-retornaveis)_
-43. Qual o e-mail de compliance correto (compliance@dutex.ind.br ou .com.br)? _(dados-institucionais)_
+36. Esses cinco produtos são vendidos? Quais medidas, materiais e aplicações? _(produtos-novos-figma)_
+37. Os renders amarelos (plastic_cantoneira135) são mesmo da cantoneira plissada plástica? _(renders-nomes)_
+38. Saeko é cliente? As placas são variações da placa de proteção de cabos? _(placas-saeko)_
+39. A Dutex fabrica para a Mantex? Existe ensaio em nome da Dutex? _(placas-ensaio-terceiro)_
+40. **[bloqueia]** A Dutex fabrica colarinhos por rotomoldagem? Quais medidas? _(colarinho-rotomoldado)_
+41. O que é a peça 03-EXT02-0019? _(slitter-borracha)_
+42. **[bloqueia]** Para que serve a manta e quais as medidas? _(manta-magnetica)_
+43. O perfil é vendido separado? _(perfil-120m)_
+44. **[bloqueia]** São produtos de linha ou projetos especiais? Quais medidas e capacidades? _(estrados-e-paletes-retornaveis)_
+45. Qual o e-mail de compliance correto (compliance@dutex.ind.br ou .com.br)? _(dados-institucionais)_
 
 ## Decisões comerciais
 
@@ -83,6 +85,13 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Status: aberto
 - Encontrado: O briefing propõe /acos-e-perfis como página de linha (com /perfil-u-simples etc.), menu Produtos e Segmentos, /orcamento, /calculadora, /contato com setores e inversão de domínio para dutex.com.br. O catálogo usa /produtos/acos-e-perfis/perfil-u-simples. A categoria pode virar a página de linha sem mudar a estrutura.
 - Fontes: `Briefing_Dutex_acos_e_perfis.docx (v2.4)`
+
+### Produtos com render no Figma que ainda não estão no catálogo
+
+- Status: aberto
+- Encontrado: O quadro "fotos de produtos (atualizadas)" do Figma tem renders de: anéis cartola plásticos, protetor tubular metálico, cantoneiras metálicas (arquivos steel_cantoneira70x40), chapas plásticas para embalagem e chapa protetora metálica multicamadas. Decisão de 19/11/2026: por ora os renders entram só nos produtos existentes; esses cinco esperam confirmação da Dutex.
+- Pergunta: Esses cinco produtos são vendidos? Quais medidas, materiais e aplicações?
+- Fontes: `Figma dutex, página Produtos, quadro 90:674`
 
 ### Placas "Saeko"
 
@@ -218,7 +227,7 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Status: aberto
 - Produtos: Anéis cartola
 - Encontrado: A apresentação comercial descreve o anel cartola como "produzido em polímero plástico" (linha plástica) e também na linha metalmecânica. O desenho 03-GAL02-0086 é em aço 1006/1010.
-- Pergunta: Existe anel cartola em plástico além do de aço?
+- Pergunta: O anel cartola plástico (render no Figma, linha "Anéis cartola plásticos") entra como produto separado? Com quais medidas?
 - Fontes: `produtos/DUTEX INDUSTRIA.pdf`; `fichas tecnicas/Fichas técnicas/AÇO/03-GAL02-0086`
 
 ### Protetor tubular: 90 x 8 ou 115 x 7?
@@ -394,8 +403,8 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 ### Produtos sem foto
 
 - Status: aberto
-- Produtos: Anel de proteção em plástico de engenharia, Separador de bobinas, Manta protetora multicamadas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter), Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
-- Encontrado: Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, manta protetora multicamadas, paletes plásticos, placas de proteção de cabos, fita de advertência e tiras slitadas. Os quatro perfis usam por enquanto a seção transversal esquemática (scripts/catalog-sections.py) até as fotos reais da perfiladeira e do produto cortado.
+- Produtos: Anel de proteção em plástico de engenharia, Separador de bobinas, Paletes plásticos, Placas de proteção mecânica de cabos, Fita de advertência, Tiras slitadas (slitter), Perfil U simples, Perfil U enrijecido (Ue), Perfil L (cantoneira), Perfil cartola
+- Encontrado: Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, paletes plásticos, placas de proteção de cabos, fita de advertência e tiras slitadas. Os quatro perfis usam por enquanto a seção transversal esquemática (scripts/catalog-sections.py) até as fotos reais da perfiladeira e do produto cortado.
 - Pergunta: Há fotos ou renders desses produtos?
 
 ### Fotos de produto não identificadas
@@ -420,3 +429,11 @@ Gerado por `npm run catalog:report` a partir de `lib/catalog/audit.ts`. Não edi
 - Encontrado: O render do catálogo 2025 se chama 70 x 70, mas não há desenho de cantoneira 70 x 70 (só 70 x 40).
 - Pergunta: O render é da cantoneira 70 x 40?
 - Fontes: `04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/CANTONEIRA 70X70.png`
+
+### Nomes dos renders x produto no Figma
+
+- Status: aberto
+- Produtos: Cantoneiras plissadas plásticas, Cantoneiras plásticas
+- Encontrado: Os renders "plastic_cantoneira135" estão na linha Cantoneiras plissadas plásticas e os "steel_cantoneira70x40" em Cantoneiras metálicas. No catálogo, 135 x 70 e 70 x 40 são cantoneiras plásticas lisas. Decisão de 19/11/2026: vale a linha do Figma.
+- Pergunta: Os renders amarelos (plastic_cantoneira135) são mesmo da cantoneira plissada plástica?
+- Fontes: `Figma dutex, página Produtos, quadro 90:674`

@@ -318,7 +318,7 @@ export const productInputs: readonly ProductInput[] = [
       pt("Bobinas ocupam menos espaço de armazenagem que chapas"),
     ],
     sources: [SRC.manta],
-    auditIds: ["imagens-ausentes"],
+    auditIds: [],
   }),
   product({
     slug: "paletes-plasticos",

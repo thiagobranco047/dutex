@@ -1,6 +1,7 @@
 """Converte as fotos de produto da pasta de materiais da Dutex em WebP para o site.
 
 Uso: python3 scripts/catalog-images.py "<pasta materiais>"
+Renders do Figma em <materiais>/_site-catalogo/renders/{slug}/ entram antes das fotos de cada produto.
 Gera public/images/produtos/{slug}/{n}.webp e lib/catalog/product-images.ts.
 O mapeamento abaixo é a fonte da verdade: para trocar ou incluir uma foto, edite e rode de novo.
 """
@@ -46,8 +47,21 @@ MAP = {
     "paletes-retornaveis": [C + "PALETE RETORNAVEIS .png"],
 }
 
+# Renders exportados do Figma (página Produtos): _site-catalogo/renders/{slug}/render-NN.png.
+# Entram na frente das fotos do MAP. Para exportar: Ctrl+Shift+E no Figma, salvando nessa pasta.
+RENDERS = SRC / "_site-catalogo" / "renders"
+
+def renders_for(slug):
+    folder = RENDERS / slug
+    if not folder.is_dir():
+        return []
+    return [str(f.relative_to(SRC)).replace("\\", "/") for f in sorted(folder.glob("*.png")) + sorted(folder.glob("*.jpg"))]
+
+slugs = list(MAP) + sorted(d.name for d in RENDERS.iterdir() if d.is_dir() and d.name not in MAP) if RENDERS.is_dir() else list(MAP)
+
 manifest, missing = {}, []
-for slug, files in MAP.items():
+for slug in slugs:
+    files = renders_for(slug) + MAP.get(slug, [])
     folder = OUT / slug
     folder.mkdir(parents=True, exist_ok=True)
     manifest[slug] = []

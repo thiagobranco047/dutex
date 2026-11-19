@@ -135,3 +135,12 @@ Fonte: `E:\work\dutex\materiais\02_Produtos\Aços e perfis\Briefing_Dutex_acos_e
 - WhatsApp: os perfis abrem a mensagem com os campos Espessura, Comprimento, Quantidade e Material para o cliente completar (`quoteFields`). Chapas e slitter pedem espessura, material e quantidade.
 - Imagens provisórias: seções transversais esquemáticas desenhadas a partir das cotas (`scripts/catalog-sections.py`), até chegarem as fotos da perfiladeira e do produto cortado. `npm run catalog:images` gera as seções e converte tudo.
 - Os quatro perfis estão bloqueados para publicação até o lançamento (regra do briefing: nada vai ao ar antes do primeiro pedido da Fase 0). Pendências em `audit.ts`.
+
+## Renders 3D do Figma (19/11/2026)
+
+- Fonte: Figma `dutex`, página Produtos, quadro "Catálogo Dutex - fotos de produtos (atualizadas)".
+- Decisões: renders só nos produtos que já existem; cada render fica no produto da linha em que está no Figma; renders entram na frente das fotos atuais.
+- Entraram 10 renders: anéis cartola (metálicos, 2), berços (1), cantoneiras plissadas plásticas (2), cantoneiras plissadas metálicas (2), chapas metálicas para embalagem (1) e manta protetora multicamadas (2).
+- Ficaram de fora os produtos que só existem no Figma (anéis cartola plásticos, protetor tubular metálico, cantoneiras metálicas, chapas plásticas para embalagem, chapa protetora metálica multicamadas). Pendência `produtos-novos-figma`.
+- Arquivos em `E:\work\dutex\materiais\_site-catalogo\renders\{slug}\render-NN.png` (1400 x 1050). `scripts/catalog-images.py` lê essa pasta e põe os renders antes das fotos do MAP.
+- Para atualizar: no Figma, exporte (Ctrl+Shift+E) para essa pasta; só os quadros `{slug}/render-NN` têm exportação ligada. Depois rode `npm run catalog:images`.

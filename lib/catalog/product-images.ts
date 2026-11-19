@@ -18,12 +18,24 @@ export const productImages: Record<string, { src: string; width: number; height:
   "aneis-cartola": [
     {
       "src": "/images/produtos/aneis-cartola/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/aneis-cartola/render-01.png"
+    },
+    {
+      "src": "/images/produtos/aneis-cartola/02.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/aneis-cartola/render-02.png"
+    },
+    {
+      "src": "/images/produtos/aneis-cartola/03.webp",
       "width": 512,
       "height": 598,
       "source": "04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/ANEL CARTOLA PINTURA .png"
     },
     {
-      "src": "/images/produtos/aneis-cartola/02.webp",
+      "src": "/images/produtos/aneis-cartola/04.webp",
       "width": 510,
       "height": 610,
       "source": "04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/ANEL CARTOLA PINTURA 01.png"
@@ -99,11 +111,17 @@ export const productImages: Record<string, { src: string; width: number; height:
     {
       "src": "/images/produtos/bercos-para-bobinas/01.webp",
       "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/bercos-para-bobinas/render-01.png"
+    },
+    {
+      "src": "/images/produtos/bercos-para-bobinas/02.webp",
+      "width": 1400,
       "height": 933,
       "source": "produtos/WhatsApp Image 2026-01-06 at 09.40.35.jpeg"
     },
     {
-      "src": "/images/produtos/bercos-para-bobinas/02.webp",
+      "src": "/images/produtos/bercos-para-bobinas/03.webp",
       "width": 647,
       "height": 1400,
       "source": "produtos/WhatsApp Image 2026-01-06 at 09.40.35 (3).jpeg"
@@ -162,30 +180,42 @@ export const productImages: Record<string, { src: string; width: number; height:
   "cantoneiras-plissadas-plasticas": [
     {
       "src": "/images/produtos/cantoneiras-plissadas-plasticas/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/cantoneiras-plissadas-plasticas/render-01.png"
+    },
+    {
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/02.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/cantoneiras-plissadas-plasticas/render-02.png"
+    },
+    {
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/03.webp",
       "width": 937,
       "height": 637,
       "source": "04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/CANTONEIRA 110X70.png"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-plasticas/02.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/04.webp",
       "width": 1080,
       "height": 1080,
       "source": "produtos/WhatsApp Image 2026-01-06 at 15.18.07 (1).jpeg"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-plasticas/03.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/05.webp",
       "width": 1080,
       "height": 1080,
       "source": "produtos/WhatsApp Image 2026-01-06 at 15.18.08 (18).jpeg"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-plasticas/04.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/06.webp",
       "width": 1080,
       "height": 1080,
       "source": "produtos/WhatsApp Image 2026-01-06 at 15.18.08 (9).jpeg"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-plasticas/05.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-plasticas/07.webp",
       "width": 1080,
       "height": 1080,
       "source": "produtos/WhatsApp Image 2026-01-06 at 15.18.10 (1).jpeg"
@@ -194,30 +224,42 @@ export const productImages: Record<string, { src: string; width: number; height:
   "cantoneiras-plissadas-metalicas": [
     {
       "src": "/images/produtos/cantoneiras-plissadas-metalicas/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/cantoneiras-plissadas-metalicas/render-01.png"
+    },
+    {
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/02.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/cantoneiras-plissadas-metalicas/render-02.png"
+    },
+    {
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/03.webp",
       "width": 745,
       "height": 582,
       "source": "04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/CANTONEIRAS PLISSADAS EM AÇO .png"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-metalicas/02.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/04.webp",
       "width": 720,
       "height": 608,
       "source": "02_Produtos/Produtos Indutrial Dutex Projetos/CANTONEIRAS PLISSADAS EM AÇO 01.png"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-metalicas/03.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/05.webp",
       "width": 1400,
       "height": 894,
       "source": "02_Produtos/Imagens de produtos/Clipped_image_20240412_133938.png"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-metalicas/04.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/06.webp",
       "width": 1400,
       "height": 1050,
       "source": "02_Produtos/Imagens de produtos/20240412_133603.jpg"
     },
     {
-      "src": "/images/produtos/cantoneiras-plissadas-metalicas/05.webp",
+      "src": "/images/produtos/cantoneiras-plissadas-metalicas/07.webp",
       "width": 1080,
       "height": 1080,
       "source": "produtos/WhatsApp Image 2026-01-06 at 15.18.08 (6).jpeg"
@@ -226,6 +268,12 @@ export const productImages: Record<string, { src: string; width: number; height:
   "chapas-metalicas-para-embalagem": [
     {
       "src": "/images/produtos/chapas-metalicas-para-embalagem/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/chapas-metalicas-para-embalagem/render-01.png"
+    },
+    {
+      "src": "/images/produtos/chapas-metalicas-para-embalagem/02.webp",
       "width": 1050,
       "height": 1400,
       "source": "02_Produtos/Imagens de produtos/20240412_135237.jpg"
@@ -407,6 +455,20 @@ export const productImages: Record<string, { src: string; width: number; height:
       "width": 727,
       "height": 606,
       "source": "04_Mídias e Redes Sociais/CATÁLOGO/Catalogo 2025/PALETE RETORNAVEIS .png"
+    }
+  ],
+  "manta-protetora-multicamadas": [
+    {
+      "src": "/images/produtos/manta-protetora-multicamadas/01.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/manta-protetora-multicamadas/render-01.png"
+    },
+    {
+      "src": "/images/produtos/manta-protetora-multicamadas/02.webp",
+      "width": 1400,
+      "height": 1050,
+      "source": "_site-catalogo/renders/manta-protetora-multicamadas/render-02.png"
     }
   ]
 };

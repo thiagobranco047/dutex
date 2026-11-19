@@ -49,14 +49,13 @@ export const auditItems: readonly AuditItem[] = [
     kind: "imagem",
     status: "aberto",
     title: "Produtos sem foto",
-    finding: "Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, manta protetora multicamadas, paletes plásticos, placas de proteção de cabos, fita de advertência e tiras slitadas. Os quatro perfis usam por enquanto a seção transversal esquemática (scripts/catalog-sections.py) até as fotos reais da perfiladeira e do produto cortado.",
+    finding: "Sem imagem identificada na pasta de materiais: anel Ø750, separador de bobinas, paletes plásticos, placas de proteção de cabos, fita de advertência e tiras slitadas. Os quatro perfis usam por enquanto a seção transversal esquemática (scripts/catalog-sections.py) até as fotos reais da perfiladeira e do produto cortado.",
     question: "Há fotos ou renders desses produtos?",
     resolution: null,
     blocksPublication: false,
     products: [
       "anel-de-protecao-plastico",
       "separador-de-bobinas",
-      "manta-protetora-multicamadas",
       "paletes-plasticos",
       "placas-de-protecao-mecanica-de-cabos",
       "fita-de-advertencia",
@@ -264,7 +263,7 @@ export const auditItems: readonly AuditItem[] = [
     status: "aberto",
     title: "Anel cartola: plástico ou aço?",
     finding: "A apresentação comercial descreve o anel cartola como \"produzido em polímero plástico\" (linha plástica) e também na linha metalmecânica. O desenho 03-GAL02-0086 é em aço 1006/1010.",
-    question: "Existe anel cartola em plástico além do de aço?",
+    question: "O anel cartola plástico (render no Figma, linha \"Anéis cartola plásticos\") entra como produto separado? Com quais medidas?",
     resolution: null,
     blocksPublication: false,
     products: ["aneis-cartola"],
@@ -497,6 +496,32 @@ export const auditItems: readonly AuditItem[] = [
     sources: [BR],
   },
 
+  {
+    id: "produtos-novos-figma",
+    kind: "decisao-comercial",
+    status: "aberto",
+    title: "Produtos com render no Figma que ainda não estão no catálogo",
+    finding:
+      "O quadro \"fotos de produtos (atualizadas)\" do Figma tem renders de: anéis cartola plásticos, protetor tubular metálico, cantoneiras metálicas (arquivos steel_cantoneira70x40), chapas plásticas para embalagem e chapa protetora metálica multicamadas. Decisão de 19/11/2026: por ora os renders entram só nos produtos existentes; esses cinco esperam confirmação da Dutex.",
+    question: "Esses cinco produtos são vendidos? Quais medidas, materiais e aplicações?",
+    resolution: null,
+    blocksPublication: false,
+    products: [],
+    sources: ["Figma dutex, página Produtos, quadro 90:674"],
+  },
+  {
+    id: "renders-nomes",
+    kind: "imagem",
+    status: "aberto",
+    title: "Nomes dos renders x produto no Figma",
+    finding:
+      "Os renders \"plastic_cantoneira135\" estão na linha Cantoneiras plissadas plásticas e os \"steel_cantoneira70x40\" em Cantoneiras metálicas. No catálogo, 135 x 70 e 70 x 40 são cantoneiras plásticas lisas. Decisão de 19/11/2026: vale a linha do Figma.",
+    question: "Os renders amarelos (plastic_cantoneira135) são mesmo da cantoneira plissada plástica?",
+    resolution: null,
+    blocksPublication: false,
+    products: ["cantoneiras-plissadas-plasticas", "cantoneiras-plasticas"],
+    sources: ["Figma dutex, página Produtos, quadro 90:674"],
+  },
   // Itens a classificar
   {
     id: "placas-saeko",

@@ -28,7 +28,7 @@ Responda em português do Brasil. Escreva "Lab. 334", nunca "LAB334".
 - Todos os produtos estão em `"rascunho"`: aparecem em dev e com `CATALOG_SHOW_DRAFTS=true` (Preview da Vercel). Para publicar, resolva as pendências bloqueantes em `audit.ts` e troque o status.
 - Páginas em en/es só são indexadas com `reviewed: true` em `translations.ts`.
 - Ficha técnica: botão com formulário em todo produto. PDF público em `public/fichas-tecnicas/{slug}.pdf`; sem o arquivo, o pedido vai por e-mail para o comercial.
-- Imagens: `public/images/produtos/{slug}/NN.webp`, geradas por `scripts/catalog-images.py` a partir de `E:\work\dutex\materiais`. Para trocar uma foto, edite o mapeamento no script e rode `npm run catalog:images`.
+- Imagens: `public/images/produtos/{slug}/NN.webp`, geradas por `scripts/catalog-images.py` a partir de `E:\work\dutex\materiais`. Para trocar uma foto, edite o mapeamento no script e rode `npm run catalog:images`. Renders do Figma (página Produtos) entram na frente das fotos quando salvos em `E:\work\dutex\materiais\_site-catalogo\renders\{slug}\render-NN.png`; no Figma, só os quadros nomeados `{slug}/render-NN` têm exportação ligada.
 - Linha de aço (submarca "Dutex aços e perfis"): categoria `acos-e-perfis`. Briefing em `E:\work\dutex\materiais\02_Produtos\Aços e perfis\`. Regra do briefing: nenhum dado técnico entra sem validação da engenharia da Dutex, e os perfis não vão ao ar antes do lançamento.
 - Imports relativos em `lib/catalog` usam extensão `.ts` (os scripts rodam direto no Node).
 
