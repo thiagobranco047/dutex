@@ -66,5 +66,13 @@
     "videoChapters": "Capítulos do vídeo",
     "chapterLabel": "Capítulo {id}",
     "videoUnsupported": "Seu navegador não suporta vídeo HTML5."
+  },
+  "notFound": {
+    "code": "Erro 404",
+    "title": "Página não encontrada",
+    "description": "O endereço pode ter mudado ou não existe mais. Veja o catálogo de produtos ou fale com a Dutex.",
+    "home": "Voltar ao início",
+    "products": "Ver produtos",
+    "contact": "Falar pelo WhatsApp"
   }
 }
