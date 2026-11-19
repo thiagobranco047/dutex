@@ -24,6 +24,7 @@ import {
   localize,
   productPath,
   productsInCategory,
+  showDrafts,
   type CategoryId,
 } from "@/lib/catalog";
 import { buildEntries, hasDatasheet } from "@/lib/catalog/server";
@@ -169,6 +170,7 @@ export default async function ProdutoPage({ params }: { params: Params }) {
                     productName={name}
                     productSlug={product.slug}
                     datasheetUrl={datasheetUrl}
+                    isPreview={showDrafts}
                     className="border-white/30 text-white hover:bg-white/10"
                   />
                 </div>

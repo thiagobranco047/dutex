@@ -40,6 +40,8 @@ type DatasheetRequestProps = {
   productSlug: string;
   /** URL do PDF quando ele existe em public/fichas-tecnicas; null enquanto a ficha não foi publicada. */
   datasheetUrl: string | null;
+  /** Marca o assunto do e-mail com [PRÉVIA] (dev e prévias com CATALOG_SHOW_DRAFTS=true). */
+  isPreview?: boolean;
   className?: string;
 };
 
@@ -48,15 +50,13 @@ type DatasheetRequestProps = {
  * O pedido vai para o e-mail comercial pelo Web3Forms (mesma chave do rodapé). Com o PDF publicado,
  * o download começa após o envio; sem ele, o usuário é avisado de que a equipe enviará por e-mail.
  */
-export default function DatasheetRequest({ productName, productSlug, datasheetUrl, className }: DatasheetRequestProps) {
+export default function DatasheetRequest({ productName, productSlug, datasheetUrl, isPreview = false, className }: DatasheetRequestProps) {
   const t = useTranslations("catalog.datasheet");
   const locale = useLocale();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [lead, setLead] = useState<Lead>({ name: "", email: "", company: "", phone: "" });
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
-  // Na Vercel, NEXT_PUBLIC_VERCEL_ENV é "production" só no domínio principal; prévias e localhost marcam o e-mail.
-  const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 
   useEffect(() => {
     const saved = readLead();
@@ -95,7 +95,7 @@ export default function DatasheetRequest({ productName, productSlug, datasheetUr
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: `${isProduction ? "" : "[PRÉVIA] "}${t("subject", { product: productName })}`,
+          subject: `${isPreview ? "[PRÉVIA] " : ""}${t("subject", { product: productName })}`,
           from_name: "Website Dutex",
           replyto: lead.email,
           Nome: lead.name,
